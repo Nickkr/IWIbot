@@ -3,6 +3,6 @@
 block content
   h1= title
   p Welcome to #{title}
-  form
-    input(type="text" placeholder="Frag mich was...")
+  form(id="chatForm")
+    input(type="text" id="messageField" placeholder="Frag mich was...")
     input(type="submit" value="senden")
