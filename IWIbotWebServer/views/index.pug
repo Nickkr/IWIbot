@@ -1,8 +1,14 @@
 ﻿extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  form(id="chatForm")
-    input(type="text" id="messageField" placeholder="Frag mich was...")
-    input(type="submit" value="senden")
+    form(id="chatForm" class="container")
+        div(id="header")
+            input(type="submit" value=" > send")
+            h1= title
+            input(type="text" id="messageField" placeholder="Frag mich was..." required)
+    div(id="chat" class="container")
+        div(class="msg")
+            div Hallo ich bin Claudio! Was kann ich für dich tun?
+        div(class="msg myMsg")
+            div Hallo ich bin Henrik!
+                    
