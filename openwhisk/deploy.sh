@@ -10,7 +10,7 @@ if [ "$1" = "" ]; then
 	echo "Commands:"
 	echo " --install		All .js actions in the directory are created in OpenWhisk"
 	echo " --uninstall		All .js actions in the directory are deleted in OpenWhisk"
-	echo " --update			All .js actions in the directroy are updated/creadted in OpenWhisk"
+	echo " --update			All .js actions in the directroy are updated/created in OpenWhisk"
     exit
 fi
 
