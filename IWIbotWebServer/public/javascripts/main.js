@@ -3,10 +3,7 @@ var openWhiskUrl = 'https://openwhisk.ng.bluemix.net/api/v1/namespaces/erhe1011%
 var username = '80bb0dcc-75e6-4885-80da-7d86d121f3f6';
 var password = 'K13yYnYPk65VCCYuatfhWnKQvzTwAHYdzpADjQWHBTYSkFmRGLuu7u8Cz52N1yHH';
 
-var textToSpeechWebUrl = 'https://stream.watsonplatform.net/text-to-speech/api/v1/synthesize';
-var textToSpeechUrl = '';
-var ttsUsername = '';
-var ttsPassword = '';
+var textToSpeechWebUrl = 'https://openwhisk.ng.bluemix.net/api/v1/namespaces/kuar1013_kuar1013-Sued/actions/text-to-speech';
 
 $(document).ready(function () {
     $('#chatForm').submit(function (event) {
@@ -37,8 +34,9 @@ $(document).ready(function () {
 });
 
 $(function () {
+    debugger
     $.get(textToSpeechWebUrl + '?text=Hello', function (response) {
-        //debugger
+        debugger
     });
 
     $.ajax({
@@ -56,20 +54,4 @@ $(function () {
         .done(function (data) {
             console.log(data);
         });
-    /*
-    $.ajax({
-        beforeSend: function (xhr) {
-            //xhr.setRequestHeader("Authorization", "Basic " + btoa(username + ":" + password));
-        },
-        url: textToSpeechWebUrl,
-        method: "POST",
-        dataType: "jsonp",
-        data: { text: 'Hallo' }
-    })
-        .done(function (data) {
-            console.log(data);
-
-            $('#chat').append('<div class="msg"><div>' + data.output.text + '<div></div>');
-        });
-        */
 });
