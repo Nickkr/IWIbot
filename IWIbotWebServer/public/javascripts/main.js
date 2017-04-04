@@ -3,7 +3,7 @@ var openWhiskUrl = 'https://openwhisk.ng.bluemix.net/api/v1/namespaces/erhe1011%
 var username = '80bb0dcc-75e6-4885-80da-7d86d121f3f6';
 var password = 'K13yYnYPk65VCCYuatfhWnKQvzTwAHYdzpADjQWHBTYSkFmRGLuu7u8Cz52N1yHH';
 
-var textToSpeechWebUrl = 'https://openwhisk.ng.bluemix.net/api/v1/web/Hochschule_Test/default/TTS.json';
+var textToSpeechWebUrl = 'https://stream.watsonplatform.net/text-to-speech/api/v1/synthesize';
 var textToSpeechUrl = '';
 var ttsUsername = '';
 var ttsPassword = '';
@@ -37,6 +37,10 @@ $(document).ready(function () {
 });
 
 $(function () {
+    debugger
+    $.get(textToSpeechWebUrl + '?text=Hello', function (response) {
+        debugger
+    });
     /*
     $.ajax({
         beforeSend: function (xhr) {
