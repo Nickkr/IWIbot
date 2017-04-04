@@ -41,6 +41,22 @@ $(function () {
     $.get(textToSpeechWebUrl + '?text=Hello', function (response) {
         debugger
     });
+
+    $.ajax({
+        beforeSend: function (xhr) {
+            //xhr.setRequestHeader("Authorization", "Basic " + btoa(username + ":" + password));
+        },
+        url: textToSpeechWebUrl,
+        method: "POST",
+        dataType: "jsonp",
+        data: { "text": "Hello",
+            "username": "0da716ea-2a67-4710-83be-3ce2d3c7d62a",
+            "password": "v5LL5oP6BiCl"
+        }
+    })
+        .done(function (data) {
+            console.log(data);
+        });
     /*
     $.ajax({
         beforeSend: function (xhr) {
