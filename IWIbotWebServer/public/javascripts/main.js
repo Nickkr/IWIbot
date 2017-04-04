@@ -37,7 +37,7 @@ $(document).ready(function () {
 });
 
 $(function () {
-    debugger
+    /*
     $.ajax({
         beforeSend: function (xhr) {
             //xhr.setRequestHeader("Authorization", "Basic " + btoa(username + ":" + password));
@@ -45,12 +45,12 @@ $(function () {
         url: textToSpeechWebUrl,
         method: "POST",
         dataType: "jsonp",
-        data: { message: text }
+        data: { text: 'Hallo' }
     })
         .done(function (data) {
-            debugger
             console.log(data);
 
             $('#chat').append('<div class="msg"><div>' + data.output.text + '<div></div>');
         });
+        */
 });
