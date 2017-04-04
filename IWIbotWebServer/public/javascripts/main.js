@@ -37,9 +37,8 @@ $(document).ready(function () {
 });
 
 $(function () {
-    debugger
     $.get(textToSpeechWebUrl + '?text=Hello', function (response) {
-        debugger
+        //debugger
     });
 
     $.ajax({
