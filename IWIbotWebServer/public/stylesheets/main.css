@@ -1,7 +1,6 @@
 ﻿html { overflow: hidden; }
 body {
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    background: lightgrey;
     display: flex;
     flex-direction: column;
     height: 100vh;
