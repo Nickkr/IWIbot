@@ -2,7 +2,7 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+/* GET Audio page. */
 router.get('/audio', function (req, res) {
 
     // allow cross-origin

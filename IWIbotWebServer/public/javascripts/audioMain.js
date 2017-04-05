@@ -186,8 +186,7 @@ function initAudio() {
     if (!navigator.requestAnimationFrame)
         navigator.requestAnimationFrame = navigator.webkitRequestAnimationFrame || navigator.mozRequestAnimationFrame;
 
-    navigator.getUserMedia(
-        {
+    navigator.getUserMedia({
             "audio": {
                 "mandatory": {
                     "googEchoCancellation": "false",
@@ -200,5 +199,5 @@ function initAudio() {
         }, gotStream, function(e) {
             alert('Error getting audio');
             console.log(e);
-        });
+    });
 }
