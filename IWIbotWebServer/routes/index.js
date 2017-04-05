@@ -7,7 +7,7 @@ router.get('/', function (req, res) {
 
     // allow cross-origin
     // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', 'https://openwhisk.ng.bluemix.net');
+    res.setHeader('Access-Control-Allow-Origin', '*');
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
     // Request headers you wish to allow
