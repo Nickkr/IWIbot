@@ -33,7 +33,10 @@ fileReader.onload = function (result) {
     result = result.currentTarget.result;
     var audioPlayer = document.getElementById('audioPlayer');
     audioPlayer.src = result;
-    audioPlayer.style.display = 'block';
+    audioPlayer.style.display = 'inline-block';
+    audioPlayer.style.right = 0;
+    audioPlayer.style.bottom = 0;
+    audioPlayer.style.position = 'absolute';
 };
 
 /* TODO:
@@ -201,3 +204,4 @@ function initAudio() {
             console.log(e);
     });
 }
+window.addEventListener('load', initAudio);
