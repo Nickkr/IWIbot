@@ -19,7 +19,7 @@
 
 (function(window){
 
-    var WORKER_PATH = 'javascripts/recorderjs/recorderWorker.js';
+    var WORKER_PATH = 'static/javascripts/recorderjs/recorderWorker.js';
 
     var Recorder = function(source, cfg){
         var config = cfg || {};
@@ -31,7 +31,7 @@
             this.node = this.context.createScriptProcessor(bufferLen, 2, 2);
         }
 
-        var worker = new Worker(config.workerPath || WORKER_PATH);
+        var worker = new Worker(WORKER_PATH);
         worker.postMessage({
             command: 'init',
             config: {
