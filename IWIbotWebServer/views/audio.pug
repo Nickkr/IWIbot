@@ -1,8 +1,6 @@
-doctype html
-html
-  head
-    title= title
-  body
+extends layout
+
+block content
     div(id="viz" onload="initAudio()")
         canvas(id="analyser" width="1024" height="500")
         canvas(id="wavedisplay" width="1024" height="500")
