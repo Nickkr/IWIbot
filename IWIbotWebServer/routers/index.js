@@ -35,4 +35,10 @@ router.get('/audio', function (req, res) {
 
     res.render('audio', { title: 'IWIbot - Audio' });
 });
+
+router.get('/javascripts/recorderjs/recorderWorker.js', function (req, res) {
+    res.contentType('application/javascript');
+    res.sendFile('../public/javascripts/recorderjs/recorderWorker.js');
+});
+
 module.exports = router;
