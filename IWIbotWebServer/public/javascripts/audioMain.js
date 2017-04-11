@@ -29,8 +29,8 @@ var files = [];
 var fileReader = new FileReader();
 var currFilename = '';
 
-fileReader.onload = function (result) {
-    result = result.currentTarget.result;
+fileReader.onload = function (event) {
+    var result = event.currentTarget.result;
     var audioPlayer = document.getElementById('audioPlayer');
     audioPlayer.src = result;
     audioPlayer.style.display = 'inline-block';
@@ -158,6 +158,7 @@ function toggleMono() {
 }
 
 function gotStream(stream) {
+    console.log('Got stream!!');
     inputPoint = audioContext.createGain();
 
     // Create an AudioNode from the stream.
