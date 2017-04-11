@@ -44,7 +44,6 @@ function getSpeechFromText(input) {
             "password": "v5LL5oP6BiCl"
         }),
         complete: function (response, status) {
-            debugger
             if (status == 'success') {
                 var audioPlayer = document.getElementById('audioPlayer');
 
