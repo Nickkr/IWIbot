@@ -27,6 +27,7 @@ var recIndex = 0;
 
 var files = [];
 var fileReader = new FileReader();
+var mediaRecorder = null;
 var currFilename = '';
 
 fileReader.onload = function (event) {
@@ -181,6 +182,59 @@ function gotStream(stream) {
     updateAnalysers();
 }
 
+function gotNewStream(stream) {
+    console.log('**Initializing MediaRecorder, Analyzer and "Snapshot"**');
+    mediaRecorder = new MediaRecorder(stream);
+    gotStream(stream);
+
+    mediaRecorder.ondataavailable = function (e) {
+        console.log("Event.data" + e.data);
+        var url = getUrlFromBlob(e.data);
+        audioRecorder.exportWAV(function (blob) {
+            $.ajax({
+                url : speechToTextWebUrl,
+                type: 'POST',
+                data: blob,
+                contentType: false,
+                processData: false,
+                success: function(data) {
+                    console.log(data);
+                },
+                error: function(err) {
+                    console.log(err);
+                }
+            });
+        });
+        /*
+        $.ajax({
+            url: speechToTextWebUrl,
+            method: "post",
+            contentType: "application/json",
+            data: JSON.stringify({
+                "binaryUrl": url,
+                "username": "bb2fe68c-06dc-4a75-ba7a-6340c0c3af67",
+                "password": "eFROyCSj1NMZ"
+            }),
+            complete: function (response, status) {
+                debugger
+                if (status == 'success') {
+                    var inputText = document.getElementById('ttsText');
+
+                    inputText.innerHTML = response.responseText;
+                } else {
+                    console.log('Response status: -> ' + status);
+                }
+            }
+        });*/
+
+    };
+    mediaRecorder.start();
+}
+
+function getUrlFromBlob(blob) {
+    return (window.URL || window.webkitURL).createObjectURL(blob);
+}
+
 function initAudio() {
     console.log('Audio get initialized!');
     if (!navigator.getUserMedia)
@@ -191,18 +245,17 @@ function initAudio() {
         navigator.requestAnimationFrame = navigator.webkitRequestAnimationFrame || navigator.mozRequestAnimationFrame;
 
     navigator.getUserMedia({
-            "audio": {
-                "mandatory": {
-                    "googEchoCancellation": "false",
-                    "googAutoGainControl": "false",
-                    "googNoiseSuppression": "false",
-                    "googHighpassFilter": "false"
-                },
-                "optional": []
-            },
-        }, gotStream, function(e) {
+            "audio": true
+        }, gotNewStream, function(e) {
             alert('Error getting audio');
             console.log(e);
     });
+
+    /*navigator.getUserMedia({
+        "video": true
+    }, gotStream, function(e) {
+        alert('Error getting audio');
+        console.log(e);
+    });*/
 }
 window.addEventListener('load', initAudio);

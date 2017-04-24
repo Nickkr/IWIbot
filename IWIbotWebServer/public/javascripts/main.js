@@ -2,6 +2,7 @@
 var context = {};
 
 var textToSpeechWebUrl = 'https://openwhisk.ng.bluemix.net/api/v1/web/kuar1013_kuar1013-Sued/default/text-to-speech.http';
+var speechToTextWebUrl = 'https://openwhisk.ng.bluemix.net/api/v1/web/kuar1013_kuar1013-Sued/default/speech-to-text.http';
 
 $(document).ready(function () {
     $('#chatForm').submit(function (event) {
