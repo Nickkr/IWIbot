@@ -19,7 +19,7 @@ if [ "$COMMAND" = "--install" ]; then
     echo "Initiating deploy sequence..."
     SAVEIFS=$IFS
     IFS=$(echo -en "\n\b")
-    for file in *; do wsk action create ${file/.js/} $file; done
+    for file in *; do wsk action create ${file/.js/} $file --web true; done
     IFS=$SAVEIFS
     echo "Deployment is done"
     exit 
@@ -35,7 +35,7 @@ elif [ "$COMMAND" = "--update" ]; then
 	echo "Initiating update sequence..."
 	SAVEIFS=$IFS
 	IFS=$(echo -en "\n\b")
-	for file in *; do wsk action update ${file/.js/} $file; done
+	for file in *; do wsk action update ${file/.js/} $file --web true; done
 	IFS=$SAVEIFS
     echo "Deployment is done"
 	exit
