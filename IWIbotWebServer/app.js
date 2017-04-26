@@ -24,9 +24,16 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/static', express.static(path.join(__dirname, 'public')));
-
 app.use('/', index);
 app.use('/users', users);
+//Force Https
+function requireHTTPS(req, res, next) {
+    if (req.headers && req.headers.$wssp === "80") {
+        return res.redirect('https://' + req.get('host') + req.url);
+    }
+    next();
+}
+app.use(requireHTTPS);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
