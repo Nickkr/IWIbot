@@ -1,3 +1,4 @@
+//Test Comment to validate if auto deploy works
 var SpeechToTextV1 = require('watson-developer-cloud/speech-to-text/v1');
 var fs = require('fs');
 var props = {
