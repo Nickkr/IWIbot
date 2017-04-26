@@ -10,12 +10,14 @@ $(document).ready(function() {
     $("#record").click(function () {
             if(!recording) {
                 $(".btn-circle").css('background-color', '#FF5036');
+                $(".btn-circle").addClass("recording");
                 recording= true;
                 Fr.voice.record(false , function () {
                     makeWaveform();
                 });
             } else {
                 $(".btn-circle").css('background-color', '#e6e6e6');
+                $(".btn-circle").removeClass("recording");
                 recording=false;
                 Fr.voice.pause();
                 Fr.voice.export(function(blob){
