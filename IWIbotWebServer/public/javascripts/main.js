@@ -1,18 +1,17 @@
-﻿var openWhiskWebUrl = 'https://openwhisk.ng.bluemix.net/api/v1/web/erhe1011%40hs-karlsruhe.de_iwibot/default/home.http';
+var openWhiskWebUrl = 'https://openwhisk.ng.bluemix.net/api/v1/web/erhe1011%40hs-karlsruhe.de_iwibot/default/home.http';
 var context = {};
-
-var textToSpeechWebUrl = 'https://openwhisk.ng.bluemix.net/api/v1/web/kuar1013_kuar1013-Sued/default/text-to-speech.http';
-var speechToTextWebUrl = 'https://openwhisk.ng.bluemix.net/api/v1/web/kuar1013_kuar1013-Sued/default/speech-to-text.http';
 
 $(document).ready(function () {
     $('#chatForm').submit(function (event) {
-        
+
         event.preventDefault();
 
         var text = $('#messageField').val();
 
-        $('#chat').append('<div class="msg myMsg"><div>' + text + '<div></div>');
-
+        $('#chat div.container').append('<div class="row msg"><div class="col-lg-5"></div><div class="col-lg-4"><div class="msg-send">' + text +'</div></div><div class="col-lg-3"></div></div>');
+        console.log($('#chat div.container').children().last());
+        $('#chat div.container').children().last().fadeIn("slow");
+        window.scrollTo(0,document.body.scrollHeight);
         console.log(context);
 
         $.ajax({
@@ -26,39 +25,24 @@ $(document).ready(function () {
             .done(function (data) {
                 console.log(data);
                 context = data.context;
-                $('#chat').append('<div class="msg"><div>' + data.output.text + '<div></div>');
-            });
+                $('#chat div.container').append('<div class="row msg"><div class="col-lg-3"></div><div class="col-lg-4"><div class="msg-recived">' + data.output.text +'</div></div><div class="col-lg-5"></div></div>');
+                $('#chat div.container').children().last().fadeIn("slow");
+                window.scrollTo(0,document.body.scrollHeight);
+         });
     })
 
 });
-
-function getSpeechFromText(input) {
-    $.ajax({
-        url: textToSpeechWebUrl,
-        type: "post",
-        contentType: "application/json",
-        data: JSON.stringify({
-            "text": input.value,
-            "voice": "en-US_LisaVoice",
-            "accept": "audio/wav",
-            "username": "0da716ea-2a67-4710-83be-3ce2d3c7d62a",
-            "password": "v5LL5oP6BiCl"
-        }),
-        complete: function (response, status) {
-            if (status == 'success') {
-                var audioPlayer = document.getElementById('audioPlayer');
-
-                var dataUri = 'data:audio/wav;base64,' + response.responseText;
-
-                audioPlayer.src = dataUri;
-                audioPlayer.style.display = 'inline-block';
-                audioPlayer.style.right = 0;
-                audioPlayer.style.bottom = 0;
-                audioPlayer.style.position = 'absolute';
-                audioPlayer.play();
-            } else {
-                console.log('Response status: -> ' + status);
-            }
-        }
+$(document).ready(function(){
+    $("#chat").css('padding-top',$("header").height() - 40.0);
+    console.log($("header").height() + "hashdasd");
+    $(window).resize(function(){
+        $("#chat").css('padding-top',$("header").height() -40.0);
     });
-}
+});
+$(document).ready(function(){
+    $(".content").css('padding-top',$("header").height() + 150.0);
+    console.log($("header").height() + "hashdasd");
+    $(window).resize(function(){
+        $(".content").css('padding-top',$("header").height() + 150.0);
+    });
+});

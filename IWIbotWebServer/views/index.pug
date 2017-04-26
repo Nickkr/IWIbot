@@ -1,13 +1,21 @@
-﻿extends layout
+extends layout
 
 block content
-    form(id="chatForm" class="container")
-        div(id="header")
-            input(type="submit" value=" > send")
-            a(href="/audio") Audio
-            h1= title
-            input(type="text" id="messageField" placeholder="Frag mich was..." required)
-    div(id="chat" class="container")
-        div(class="msg")
-            div Hallo, ich bin Claudio! Was kann ich für dich tun?
-                    
+    header
+     .jumbotron.text-center
+        h1= title
+        p Welcome to #{title}
+     nav.navbar.navbar-default
+        .container-fluid
+            ul.nav.navbar-nav
+                li.active
+                    a(href="/") IWIBot
+                li
+                    a(href="/textInput") Text Input
+    .content.text-center
+        button#record.btn.btn-default.btn-circle.recordButton
+            i.fa.fa-microphone.fa-3x
+    .container
+        div.row.msg.topDiv
+            div.col-lg-4: div.stt Warten auf Aufnahme...
+            div.col-lg-8
