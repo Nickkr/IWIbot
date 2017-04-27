@@ -2,13 +2,14 @@ var recording = false;
 $(document).ready(function() {
 
     $("#record").click(function () {
+        var $recordingButton = $(".btn-circle");
             if(!recording) {
-                $(".btn-circle").css('background-color', '#FF5036').addClass("recording");
+                $recordingButton.css('background-color', '#FF5036').addClass("recording");
                 recording = true;
                 Fr.voice.record(false , function () {
                 });
             } else {
-                $(".btn-circle").css('background-color', '#e6e6e6').removeClass("recording");
+                $recordingButton.css('background-color', '#e6e6e6').removeClass("recording");
                 recording = false;
                 Fr.voice.pause();
                 Fr.voice.export(function(blob){
