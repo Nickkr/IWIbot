@@ -11,7 +11,6 @@ var promise = new Promise(function(resolve, reject) {
                 console.log(j.name);
                 resolve(j);
             } else {
-                console.log('error getting forecast');
                 console.log('http status code:', (response || {}).statusCode);
                 console.log('error:', error);
                 console.log('body:', body);
