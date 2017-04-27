@@ -1,28 +1,18 @@
-function makeWaveform() {
-    var analyser = Fr.voice.recorder.analyser;
-
-    var bufferLength = analyser.frequencyBinCount;
-    var dataArray = new Uint8Array(bufferLength);
-}
 var recording = false;
 $(document).ready(function() {
 
     $("#record").click(function () {
             if(!recording) {
-                $(".btn-circle").css('background-color', '#FF5036');
-                $(".btn-circle").addClass("recording");
-                recording= true;
+                $(".btn-circle").css('background-color', '#FF5036').addClass("recording");
+                recording = true;
                 Fr.voice.record(false , function () {
-                    makeWaveform();
                 });
             } else {
-                $(".btn-circle").css('background-color', '#e6e6e6');
-                $(".btn-circle").removeClass("recording");
-                recording=false;
+                $(".btn-circle").css('background-color', '#e6e6e6').removeClass("recording");
+                recording = false;
                 Fr.voice.pause();
                 Fr.voice.export(function(blob){
-                    //var formData = new FormData();
-                    //formData.append('file', blob);
+
                     var payload = {"payload": blob};
                         $.ajax({
                         url: 'https://openwhisk.ng.bluemix.net/api/v1/web/Hochschule_Test/default/speechToText.http',
