@@ -3,6 +3,9 @@ var recording = false;
 $(function(){
     // Call one time record to get the user agreement for using the microphone
     Fr.voice.record(false);
+    Fr.voice.pause();
+    Fr.voice.recorder.clear();
+
 });
 $(document).ready(function() {
     $("#record").click(function () {
