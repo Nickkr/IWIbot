@@ -5,8 +5,8 @@ $(function(){
     Fr.voice.record(false);
     Fr.voice.pause();
     Fr.voice.recorder.clear();
-
 });
+
 $(document).ready(function() {
     $("#record").click(function () {
         var $recordingButton = $(".btn-circle");
