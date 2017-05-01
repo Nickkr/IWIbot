@@ -81,11 +81,11 @@
 
 			var $that = this;
 			navigator.getUserMedia({audio: true}, function(stream){
+				/**
+				 * Live Output
+				 */
+				$that.input = $that.context.createMediaStreamSource(stream);
 
-			/**
-			 * Live Output
-			 */
-			$that.input = $that.context.createMediaStreamSource(stream);
 				if(output === true){
 					$that.input.connect($that.context.destination);
 				}
