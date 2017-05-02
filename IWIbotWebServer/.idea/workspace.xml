@@ -892,7 +892,7 @@
       <workItem from="1493678896889" duration="5883000" />
       <workItem from="1493692617061" duration="5486000" />
       <workItem from="1493710835519" duration="1223000" />
-      <workItem from="1493725782278" duration="1500000" />
+      <workItem from="1493725782278" duration="1514000" />
     </task>
     <task id="LOCAL-00001" summary="updated to new design with working sst">
       <created>1493166415316</created>
@@ -957,11 +957,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493726490031</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="added conversation function">
+      <created>1493727290327</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1493727290327</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34885000" />
+    <option name="totallyTimeSpent" value="34899000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
