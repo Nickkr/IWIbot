@@ -17,10 +17,17 @@ block content
                     a(href="/") IWIBot
                 li
                     a(href="/textInput") Text Input
-    .content.text-center
-        button#record.btn.btn-default.btn-circle.recordButton
+
+    .content
+     .container
+       div.row
+        div.col-lg-5
+        div.col-lg-2.text-center: button#record.btn.btn-default.btn-circle.recordButton
             i.fa.fa-microphone.fa-3x
-    .container
-        div.row.msg.topDiv
+        div.col-lg-5
+       div.row
+           div.col-lg-4: audio.tts(controls autoplay)
+           div.col-lg-8
+       div.row
             div.col-lg-4: div.stt Warten auf Aufnahme...
             div.col-lg-8
