@@ -13,7 +13,7 @@ $(document).ready(function() {
         var $recordingButton = $(".btn-circle");
 
         if(!recording) {
-            $recordingButton.css('background-color', '#FF5036').addClass("recording");
+            $recordingButton.css('background-color', '#FF7F50').addClass("recording");
             recording = true;
             Fr.voice.resume();
         } else {
