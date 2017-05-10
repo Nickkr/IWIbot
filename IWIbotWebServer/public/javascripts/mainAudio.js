@@ -17,7 +17,8 @@ $(document).ready(function() {
             recording = true;
             Fr.voice.resume();
         } else {
-            $recordingButton.css('background-color', '#e6e6e6').removeClass("recording");
+            $recordingButton.css('background-color', '#e6e6e6').removeClass("recording").hide();
+            $("#mainDiv").addClass("loader");
             recording = false;
             Fr.voice.pause();
             Fr.voice.export(function(blob){
@@ -45,14 +46,21 @@ $(document).ready(function() {
                         processData: false,
                         success: function(data) {
                             console.log(data);
+                            $("#mainDiv").removeClass("loader");
+                            $recordingButton.show();
                             var obj = JSON.parse(data);
                             //obj = JSON.stringify(obj.payload);
-                            console.log(obj);
-                            $('.tts').attr('src', "data:audio/wav;base64," + obj.payload.toString());
-                            $('.stt').html(data);
+                            console.log("Data: " + data);
+                            $('.tts').attr('src', "data:audio/ogg;base64," + obj.payload.toString());
+                            $('.stt').html(obj.text.toString());
+
+
                         },
                         error: function(err) {
                             console.log(err);
+                            $("#mainDiv").removeClass("loader");
+                            $recordingButton.show();
+                            $('.stt').html(obj.text.toString());
                         }
                     });
                     console.log(blob);
