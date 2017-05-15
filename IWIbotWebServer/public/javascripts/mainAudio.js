@@ -1,9 +1,46 @@
 var recording = false;
 var mediaRecorder = null;
+var reader = new window.FileReader();
 
 $(function(){
     var recordingButton = $(".btn-circle");
+
+    reader.onloadend = function() {
+        console.log("DataURL Size: " + reader.result.length);
+        var json = JSON.stringify({"payload": reader.result.split(',')[1]});
+        $("#mainDiv").addClass("loader");
+        recordingButton.hide();
+
+        $.ajax({
+            url: 'https://openwhisk.ng.bluemix.net/api/v1/web/Hochschule_Test/default/Router.http',
+            type: 'POST',
+            data: json,
+            contentType: "application/json",
+            processData: false,
+            success: function(data) {
+                console.log("Success: " + data);
+                var obj = JSON.parse(data);
+                $('.tts').attr('src', "data:audio/ogg;base64," + obj.payload.toString());
+                $('.stt').html(obj.text.toString());
+                $("#mainDiv").removeClass("loader");
+                setMediaRecorder(mediaRecorder.stream);
+                recordingButton.show();
+            },
+            error: function(err) {
+                console.log("Error: " + err);
+                $('.stt').html(obj.text.toString());
+                $("#mainDiv").removeClass("loader");
+                setMediaRecorder(mediaRecorder.stream);
+                recordingButton.show();
+            }
+        });
+    };
+
     function gotStream(stream) {
+        setMediaRecorder(stream);
+    }
+
+    function setMediaRecorder(stream) {
         var options = {
             audioBitsPerSecond : 16000,
             mimeType : 'audio/ogg; codecs=opus'
@@ -15,36 +52,9 @@ $(function(){
         };
 
         mediaRecorder.ondataavailable = function (e) {
-            var reader = new window.FileReader();
             console.log('Blob size: ' + e.data.size);
             reader.readAsDataURL(e.data);
-            reader.onloadend = function() {
-                var json = JSON.stringify({"payload": reader.result.split(',')[1]});
-                $("#mainDiv").addClass("loader");
-                recordingButton.hide();
 
-                $.ajax({
-                    url: 'https://openwhisk.ng.bluemix.net/api/v1/web/Hochschule_Test/default/Router.http',
-                    type: 'POST',
-                    data: json,
-                    contentType: "application/json",
-                    processData: false,
-                    success: function(data) {
-                        console.log("Success: " + data);
-                        var obj = JSON.parse(data);
-                        $('.tts').attr('src', "data:audio/ogg;base64," + obj.payload.toString());
-                        $('.stt').html(obj.text.toString());
-                        $("#mainDiv").removeClass("loader");
-                        recordingButton.show();
-                    },
-                    error: function(err) {
-                        console.log("Error: " + err);
-                        $('.stt').html(obj.text.toString());
-                        $("#mainDiv").removeClass("loader");
-                        recordingButton.show();
-                    }
-                });
-            }
         }
         mediaRecorder.start();
         mediaRecorder.pause();
