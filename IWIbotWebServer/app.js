@@ -5,7 +5,8 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var stt = require( path.resolve( __dirname, "./stt-token.js" ) );
+var tts = require( path.resolve( __dirname, "./tts-token.js" ) );
 
 var index = require('./routers/index');
 var users = require('./routers/users');
@@ -36,9 +37,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/static', express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
-app.use('/api/speech-to-text/', require('./stt-token.js'));
-app.use('/api/text-to-speech/', require('./tts-token.js'));
-
+app.use('/api/speech-to-text/', stt);
+app.use('/api/text-to-speech/', tts);
+/*app.use('/api/speech-to-text/', require('./stt-token.js'));
+app.use('/api/text-to-speech/', require('./tts-token.js'));*/
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
     var err = new Error('Not Found');
