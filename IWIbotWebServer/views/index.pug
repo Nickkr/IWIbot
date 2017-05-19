@@ -1,9 +1,11 @@
 extends layout
 
 block head
+    link(rel='stylesheet', href='/stylesheets/style.css')
     script(src='/javascripts/recorder.js')
     script(src='/javascripts/Fr.voice.js')
     script(src='/javascripts/mainAudio.js')
+    script(src='/javascripts/main.js')
 
 block content
     header
@@ -17,6 +19,10 @@ block content
                     a(href="/") IWIBot
                 li
                     a(href="/textInput") Text Input
+                li
+                    a(href="/stream") Stream Test
+                li
+                    a(href="/login") Login
 
     .content
      .container

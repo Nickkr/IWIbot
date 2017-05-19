@@ -1,5 +1,9 @@
 extends layout
 
+block head
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='/javascripts/main.js')
+
 block content
     header
      //.jumbotron.text-center
@@ -13,8 +17,11 @@ block content
                 li.active
                     a(href="/textInput") Text Input
                 li
-                    form#chatForm.col-lg-4.col-lg-offset-3
-                        div.input-group
+                    a(href="/stream") Stream Test
+                li
+                    a(href="/login") Login
+                form#chatForm.col-lg-4.col-lg-offset-3
+                  div.input-group
                             input#messageField.form-control(type="text" placeholder="Frag mich was..." required)
                             span.input-group-btn: button.btn.btn-default(type="submit") Send
     //.contentTextInput.text-center

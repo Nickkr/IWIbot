@@ -1,0 +1,66 @@
+extends layout
+
+block head
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src="javascripts/bundle.js")
+
+
+block content
+    header.headerCustom
+        .text-center
+            h1= title
+            p Welcome to #{title}
+        nav.navbar.navbar-default
+            .container-fluid
+              .navbar-header
+                 button(type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar")
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+              div.collapse.navbar-collapse#myNavbar
+               ul.nav.navbar-nav
+                        li.active
+                            a(href="/") IWIBot
+                        li
+                            a(href="/login") Login
+                        li
+                          a.hider.button(href="#")
+                              //button.btn.btn-outline-success.my-2.my-sm-0.hider.button(href="#") History
+                              i(class="fa fa-comments fa-lg")
+                              span.notification
+
+
+                        //form#chatForm.col-lg-4.col-lg-offset-3
+                            div.input-group
+                                input#messageField.form-control(type="text" placeholder="Frag mich was..." required)
+                                span.input-group-btn: button.btn.btn-default(type="submit") Send
+              form#chatForm.navbar-form.navbar-search
+                      .form-group
+                          input#messageField.form-control(type='text', placeholder='Frag mich was...')
+                      button.btn.btn-default.hidden-xs.hidden-sm(type='submit') Submit
+              //form#chatForm.navbar-form
+               .form-group.form-horizontal
+                 input#messageField(type="text" class="form-control" placeholder="Frag mich was...")
+                 button.btn-btn-default(type = "submit") Submit
+    .history
+        div#chat.text-center
+            .container
+               // div.row.msg.topDiv
+                    div.col-lg-3
+                    div.col-lg-4: div.msg-recived Hallo, ich bin Claudio! Was kann ich für dich tun?
+                    div.col-lg-5
+    .content
+        .container
+          .voice
+            div.row
+                div.col-lg-5
+                div.col-lg-2.text-center: div#mainDiv: button#record.btn.btn-default.btn-circle.recordButton
+                    i.fa.fa-microphone.fa-3x
+                div.col-lg-5
+            div.row
+                div.col-lg-4
+                div.col-lg-8
+            div.row
+                div.col-lg-4: div.stt#sttContent Warten auf Aufnahme...
+                div.col-lg-8
+
