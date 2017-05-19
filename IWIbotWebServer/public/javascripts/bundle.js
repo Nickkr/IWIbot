@@ -8822,7 +8822,7 @@ $(document).ready(function () {
 var exports = module.exports = {};
 
 exports.con = function (param) {
-    var response;
+
     var options = {
         url: 'https://openwhisk.ng.bluemix.net/api/v1/web/Hochschule_Test/default/RouterV2.http',
         type: 'POST',

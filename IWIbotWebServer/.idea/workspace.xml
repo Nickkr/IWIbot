@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1d6dfda1-0bfd-4834-bf05-85262164f729" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/bundle.js" afterPath="$PROJECT_DIR$/public/javascripts/bundle.js" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,12 +48,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bundle.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bundle.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/javascripts/bundle.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
+            <state relative-caret-position="-770">
               <caret line="8246" column="3" lean-forward="false" selection-start-line="8246" selection-start-column="3" selection-end-line="8246" selection-end-column="3" />
-              <folding />
+              <folding>
+                <marker date="1495193216846" expanded="true" signature="443:280806" ph="{...}" />
+                <marker date="1495193216846" expanded="true" signature="276102:276750" ph="[...]" />
+                <marker date="1495193216846" expanded="true" signature="276135:276746" ph="{...}" />
+                <marker date="1495193216846" expanded="true" signature="276204:276744" ph="{...}" />
+                <marker date="1495193216846" expanded="true" signature="276225:276644" ph="{&quot;url&quot;: 'https://openwhisk.ng.bluemix.net/api/v1/web/Hochschule_Test/default/RouterV2.http'...}" />
+                <marker date="1495193216846" expanded="true" signature="276486:276539" ph="{...}" />
+                <marker date="1495193216846" expanded="true" signature="276571:276638" ph="{...}" />
+                <marker date="1495193216846" expanded="true" signature="276695:276738" ph="{...}" />
+                <marker date="1495193216846" expanded="true" signature="276754:279675" ph="[...]" />
+                <marker date="1495193216846" expanded="true" signature="276787:279617" ph="{...}" />
+                <marker date="1495193216846" expanded="true" signature="276855:279614" ph="{...}" />
+                <marker date="1495193216846" expanded="true" signature="276970:279599" ph="{...}" />
+                <marker date="1495193216846" expanded="true" signature="277337:277392" ph="{...}" />
+                <marker date="1495193216846" expanded="true" signature="277416:279376" ph="{...}" />
+                <marker date="1495193216846" expanded="true" signature="277463:277619" ph="{&quot;token&quot;: token...}" />
+                <marker date="1495193216846" expanded="true" signature="277669:277866" ph="{...}" />
+                <marker date="1495193216846" expanded="true" signature="277918:278297" ph="{...}" />
+                <marker date="1495193216846" expanded="true" signature="278014:278283" ph="{...}" />
+                <marker date="1495193216846" expanded="true" signature="278067:278264" ph="{...}" />
+                <marker date="1495193216846" expanded="true" signature="278432:279089" ph="{...}" />
+                <marker date="1495193216846" expanded="true" signature="279105:279250" ph="/*...*/" />
+                <marker date="1495193216846" expanded="true" signature="279264:279366" ph="/*...*/" />
+                <marker date="1495193216846" expanded="true" signature="279401:279591" ph="{...}" />
+                <marker date="1495193216846" expanded="true" signature="279679:280805" ph="[...]" />
+                <marker date="1495193216846" expanded="true" signature="279712:280757" ph="{...}" />
+                <marker date="1495193216846" expanded="true" signature="279780:280754" ph="{...}" />
+                <marker date="1495193216846" expanded="true" signature="280177:280748" ph="{...}" />
+                <marker date="1495193216846" expanded="true" signature="280339:280394" ph="{...}" />
+                <marker date="1495193216846" expanded="true" signature="280418:280699" ph="{...}" />
+                <marker date="1495193216846" expanded="true" signature="280432:280494" ph="//..." />
+                <marker date="1495193216846" expanded="true" signature="280530:280687" ph="{&quot;text&quot;: text...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -107,11 +140,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routers/index.js">
+      <file leaf-file-name="mainAudio.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/mainAudio.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+            <state relative-caret-position="294">
+              <caret line="14" column="11" lean-forward="false" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -180,7 +213,6 @@
         <option value="$PROJECT_DIR$/views/index.pug" />
         <option value="$PROJECT_DIR$/public/javascripts/bundle.js" />
         <option value="$PROJECT_DIR$/views/textInput.pug" />
-        <option value="$PROJECT_DIR$/public/javascripts/mainAudio.js" />
         <option value="$PROJECT_DIR$/public/javascripts/textToSpeech.js" />
         <option value="$PROJECT_DIR$/public/javascripts/speechToText.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/login.css" />
@@ -190,6 +222,7 @@
         <option value="$PROJECT_DIR$/public/javascripts/Router.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/public/javascripts/conversation.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/mainAudio.js" />
       </list>
     </option>
   </component>
@@ -823,7 +856,7 @@
       <workItem from="1495111702454" duration="4964000" />
       <workItem from="1495132846743" duration="31293000" />
       <workItem from="1495166535726" duration="1148000" />
-      <workItem from="1495186532615" duration="4401000" />
+      <workItem from="1495186532615" duration="5321000" />
     </task>
     <task id="LOCAL-00001" summary="updated to new design with working sst">
       <created>1493166415316</created>
@@ -923,11 +956,25 @@
       <option name="project" value="LOCAL" />
       <updated>1495192301096</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="streaming working + new design">
+      <created>1495192311599</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1495192311599</updated>
+    </task>
+    <task id="LOCAL-00016" summary="streaming working + new design">
+      <created>1495192594901</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1495192594901</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142634000" />
+    <option name="totallyTimeSpent" value="143554000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -943,18 +990,18 @@
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32842582" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.50416666" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33861834" sideWeight="0.5064447" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32842582" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33861834" sideWeight="0.49583334" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32842582" sideWeight="0.49570355" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33861834" sideWeight="0.4935553" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34654588" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34654588" sideWeight="0.49785176" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23308271" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1010,6 +1057,32 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -1248,14 +1321,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/mainAudio.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1029">
-          <caret line="49" column="52" lean-forward="false" selection-start-line="49" selection-start-column="52" selection-end-line="49" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/speechToText.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="118">
@@ -1300,7 +1365,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-          <folding />
+          <folding>
+            <marker date="1495192346339" expanded="true" signature="449:499" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1370,8 +1437,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/bundle.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
+        <state relative-caret-position="-770">
           <caret line="8246" column="3" lean-forward="false" selection-start-line="8246" selection-start-column="3" selection-end-line="8246" selection-end-column="3" />
+          <folding>
+            <marker date="1495193216846" expanded="true" signature="443:280806" ph="{...}" />
+            <marker date="1495193216846" expanded="true" signature="276102:276750" ph="[...]" />
+            <marker date="1495193216846" expanded="true" signature="276135:276746" ph="{...}" />
+            <marker date="1495193216846" expanded="true" signature="276204:276744" ph="{...}" />
+            <marker date="1495193216846" expanded="true" signature="276225:276644" ph="{&quot;url&quot;: 'https://openwhisk.ng.bluemix.net/api/v1/web/Hochschule_Test/default/RouterV2.http'...}" />
+            <marker date="1495193216846" expanded="true" signature="276486:276539" ph="{...}" />
+            <marker date="1495193216846" expanded="true" signature="276571:276638" ph="{...}" />
+            <marker date="1495193216846" expanded="true" signature="276695:276738" ph="{...}" />
+            <marker date="1495193216846" expanded="true" signature="276754:279675" ph="[...]" />
+            <marker date="1495193216846" expanded="true" signature="276787:279617" ph="{...}" />
+            <marker date="1495193216846" expanded="true" signature="276855:279614" ph="{...}" />
+            <marker date="1495193216846" expanded="true" signature="276970:279599" ph="{...}" />
+            <marker date="1495193216846" expanded="true" signature="277337:277392" ph="{...}" />
+            <marker date="1495193216846" expanded="true" signature="277416:279376" ph="{...}" />
+            <marker date="1495193216846" expanded="true" signature="277463:277619" ph="{&quot;token&quot;: token...}" />
+            <marker date="1495193216846" expanded="true" signature="277669:277866" ph="{...}" />
+            <marker date="1495193216846" expanded="true" signature="277918:278297" ph="{...}" />
+            <marker date="1495193216846" expanded="true" signature="278014:278283" ph="{...}" />
+            <marker date="1495193216846" expanded="true" signature="278067:278264" ph="{...}" />
+            <marker date="1495193216846" expanded="true" signature="278432:279089" ph="{...}" />
+            <marker date="1495193216846" expanded="true" signature="279105:279250" ph="/*...*/" />
+            <marker date="1495193216846" expanded="true" signature="279264:279366" ph="/*...*/" />
+            <marker date="1495193216846" expanded="true" signature="279401:279591" ph="{...}" />
+            <marker date="1495193216846" expanded="true" signature="279679:280805" ph="[...]" />
+            <marker date="1495193216846" expanded="true" signature="279712:280757" ph="{...}" />
+            <marker date="1495193216846" expanded="true" signature="279780:280754" ph="{...}" />
+            <marker date="1495193216846" expanded="true" signature="280177:280748" ph="{...}" />
+            <marker date="1495193216846" expanded="true" signature="280339:280394" ph="{...}" />
+            <marker date="1495193216846" expanded="true" signature="280418:280699" ph="{...}" />
+            <marker date="1495193216846" expanded="true" signature="280432:280494" ph="//..." />
+            <marker date="1495193216846" expanded="true" signature="280530:280687" ph="{&quot;text&quot;: text...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/mainAudio.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="11" lean-forward="false" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
           <folding />
         </state>
       </provider>
