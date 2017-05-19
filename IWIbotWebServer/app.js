@@ -5,8 +5,8 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var stt = require( path.resolve( __dirname, "./stt-token.js" ) );
-var tts = require( path.resolve( __dirname, "./tts-token.js" ) );
+var stt = require( path.resolve( __dirname, './stt-token.js' ) );
+var tts = require( path.resolve( __dirname, './tts-token.js' ) );
 
 var index = require('./routers/index');
 var users = require('./routers/users');
