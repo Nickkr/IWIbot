@@ -1,7 +1,8 @@
 var exports = module.exports = {};
 
 exports.con = function (param) {
-
+    console.log("Param :" + param);
+    param = {"transcript" : param.toString()};
     var options = {
         url: 'https://openwhisk.ng.bluemix.net/api/v1/web/Hochschule_Test/default/RouterV2.http',
         type: 'POST',
@@ -14,7 +15,9 @@ exports.con = function (param) {
         },
         error: function (err) {
             console.log(err);
-            reject(err);
+            $("#mainDiv").removeClass("loader");
+            $(".btn-circle").show();
+
 
         }
     }
