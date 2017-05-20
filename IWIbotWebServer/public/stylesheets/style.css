@@ -37,7 +37,7 @@ a {
 		padding: 0;
 		position: absolute;
 		top: 0;
-		right: 130px;
+		right: 40%;
 	}
 }
 
@@ -45,7 +45,7 @@ a {
 	.navbar-search {
 		position: absolute;
 		top: 0;
-		right: 20%;
+		right: 40%;
 	}
 }
 .btn-circle {

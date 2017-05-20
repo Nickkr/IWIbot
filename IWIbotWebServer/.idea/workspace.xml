@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d6dfda1-0bfd-4834-bf05-85262164f729" name="Default" comment="minor improvements to the router function">
+    <list default="true" id="1d6dfda1-0bfd-4834-bf05-85262164f729" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/Router.js" afterPath="$PROJECT_DIR$/public/javascripts/Router.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/bundle.js" afterPath="$PROJECT_DIR$/public/javascripts/bundle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/conversation.js" afterPath="$PROJECT_DIR$/public/javascripts/conversation.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/speechToText.js" afterPath="$PROJECT_DIR$/public/javascripts/speechToText.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/textToSpeech.js" afterPath="$PROJECT_DIR$/public/javascripts/textToSpeech.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/style.css" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stt-token.js" afterPath="$PROJECT_DIR$/stt-token.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tts-token.js" afterPath="$PROJECT_DIR$/tts-token.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/stream.pug" afterPath="$PROJECT_DIR$/views/stream.pug" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,7 +48,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stt-token.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="stt-token.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stt-token.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="126">
@@ -116,11 +108,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="145" column="14" lean-forward="false" selection-start-line="145" selection-start-column="14" selection-end-line="145" selection-end-column="14" />
+            <state relative-caret-position="252">
+              <caret line="39" column="18" lean-forward="false" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -196,11 +188,11 @@
         <option value="$PROJECT_DIR$/stt-token.js" />
         <option value="$PROJECT_DIR$/tts-token.js" />
         <option value="$PROJECT_DIR$/public/javascripts/conversation.js" />
-        <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/views/stream.pug" />
         <option value="$PROJECT_DIR$/public/javascripts/speechToText.js" />
         <option value="$PROJECT_DIR$/public/javascripts/Router.js" />
         <option value="$PROJECT_DIR$/public/javascripts/textToSpeech.js" />
+        <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
       </list>
     </option>
   </component>
@@ -837,7 +829,7 @@
       <workItem from="1495186532615" duration="9755000" />
       <workItem from="1495199185323" duration="2136000" />
       <workItem from="1495202746794" duration="788000" />
-      <workItem from="1495274080635" duration="15817000" />
+      <workItem from="1495274080635" duration="16092000" />
     </task>
     <task id="LOCAL-00001" summary="updated to new design with working sst">
       <created>1493166415316</created>
@@ -1007,11 +999,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495200776929</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="minor improvements to the router function">
+      <created>1495305077302</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1495305077302</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="166729000" />
+    <option name="totallyTimeSpent" value="167004000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1445,14 +1444,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="145" column="14" lean-forward="false" selection-start-line="145" selection-start-column="14" selection-end-line="145" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/stream.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
@@ -1497,6 +1488,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="39" column="18" lean-forward="false" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
           <folding />
         </state>
       </provider>
