@@ -8778,6 +8778,7 @@ $(document).ready(function () {
     $(".historyToggle").click(function () {
         notificationNumber = 0;
         $(".notification").hide().text();
+        $("i.toggleIcon").toggleClass(".fa fa-microphone");
         $(".voice , .history").toggle();
         $("#chatForm").toggle();
         window.scrollTo(0, document.body.scrollHeight);
