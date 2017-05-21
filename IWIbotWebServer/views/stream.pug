@@ -30,21 +30,12 @@ block content
                               //button.btn.btn-outline-success.my-2.my-sm-0.hider.button(href="#") History
                               i(class="fa fa-comments fa-lg")
                               span.notification
-
-
-                        //form#chatForm.col-lg-4.col-lg-offset-3
-                            div.input-group
-                                input#messageField.form-control(type="text" placeholder="Frag mich was..." required)
-                                span.input-group-btn: button.btn.btn-default(type="submit") Send
-
+              //Navbar Form start!
               form#chatForm.navbar-form.navbar-search
                       .form-group
                           input#messageField.form-control(type='text', placeholder='Frag mich was...')
                           button.btn.btn-default.hidden-xs.hidden-sm(type='submit') Submit
-              //form#chatForm.navbar-form
-               .form-group.form-horizontal
-                 input#messageField(type="text" class="form-control" placeholder="Frag mich was...")
-                 button.btn-btn-default(type = "submit") Submit
+    //Login Popup start!
     #modal.popupContainer(style='display:none;')
         header.popupHeader
             span.header_title Login
@@ -54,6 +45,7 @@ block content
             // Username & Password Login form
             .user_login
                 form.loginForm
+                    div.invalidInput Username or Password wrong!
                     label Username
                     input(type='text' name="username")
                     br
@@ -61,6 +53,7 @@ block content
                     input(type='password' name="password")
                     br
                     button.btn.btn_red(type='submit') Login
+    //Chat history start!
     .history
         div#chat.text-center
             .container

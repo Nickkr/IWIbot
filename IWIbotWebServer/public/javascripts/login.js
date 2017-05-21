@@ -1,9 +1,25 @@
 $(document).ready(function () {
+
+    var $invalidInput = $(".invalidInput");
+
+    function close_modal() {
+        $("#lean_overlay").fadeOut(200);
+        $("#modal").css({"display": "none"})
+
+    }
+
     $("#modal_trigger").leanModal({
         top: 100,
         overlay: 0.6,
         closeButton: ".modal_close"
     });
+    function setItem(key, value) {
+        localStorage.setItem(key, value);
+    }
+
+    function getItem(key) {
+        return localStorage.getItem(key);
+    }
 
     $('.loginForm').on('submit', function () {
         event.preventDefault()
@@ -26,11 +42,13 @@ $(document).ready(function () {
                 "Authorization": "Basic " + btoa(values["username"] + ":" + values["password"])
             },
             success: function () {
-
-                window.location = "/stream";
+                $invalidInput.hide();
+                close_modal();
+                setItem("username", values["username"]);
+                setItem("password", values["password"]);
             },
             error: function () {
-                alert("Username or Password wrong");
+                $invalidInput.show();
             }
 
         });

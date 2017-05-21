@@ -56,6 +56,14 @@
     font-size: 16px;
 }
 
+.invalidInput {
+    text-align: center;
+    color: red;
+    padding-bottom: 5px;
+    display: none;
+
+}
+
 .popupBody {
     padding: 20px;
 }
@@ -63,12 +71,14 @@
 /* User Login Form */
 
 .user_login {
+
 }
 
 .user_login label {
     display: block;
     margin-bottom: 5px;
 }
+
 .user_login input[type="text"],
 .user_login input[type="email"],
 .user_login input[type="password"] {

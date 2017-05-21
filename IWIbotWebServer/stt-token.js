@@ -32,12 +32,5 @@ router.get('/token', function(req, res) {
     });
 });
 
-function setItem(key, value) {
-    localStorage.setItem(key, value);    
-}
-
-function getItem(key) {
-    return localStorage.getItem(key);
-}
 
 module.exports = router;
