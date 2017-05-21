@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d6dfda1-0bfd-4834-bf05-85262164f729" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/jquery.leanModal.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/stylesheets/login.css" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/login.pug" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/login.js" afterPath="$PROJECT_DIR$/public/javascripts/login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routers/index.js" afterPath="$PROJECT_DIR$/routers/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/stream.pug" afterPath="$PROJECT_DIR$/views/stream.pug" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -808,7 +802,7 @@
       <workItem from="1495202746794" duration="788000" />
       <workItem from="1495274080635" duration="16950000" />
       <workItem from="1495314765175" duration="2569000" />
-      <workItem from="1495327534703" duration="1934000" />
+      <workItem from="1495327534703" duration="1955000" />
     </task>
     <task id="LOCAL-00001" summary="updated to new design with working sst">
       <created>1493166415316</created>
@@ -992,11 +986,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495305361823</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="new login overlay">
+      <created>1495329488271</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1495329488271</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="172365000" />
+    <option name="totallyTimeSpent" value="172386000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1121,7 +1122,8 @@
     <MESSAGE value="streaming working + new design" />
     <MESSAGE value="minor improvements to the router function" />
     <MESSAGE value="moved submit form to the middle" />
-    <option name="LAST_COMMIT_MESSAGE" value="moved submit form to the middle" />
+    <MESSAGE value="new login overlay" />
+    <option name="LAST_COMMIT_MESSAGE" value="new login overlay" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
