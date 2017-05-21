@@ -18,7 +18,7 @@ router.get('/stream', function(req, res, next) {
 });
 
 router.get('/login', function(req, res, next) {
-    res.render('login', { title: 'IWIBot' });
+    res.render('loginTest', { title: 'IWIBot' });
 });
 
 module.exports = router;

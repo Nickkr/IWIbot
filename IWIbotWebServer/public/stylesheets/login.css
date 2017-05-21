@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+#lean_overlay {
+    position: fixed;
+    z-index: 100;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    font-family: Raleway;
+    display: none;
+}
+
+.popupContainer {
+    position: absolute;
+    width: 330px;
+    height: auto;
+    left: 45%;
+    top: 60px;
+    background: #FFF;
+}
+
+.btn_red {
+    background: #ff7f50;
+    color: #FFF;
+    display: block;
+    width: 100%;
+}
+
+.btn_red:hover {
+    background: coral;
+}
+
+.popupHeader {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.popupHeader {
+    background: #F4F4F2;
+    position: relative;
+    padding: 10px 20px;
+    border-bottom: 1px solid #DDD;
+    font-weight: bold;
+}
+
+.popupHeader .modal_close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px 15px;
+    background: #E4E4E2;
+    cursor: pointer;
+    color: #aaa;
+    font-size: 16px;
+}
+
+.popupBody {
+    padding: 20px;
+}
+
+/* User Login Form */
+
+.user_login {
+}
+
+.user_login label {
+    display: block;
+    margin-bottom: 5px;
+}
+.user_login input[type="text"],
+.user_login input[type="email"],
+.user_login input[type="password"] {
+    display: block;
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #DDD;
+    color: #666;
+}
+
+
+
+

@@ -1,17 +1,22 @@
 $(document).ready(function () {
+    $("#modal_trigger").leanModal({
+        top: 100,
+        overlay: 0.6,
+        closeButton: ".modal_close"
+    });
 
-    $('.form-signin').on('submit', function () {
+    $('.loginForm').on('submit', function () {
         event.preventDefault()
         console.log("hello");
         var name;
-        var $inputs = $('.form-signin :input');
+        var $inputs = $('.loginForm :input');
         var values = {};
         $inputs.each(function () {
             values[this.name] = $(this).val();
 
         });
 
-
+        console.log(values["username"]);
         $.ajax
         ({
             type: "GET",
@@ -33,4 +38,5 @@ $(document).ready(function () {
 
     });
 
-});
+
+})

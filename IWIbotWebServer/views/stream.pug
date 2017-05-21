@@ -3,7 +3,9 @@ extends layout
 block head
     link(rel='stylesheet', href='/stylesheets/style.css')
     script(src="javascripts/bundle.js")
-
+    link(rel='stylesheet', href='/stylesheets/login.css')
+    script(src='./javascripts/jquery.leanModal.min.js')
+    script(src='./javascripts/login.js')
 
 block content
     header.headerCustom
@@ -22,7 +24,7 @@ block content
                         li.active
                             a(href="/") IWIBot
                         li
-                            a(href="/login") Login
+                            a#modal_trigger(href='#modal') Login
                         li
                           a.historyToggle.button(href="#")
                               //button.btn.btn-outline-success.my-2.my-sm-0.hider.button(href="#") History
@@ -42,6 +44,22 @@ block content
                .form-group.form-horizontal
                  input#messageField(type="text" class="form-control" placeholder="Frag mich was...")
                  button.btn-btn-default(type = "submit") Submit
+    #modal.popupContainer(style='display:none;')
+        header.popupHeader
+            span.header_title Login
+            span.modal_close
+                i.fa.fa-times
+        section.popupBody
+            // Username & Password Login form
+            .user_login
+                form.loginForm
+                    label Username
+                    input(type='text' name="username")
+                    br
+                    label Password
+                    input(type='password' name="password")
+                    br
+                    button.btn.btn_red(type='submit') Login
     .history
         div#chat.text-center
             .container
