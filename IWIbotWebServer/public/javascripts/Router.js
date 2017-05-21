@@ -47,7 +47,6 @@ $(document).ready(function () {
                 $("#mainDiv").removeClass("loader");
                 $recordingButton.show();
                 $(".notification").show().text(notificationNumber.toString());
-                //Extract Payload and safe as String
 
                 return tts.tts(result);
             });
