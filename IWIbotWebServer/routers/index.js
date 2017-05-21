@@ -9,17 +9,11 @@ router.get('/', function(req, res, next) {
 router.get('/textInput', function(req, res, next) {
     res.render('textInput', { title: 'IWIBot' });
 });
-router.get('/test', function (req, res, next) {
-   res.render("test", { titke: 'Test'});
-});
 
 router.get('/stream', function(req, res, next) {
     res.render('stream', { title: 'IWIBot' });
 });
 
-router.get('/login', function(req, res, next) {
-    res.render('loginTest', { title: 'IWIBot' });
-});
 
 module.exports = router;
 
