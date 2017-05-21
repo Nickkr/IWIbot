@@ -43,7 +43,7 @@ exports.promise = function () {
 
                     $recordingButton.removeClass("recording").addClass("notRecording").hide();
                     $("#mainDiv").addClass("loader");
-                    var msgSend = '<div class="row msg "><div class="col-lg-5"></div><div class="col-lg-4"><div class="msg-send">' + sttResponse.transcript + '</div></div><div class="col-lg-3"></div></div>';
+                    var msgSend = '<div class="row msg "><div class="col-lg-5"></div><div class="col-lg-4"><div class="msg-send">' + sttResponse + '</div></div><div class="col-lg-3"></div></div>';
                     $(msgSend).appendTo("#chat div.container");
                     resolve(sttResponse);
                 } else {

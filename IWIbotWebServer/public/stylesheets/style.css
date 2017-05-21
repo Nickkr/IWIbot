@@ -38,16 +38,26 @@ a {
 		position: absolute;
 		top: 0;
 		right: 40%;
+
+	}
+	#messageField {
+		/*//width: 180px;*/
 	}
 }
 
 @media (min-width: 900px) {
 	.navbar-search {
-		position: absolute;
 		top: 0;
+		position:absolute;
 		right: 40%;
+
+
 	}
+
+
+
 }
+
 .btn-circle {
 	background-color: #e6e6e6;
 	width: 120px;
@@ -82,14 +92,14 @@ a {
 
 }
 .msg {
-	margin-top: 25px;
+	margin-top: 15px;
 	margin-bottom: 0px;
 }
 .msg-recived {
 	background-color: gainsboro;
 	padding: 10px;
 	border-radius: 20px;
-	margin-bottom: 0px;
+	margin-bottom: 15px;
 	word-wrap: break-word;
 
 
@@ -97,6 +107,8 @@ a {
 .msg-send{
 	background-color: coral;
 	padding: 10px;
+	margin-top: 0px;
+	margin-bottom: 15px;
 	border-radius: 20px;
 	word-wrap: break-word;
 
