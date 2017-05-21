@@ -23,7 +23,7 @@ $(document).ready(function () {
         $(msgSend).appendTo("#chat div.container").hide().fadeIn();
         window.scrollTo(0, document.body.scrollHeight);
         con.con(value).then(function (result) {
-
+            console.log(result);
             valueRecived = JSON.parse(result);
             valueRecived = valueRecived.payload.toString();
             var msgRecived = '<div class="row msg "><div class="col-lg-3"></div><div class="col-lg-4"><div class="msg-recived">' + valueRecived + '</div></div><div class="col-lg-5"></div></div>';
@@ -48,8 +48,7 @@ $(document).ready(function () {
                 $recordingButton.show();
                 $(".notification").show().text(notificationNumber.toString());
                 //Extract Payload and safe as String
-                result = JSON.parse(result);
-                result = result.payload.toString();
+
                 return tts.tts(result);
             });
 

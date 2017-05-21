@@ -8791,7 +8791,7 @@ $(document).ready(function () {
         $(msgSend).appendTo("#chat div.container").hide().fadeIn();
         window.scrollTo(0, document.body.scrollHeight);
         con.con(value).then(function (result) {
-
+            console.log(result);
             valueRecived = JSON.parse(result);
             valueRecived = valueRecived.payload.toString();
             var msgRecived = '<div class="row msg "><div class="col-lg-3"></div><div class="col-lg-4"><div class="msg-recived">' + valueRecived + '</div></div><div class="col-lg-5"></div></div>';
@@ -8816,8 +8816,7 @@ $(document).ready(function () {
                 $recordingButton.show();
                 $(".notification").show().text(notificationNumber.toString());
                 //Extract Payload and safe as String
-                result = JSON.parse(result);
-                result = result.payload.toString();
+
                 return tts.tts(result);
             });
 
@@ -8925,9 +8924,18 @@ exports.promise = function () {
 },{"watson-speech/speech-to-text/recognize-microphone":50}],65:[function(require,module,exports){
 var exports = module.exports = {};
 
-exports.tts = function (text) {
+exports.tts = function (result) {
+    result = JSON.parse(result);
+    text = result.payload.toString();
+    if (typeof result.voice !== "undefined") {
 
-    var msgRecived = '<div class="row msg "><div class="col-lg-3"></div><div class="col-lg-4"><div class="msg-recived">' + text +'</div></div><div class="col-lg-5"></div></div>';
+        voice = result.voice;
+
+    }
+    else {
+        voice = 'de-DE_DieterVoice';
+    }
+    var msgRecived = '<div class="row msg "><div class="col-lg-3"></div><div class="col-lg-4"><div class="msg-recived">' + text + '</div></div><div class="col-lg-5"></div></div>';
     $(msgRecived).appendTo("#chat div.container");
     return new Promise(function (resolve, reject) {
 
@@ -8938,12 +8946,12 @@ exports.tts = function (text) {
                 return response.text();
             }).then(function (token) {
 
-           // var obj = JSON.parse(text);
+            // var obj = JSON.parse(text);
             //console.log(obj);
             var synth = synthesize({
                 text: text,//obj.response.result.payload.toString(),
                 token: token,
-                voice: 'de-DE_DieterVoice'
+                voice: voice
             })
 
         });
