@@ -8639,18 +8639,18 @@ module.exports={
   "_args": [
     [
       {
-        "raw": "websocket@^1.0.24",
+        "raw": "websocket@~1.0.22",
         "scope": null,
         "escapedName": "websocket",
         "name": "websocket",
-        "rawSpec": "^1.0.24",
-        "spec": ">=1.0.24 <2.0.0",
+        "rawSpec": "~1.0.22",
+        "spec": ">=1.0.22 <1.1.0",
         "type": "range"
       },
-      "C:\\Users\\nkreu\\git\\IWIbot\\IWIbotWebServer\\node_modules\\watson-speech"
+      "C:\\Users\\nkreu\\git\\IWIbot\\IWIbotWebServer\\node_modules\\watson-developer-cloud"
     ]
   ],
-  "_from": "websocket@>=1.0.24 <2.0.0",
+  "_from": "websocket@>=1.0.22 <1.1.0",
   "_id": "websocket@1.0.24",
   "_inCache": true,
   "_location": "/websocket",
@@ -8666,22 +8666,23 @@ module.exports={
   "_npmVersion": "3.10.10",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "websocket@^1.0.24",
+    "raw": "websocket@~1.0.22",
     "scope": null,
     "escapedName": "websocket",
     "name": "websocket",
-    "rawSpec": "^1.0.24",
-    "spec": ">=1.0.24 <2.0.0",
+    "rawSpec": "~1.0.22",
+    "spec": ">=1.0.22 <1.1.0",
     "type": "range"
   },
   "_requiredBy": [
+    "/watson-developer-cloud",
     "/watson-speech"
   ],
   "_resolved": "https://registry.npmjs.org/websocket/-/websocket-1.0.24.tgz",
   "_shasum": "74903e75f2545b6b2e1de1425bc1c905917a1890",
   "_shrinkwrap": null,
-  "_spec": "websocket@^1.0.24",
-  "_where": "C:\\Users\\nkreu\\git\\IWIbot\\IWIbotWebServer\\node_modules\\watson-speech",
+  "_spec": "websocket@~1.0.22",
+  "_where": "C:\\Users\\nkreu\\git\\IWIbot\\IWIbotWebServer\\node_modules\\watson-developer-cloud",
   "author": {
     "name": "Brian McKelvey",
     "email": "brian@worlize.com",
@@ -8791,16 +8792,10 @@ $(document).ready(function () {
         var msgSend = '<div class="row msg "><div class="col-lg-5"></div><div class="col-lg-4"><div class="msg-send">' + value + '</div></div><div class="col-lg-3"></div></div>';
         $(msgSend).appendTo("#chat div.container").hide().fadeIn();
         window.scrollTo(0, document.body.scrollHeight);
-        con.con(value).then(function (result) {
-            console.log(result);
-            valueRecived = JSON.parse(result);
-            valueRecived = valueRecived.payload.toString();
-            var msgRecived = '<div class="row msg "><div class="col-lg-3"></div><div class="col-lg-4"><div class="msg-recived">' + valueRecived + '</div></div><div class="col-lg-5"></div></div>';
-            $(msgRecived).appendTo("#chat div.container").hide().fadeIn();
-            window.scrollTo(0, document.body.scrollHeight);
+
+        con.con(value).then();
 
 
-        });
 
     });
 
@@ -8835,7 +8830,17 @@ exports.con = function (param) {
         contentType: "application/json",
         processData: false,
         success: function (data) {
+            var obj = JSON.parse(data);
             console.log("DATA " + data);
+            console.log("HTML: " + obj.htmlText );
+            valueRecived = JSON.parse(data);
+            htmlText = valueRecived.htmlText;
+            valueRecived = valueRecived.payload.toString();
+            var msgRecived = '<div class="row msg "><div class="col-lg-3"></div><div class="col-lg-4"><div class="msg-recived">' + valueRecived + '</div></div><div class="col-lg-5"></div></div>';
+            $(msgRecived).appendTo("#chat div.container").hide().fadeIn();
+            var html = '<div class="row msg "><div class="col-lg-3"></div><div class="col-lg-4"><div class="html-recived">'+ htmlText+ '</div></div><div class="col-lg-5"></div></div>';
+            $(html).appendTo("#chat div.container").hide().fadeIn();
+            window.scrollTo(0, document.body.scrollHeight);
 
         },
         error: function (err) {
@@ -8869,7 +8874,7 @@ exports.promise = function () {
             }).then(function (token) {
             var stream = recognizeMicrophone({
                 token: token,
-                continuous: false,
+                //continuous: false,
                 outputElement: '#sttContent' // CSS selector or DOM Element
             });
 
@@ -8935,8 +8940,7 @@ exports.tts = function (result) {
     else {
         voice = 'de-DE_DieterVoice';
     }
-    var msgRecived = '<div class="row msg "><div class="col-lg-3"></div><div class="col-lg-4"><div class="msg-recived">' + text + '</div></div><div class="col-lg-5"></div></div>';
-    $(msgRecived).appendTo("#chat div.container");
+
     return new Promise(function (resolve, reject) {
 
         var synthesize = require('watson-speech/text-to-speech/synthesize');

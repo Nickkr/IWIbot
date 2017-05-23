@@ -12,7 +12,7 @@ exports.promise = function () {
             }).then(function (token) {
             var stream = recognizeMicrophone({
                 token: token,
-                continuous: false,
+                //continuous: false,
                 outputElement: '#sttContent' // CSS selector or DOM Element
             });
 

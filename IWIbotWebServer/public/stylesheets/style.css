@@ -101,7 +101,7 @@ a {
 	border-radius: 20px;
 	margin-bottom: 15px;
 	word-wrap: break-word;
-
+	text-align: center;
 
 }
 .msg-send{
@@ -111,7 +111,15 @@ a {
 	margin-bottom: 15px;
 	border-radius: 20px;
 	word-wrap: break-word;
+	text-align: center;
 
+}
+.html-recived {
+	background-color: gainsboro;
+	padding: 10px;
+	border-radius: 20px;
+	margin-bottom: 15px;
+	word-wrap: break-word;
 }
 .topDiv {
 	display: block;

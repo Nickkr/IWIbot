@@ -23,7 +23,7 @@ $(document).ready(function () {
 
     $('.loginForm').on('submit', function () {
         event.preventDefault()
-        console.log("hello");
+
         var name;
         var $inputs = $('.loginForm :input');
         var values = {};
@@ -31,7 +31,7 @@ $(document).ready(function () {
             values[this.name] = $(this).val();
 
         });
-
+        $(".loginForm").trigger('reset');
         console.log(values["username"]);
         $.ajax
         ({
