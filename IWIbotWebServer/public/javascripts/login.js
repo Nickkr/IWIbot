@@ -2,6 +2,7 @@ $(document).ready(function () {
 
     var $invalidInput = $(".invalidInput");
 
+    //Close Login-Overlay
     function close_modal() {
         $("#lean_overlay").fadeOut(200);
         $("#modal").css({"display": "none"})
@@ -13,10 +14,11 @@ $(document).ready(function () {
         overlay: 0.6,
         closeButton: ".modal_close"
     });
+    //Set local storage
     function setItem(key, value) {
         localStorage.setItem(key, value);
     }
-
+    //Get local storage
     function getItem(key) {
         return localStorage.getItem(key);
     }
@@ -24,7 +26,6 @@ $(document).ready(function () {
     $('.loginForm').on('submit', function () {
         event.preventDefault()
 
-        var name;
         var $inputs = $('.loginForm :input');
         var values = {};
         $inputs.each(function () {
