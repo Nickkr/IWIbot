@@ -8768,14 +8768,17 @@ module.exports={
 
 },{}],62:[function(require,module,exports){
 $(document).ready(function () {
-    var $recordingButton = $(".btn-circle");
+    //Require Watson Modules
     var stt = require("./speechToText");
     var con = require("./conversation");
     var tts = require("./textToSpeech");
+
+    var $recordingButton = $(".btn-circle");
     var notificationNumber = 0;
     var greeting = "Hallo, ich bin Claudio, dein persönlicher Assistent. Wie kann ich dir helfen?";
     // tts.tts(greeting).then();
 
+    //Onclick toggle between Chat and Voice view
     $(".historyToggle").click(function () {
         notificationNumber = 0;
         $(".notification").hide().text();
@@ -8785,9 +8788,10 @@ $(document).ready(function () {
         window.scrollTo(0, document.body.scrollHeight);
 
     });
-
+    //Form submit in Chat view
     $('#chatForm').submit(function (event) {
         event.preventDefault();
+        //Append submitted message to Chat
         var value = $('#messageField').val().toString();
         var msgSend = '<div class="row msg "><div class="col-lg-5"></div><div class="col-lg-4"><div class="msg-send">' + value + '</div></div><div class="col-lg-3"></div></div>';
         $(msgSend).appendTo("#chat div.container").hide().fadeIn();
@@ -8798,15 +8802,16 @@ $(document).ready(function () {
 
 
     });
-
+    //Recording
     $(document).on('click', '.notRecording', function () {
 
         $recordingButton.removeClass("notRecording").addClass("recording");
         stt.promise().then(function (result) {
+
             return con.con(result);
-        })
-            .then(function (result) {
-                //Add new notification and stop Loader animation
+
+        }).then(function (result) {
+                //Add new notification, stop loader animation and show recording button again
                 notificationNumber++;
                 $("#mainDiv").removeClass("loader");
                 $recordingButton.show();
@@ -8821,8 +8826,12 @@ $(document).ready(function () {
 var exports = module.exports = {};
 
 exports.con = function (param) {
-    console.log("Param :" + param);
+
+    console.log("----------CONVERSATION_started----------");
+    console.log("CONVERSATION_param: " + param);
+
     param = {"transcript": param.toString()};
+
     var options = {
         url: 'https://openwhisk.ng.bluemix.net/api/v1/web/Hochschule_Test/default/RouterV2.http',
         type: 'POST',
@@ -8830,14 +8839,15 @@ exports.con = function (param) {
         contentType: "application/json",
         processData: false,
         success: function (data) {
-            var obj = JSON.parse(data);
-            console.log("DATA " + data);
-            console.log("HTML: " + obj.htmlText);
+
             valueRecived = JSON.parse(data);
+            console.log("CONVERSATION_recivedData: " + data);
+            console.log("CONVERSATION_htmlText: " + data.htmlText);
             htmlText = valueRecived.htmlText;
             valueRecived = valueRecived.payload.toString();
             var msgRecived = '<div class="row msg "><div class="col-lg-3"></div><div class="col-lg-4"><div class="msg-recived">' + valueRecived + '</div></div><div class="col-lg-5"></div></div>';
             $(msgRecived).appendTo("#chat div.container").hide().fadeIn();
+
             if (typeof htmlText !== 'undefined') {
 
                 var html = '<div class="row msg "><div class="col-lg-3"></div><div class="col-lg-4"><div class="html-recived">' + htmlText + '</div></div><div class="col-lg-5"></div></div>';
@@ -8847,7 +8857,8 @@ exports.con = function (param) {
 
         },
         error: function (err) {
-            console.log(err);
+            console.log("CONVERSATION_err: " + err);
+            //remove loader animation and show recording button
             $("#mainDiv").removeClass("loader");
             $(".btn-circle").show();
 
@@ -8866,11 +8877,15 @@ exports.con = function (param) {
 var exports = module.exports = {};
 
 exports.promise = function () {
-    var sttResponse;
-    var $recordingButton = $(".btn-circle");
+    console.log("----------STT_started----------");
+    //Require Watson Module
     var recognizeMicrophone = require('watson-speech/speech-to-text/recognize-microphone');
-    return new Promise(function (resolve, reject) {
 
+    var $recordingButton = $(".btn-circle");
+    var sttResponse;
+
+    return new Promise(function (resolve, reject) {
+        //Get API-Token from server
         fetch('./api/speech-to-text/token')
             .then(function (response) {
                 return response.text();
@@ -8882,35 +8897,40 @@ exports.promise = function () {
             });
 
             stream.on('error', function (err) {
+                //Remove recording animation on error
                 $recordingButton.removeClass("recording").addClass("notRecording");
-                console.log(err);
+                console.log("STT_err: " + err);
             });
             stream.on('data', function (message) {
-                console.log(message);
-                console.log(JSON.stringify(message));
-                console.log(typeof message.results[0] !== "undefined");
+                console.log("STT_streamData: " + JSON.stringify(message));
+                //If Speech To Text service recognized something
                 if (typeof message.results[0] !== "undefined") {
-
+                    //Safe sst response when sentence has ended
                     if (message.results[0].final) {
                         sttResponse = message.results[0].alternatives[0].transcript;
-                        console.log("Messag: " + JSON.stringify(message.results[0].alternatives[0]));
 
                     }
 
                 }
             })
+            //Stop recording
             document.querySelector('.recording').onclick = stream.stop.bind(stream);
 
             stream.on('finish', function () {
-                console.log("Response" + sttResponse);
 
+                console.log("STT_finalResponse: " + sttResponse);
+                //Data recorded
                 if (typeof sttResponse !== "undefined") {
-
+                    //Hide recording button and show loader animation
                     $recordingButton.removeClass("recording").addClass("notRecording").hide();
+
+                    //Append final stt response to chat view
                     $("#mainDiv").addClass("loader");
                     var msgSend = '<div class="row msg "><div class="col-lg-5"></div><div class="col-lg-4"><div class="msg-send">' + sttResponse + '</div></div><div class="col-lg-3"></div></div>';
                     $(msgSend).appendTo("#chat div.container");
+
                     resolve(sttResponse);
+
                 } else {
 
                     $recordingButton.removeClass("recording").addClass("notRecording")
@@ -8933,6 +8953,12 @@ exports.promise = function () {
 var exports = module.exports = {};
 
 exports.tts = function (result) {
+    console.log('----------TTS_started----------');
+    console.log('TTS_params: ' + result);
+    //Require Watson Module
+    var synthesize = require('watson-speech/text-to-speech/synthesize');
+
+    //Get and set voice from json
     result = JSON.parse(result);
     text = result.payload.toString();
     if (typeof result.voice !== "undefined") {
@@ -8946,24 +8972,21 @@ exports.tts = function (result) {
 
     return new Promise(function (resolve, reject) {
 
-        var synthesize = require('watson-speech/text-to-speech/synthesize');
-
+        //Get API-Token from server
         fetch('/api/text-to-speech/token')
             .then(function (response) {
                 return response.text();
             }).then(function (token) {
 
-            // var obj = JSON.parse(text);
-            //console.log(obj);
             var synth = synthesize({
-                text: text,//obj.response.result.payload.toString(),
+                text: text,
                 token: token,
                 voice: voice
             })
 
         });
 
-        resolve(console.log("done"));
+        resolve();
 
 
     });
