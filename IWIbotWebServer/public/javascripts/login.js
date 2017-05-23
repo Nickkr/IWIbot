@@ -24,7 +24,7 @@ $(document).ready(function () {
     }
 
     $('.loginForm').on('submit', function () {
-        event.preventDefault()
+        event.preventDefault();
 
         var $inputs = $('.loginForm :input');
         var values = {};
@@ -58,4 +58,4 @@ $(document).ready(function () {
     });
 
 
-})
+});
