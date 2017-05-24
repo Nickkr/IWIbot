@@ -48,11 +48,15 @@ a {
 @media (min-width: 900px) {
 	.navbar-search {
 		top: 0;
-		position:absolute;
-		right: 40%;
-
-
+		position: absolute;
+		right: 36%;
 	}
+    #messageField {
+
+		width: 300px;
+	}
+
+
 
 
 

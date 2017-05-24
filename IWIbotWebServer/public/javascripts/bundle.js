@@ -8876,6 +8876,8 @@ $(document).ready(function () {
                 close_modal();
                 setItem("username", values["username"]);
                 setItem("password", values["password"]);
+                setItem("courseOfStudies", data.courseOfStudies);
+                console.log("courseOfStudies: " + getItem("courseOfStudies"));
             },
             error: function () {
                 $invalidInput.show();
