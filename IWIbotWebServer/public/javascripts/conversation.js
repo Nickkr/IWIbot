@@ -1,16 +1,17 @@
 var exports = module.exports = {};
 
-exports.con = function (param) {
+exports.con = function (result) {
 
     console.log("----------CONVERSATION_started----------");
-    console.log("CONVERSATION_param: " + param);
+    console.log("CONVERSATION_param: " + result);
 
-    param = {"transcript": param.toString()};
+    result = {"transcript": result.toString()};
+
 
     var options = {
         url: 'https://openwhisk.ng.bluemix.net/api/v1/web/Hochschule_Test/default/RouterV2.http',
         type: 'POST',
-        data: JSON.stringify(param),
+        data: JSON.stringify(result),
         contentType: "application/json",
         processData: false,
         success: function (data) {
@@ -32,7 +33,7 @@ exports.con = function (param) {
 
         },
         error: function (err) {
-            console.log("CONVERSATION_err: " + err);
+            console.log("CONVERSATION_err: " + JSON.stringify(err));
             //remove loader animation and show recording button
             $("#mainDiv").removeClass("loader");
             $(".btn-circle").show();

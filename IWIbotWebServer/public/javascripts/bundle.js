@@ -8773,6 +8773,7 @@ $(document).ready(function () {
     var con = require("./conversation");
     var tts = require("./textToSpeech");
 
+
     var $recordingButton = $(".btn-circle");
     var notificationNumber = 0;
     var greeting = "Hallo, ich bin Claudio, dein persönlicher Assistent. Wie kann ich dir helfen?";
@@ -8821,21 +8822,86 @@ $(document).ready(function () {
             });
 
     });
+
+    //-------------Login-------------------
+    var $invalidInput = $(".invalidInput");
+
+    //Close Login-Overlay
+    function close_modal() {
+        $("#lean_overlay").fadeOut(200);
+        $("#modal").css({"display": "none"})
+
+    }
+
+    $("#modal_trigger").leanModal({
+        top: 100,
+        overlay: 0.6,
+        closeButton: ".modal_close"
+    });
+    //Set local storage
+    function setItem(key, value) {
+        localStorage.setItem(key, value);
+    }
+    //Get local storage
+    function getItem(key) {
+        return localStorage.getItem(key);
+    }
+
+    $('.loginForm').on('submit', function () {
+        event.preventDefault();
+
+        var $inputs = $('.loginForm :input');
+        var values = {};
+        $inputs.each(function () {
+            values[this.name] = $(this).val();
+
+        });
+        $(".loginForm").trigger('reset');
+
+        $.ajax
+        ({
+            type: "GET",
+            //url: "https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/credential/validate",
+            url: "https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/credential/info",
+            async: false,
+            headers: {
+                "Authorization": "Basic " + btoa(values["username"] + ":" + values["password"])
+            },
+            success: function (data) {
+                console.log(data);
+                firstName = {payload: "Hallo " + data.firstName + ", du hast dich erfolgreich eingeloggt"};
+                firstName = JSON.stringify(firstName);
+                tts.tts(firstName).then;
+                $invalidInput.hide();
+                close_modal();
+                setItem("username", values["username"]);
+                setItem("password", values["password"]);
+            },
+            error: function () {
+                $invalidInput.show();
+            }
+
+        });
+
+
+    });
+
 });
 },{"./conversation":63,"./speechToText":64,"./textToSpeech":65}],63:[function(require,module,exports){
 var exports = module.exports = {};
 
-exports.con = function (param) {
+exports.con = function (result) {
 
     console.log("----------CONVERSATION_started----------");
-    console.log("CONVERSATION_param: " + param);
+    console.log("CONVERSATION_param: " + result);
 
-    param = {"transcript": param.toString()};
+    result = {"transcript": result.toString()};
+
 
     var options = {
         url: 'https://openwhisk.ng.bluemix.net/api/v1/web/Hochschule_Test/default/RouterV2.http',
         type: 'POST',
-        data: JSON.stringify(param),
+        data: JSON.stringify(result),
         contentType: "application/json",
         processData: false,
         success: function (data) {
@@ -8857,7 +8923,7 @@ exports.con = function (param) {
 
         },
         error: function (err) {
-            console.log("CONVERSATION_err: " + err);
+            console.log("CONVERSATION_err: " + JSON.stringify(err));
             //remove loader animation and show recording button
             $("#mainDiv").removeClass("loader");
             $(".btn-circle").show();

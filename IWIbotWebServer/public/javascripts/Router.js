@@ -4,6 +4,7 @@ $(document).ready(function () {
     var con = require("./conversation");
     var tts = require("./textToSpeech");
 
+
     var $recordingButton = $(".btn-circle");
     var notificationNumber = 0;
     var greeting = "Hallo, ich bin Claudio, dein persönlicher Assistent. Wie kann ich dir helfen?";
@@ -52,4 +53,68 @@ $(document).ready(function () {
             });
 
     });
+
+    //-------------Login-------------------
+    var $invalidInput = $(".invalidInput");
+
+    //Close Login-Overlay
+    function close_modal() {
+        $("#lean_overlay").fadeOut(200);
+        $("#modal").css({"display": "none"})
+
+    }
+
+    $("#modal_trigger").leanModal({
+        top: 100,
+        overlay: 0.6,
+        closeButton: ".modal_close"
+    });
+    //Set local storage
+    function setItem(key, value) {
+        localStorage.setItem(key, value);
+    }
+    //Get local storage
+    function getItem(key) {
+        return localStorage.getItem(key);
+    }
+
+    $('.loginForm').on('submit', function () {
+        event.preventDefault();
+
+        var $inputs = $('.loginForm :input');
+        var values = {};
+        $inputs.each(function () {
+            values[this.name] = $(this).val();
+
+        });
+        $(".loginForm").trigger('reset');
+
+        $.ajax
+        ({
+            type: "GET",
+            //url: "https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/credential/validate",
+            url: "https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/credential/info",
+            async: false,
+            headers: {
+                "Authorization": "Basic " + btoa(values["username"] + ":" + values["password"])
+            },
+            success: function (data) {
+                console.log(data);
+                firstName = {payload: "Hallo " + data.firstName + ", du hast dich erfolgreich eingeloggt"};
+                firstName = JSON.stringify(firstName);
+                tts.tts(firstName).then;
+                $invalidInput.hide();
+                close_modal();
+                setItem("username", values["username"]);
+                setItem("password", values["password"]);
+            },
+            error: function () {
+                $invalidInput.show();
+            }
+
+        });
+
+
+    });
+
 });
