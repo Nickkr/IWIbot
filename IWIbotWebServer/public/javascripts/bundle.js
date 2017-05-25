@@ -8887,6 +8887,12 @@ $(document).ready(function () {
 
 
     });
+    //Hide collapsed navbar when link is clicked
+    $(document).on('click','.navbar-collapse.in',function(e) {
+        if( $(e.target).is('a') ) {
+            $(this).collapse('hide');
+        }
+    });
 
 });
 },{"./conversation":63,"./speechToText":64,"./textToSpeech":65}],63:[function(require,module,exports){
