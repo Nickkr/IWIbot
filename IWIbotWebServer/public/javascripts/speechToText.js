@@ -36,7 +36,7 @@ exports.promise = function () {
                     }
 
                 }
-            })
+            });
             //Stop recording
             document.querySelector('.recording').onclick = stream.stop.bind(stream);
 
@@ -57,18 +57,18 @@ exports.promise = function () {
 
                 } else {
 
-                    $recordingButton.removeClass("recording").addClass("notRecording")
+                    $recordingButton.removeClass("recording").addClass("notRecording");
                     reject();
 
 
                 }
 
 
-            })
+            });
 
 
         }).catch(function (error) {
             console.log(error);
         });
     });
-}
+};

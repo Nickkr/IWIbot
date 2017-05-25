@@ -20,6 +20,7 @@ $(document).ready(function () {
         window.scrollTo(0, document.body.scrollHeight);
 
     });
+
     //Form submit in Chat view
     $('#chatForm').submit(function (event) {
         event.preventDefault();
@@ -60,8 +61,7 @@ $(document).ready(function () {
     //Close Login-Overlay
     function close_modal() {
         $("#lean_overlay").fadeOut(200);
-        $("#modal").css({"display": "none"})
-
+        $("#modal").css({"display": "none"});
     }
 
     $("#modal_trigger").leanModal({
@@ -89,24 +89,23 @@ $(document).ready(function () {
         });
         $(".loginForm").trigger('reset');
 
-        $.ajax
-        ({
+        $.ajax({
             type: "GET",
             //url: "https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/credential/validate",
             url: "https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/credential/info",
             async: false,
             headers: {
-                "Authorization": "Basic " + btoa(values["username"] + ":" + values["password"])
+                "Authorization": "Basic " + btoa(values.username + ":" + values.password)
             },
             success: function (data) {
                 console.log(data);
                 firstName = {payload: "Hallo " + data.firstName + ", du hast dich erfolgreich eingeloggt"};
                 firstName = JSON.stringify(firstName);
-                tts.tts(firstName).then;
+                //tts.tts(firstName).then;
                 $invalidInput.hide();
                 close_modal();
-                setItem("username", values["username"]);
-                setItem("password", values["password"]);
+                setItem("username", values.username);
+                setItem("password", values.password);
                 setItem("courseOfStudies", data.courseOfStudies);
                 console.log("courseOfStudies: " + getItem("courseOfStudies"));
             },
@@ -115,8 +114,6 @@ $(document).ready(function () {
             }
 
         });
-
-
     });
 
 });

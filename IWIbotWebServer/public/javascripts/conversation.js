@@ -40,7 +40,7 @@ exports.con = function (result) {
 
 
         }
-    }
+    };
     return new Promise(function (resolve, reject) {
 
         resolve($.ajax(options));
@@ -48,4 +48,4 @@ exports.con = function (result) {
     });
 
 
-}
+};

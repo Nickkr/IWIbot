@@ -30,14 +30,9 @@ exports.tts = function (result) {
                 text: text,
                 token: token,
                 voice: voice
-            })
+            });
 
         });
-
         resolve();
-
-
     });
-
-
-}
+};
