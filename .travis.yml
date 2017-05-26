@@ -4,6 +4,7 @@ node_js:
 before_script:
   - cd IWIbotWebServer
   - npm install
+  - npm install source-map
   - npm test
   
   
