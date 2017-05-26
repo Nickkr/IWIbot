@@ -5,8 +5,9 @@ exports.con = function (result) {
     console.log("----------CONVERSATION_started----------");
     console.log("CONVERSATION_param: " + result);
 
-    result = {"transcript": result.toString()};
-
+    result = {"transcript": result.toString(),
+             "courseOfStudies": localStorage.getItem("courseOfStudies") ,
+             "semester": localStorage.getItem("semester") };
 
     var options = {
         url: 'https://openwhisk.ng.bluemix.net/api/v1/web/Hochschule_Test/default/RouterV2.http',
