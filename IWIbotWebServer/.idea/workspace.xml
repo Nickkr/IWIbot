@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d6dfda1-0bfd-4834-bf05-85262164f729" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/bundle.min.js" afterPath="$PROJECT_DIR$/public/javascripts/bundle.min.js" />
-    </list>
+    <list default="true" id="1d6dfda1-0bfd-4834-bf05-85262164f729" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -897,7 +895,7 @@
       <workItem from="1495586535111" duration="2538000" />
       <workItem from="1495721277896" duration="977000" />
       <workItem from="1495791303084" duration="181000" />
-      <workItem from="1495791512857" duration="3625000" />
+      <workItem from="1495791512857" duration="4183000" />
     </task>
     <task id="LOCAL-00002" summary="updated to new design with working sst">
       <created>1493167221257</created>
@@ -1246,7 +1244,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="208315000" />
+    <option name="totallyTimeSpent" value="208873000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
