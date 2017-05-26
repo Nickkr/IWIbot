@@ -7,9 +7,10 @@
     "test": "grunt"
   },
   "description": "IWIbotWebServer",
-  "author": {
-    "name": "Hen"
-  },
+  "authors": [
+    {"name": "Hen"},
+    {"name": "Armin Kunkel"}
+  ],
   "dependencies": {
     "body-parser": "^1.17.2",
     "browserify": "^14.3.0",

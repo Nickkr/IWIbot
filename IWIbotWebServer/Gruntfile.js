@@ -38,7 +38,7 @@ module.exports = function(grunt) {
                     "jQuery": true,
                     "require": true,
                     "__dirname": true,
-                    "module": true,
+                    "module": true
                 },
                 "reporterOutput": "" // This is to ommit bug!
             }
@@ -48,10 +48,15 @@ module.exports = function(grunt) {
         // After that every change on a file matching the patterns used bellow
         // will execute the corresponding task
         watch: {
-            test: {
+            unittest: {
                 files: '<%= nodeunit.files %>',
                 tasks: ['nodeunit']
-            }/*,
+            },
+            linting: {
+                files: '<%= jshint.files %>',
+                tasks: ['jshint']
+            }
+            /*,
             uglify: {
                 files: '<%= uglify.build.src %>',
                 tasks: ['uglify']
