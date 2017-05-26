@@ -87,7 +87,7 @@ $(document).ready(function () {
             values[this.name] = $(this).val();
         });
 
-        if(values.semester ===  0) {
+        if(values.semester ===  "0") {
 
            $noSemesterSelected.show();
 
