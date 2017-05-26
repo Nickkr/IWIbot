@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "node ./public/javascripts/www",
     "test": "grunt"
   },
   "description": "IWIbotWebServer",
@@ -31,6 +31,5 @@
     "grunt-contrib-nodeunit": "~1.0.0",
     "grunt-contrib-uglify": "~3.0.1",
     "grunt-contrib-watch": "^1.0.0"
-
   }
 }

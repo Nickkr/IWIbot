@@ -1,1 +1,6 @@
-IWIbotWebServer/node_modules
+# CloudFoundryIgnore these directorys...
+launchConfigurations/
+.idea/
+node_modules/
+
+# .. and these files

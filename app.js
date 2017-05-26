@@ -12,7 +12,6 @@
     var index = require('./routers/index');
     var users = require('./routers/users');
 
-
     var app = express();
 
     // view engine setup

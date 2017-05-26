@@ -1,10 +1,10 @@
 var request = require('request');
-var url = 'https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/canteen/2/2017-04-27'
-function main() {
+var url = 'https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/canteen/2/2017-04-27';
 
-var promise = new Promise(function(resolve, reject) {
+function main() {
+    return new Promise(function(resolve, reject) {
         request({
-            url: url,
+            url: url
         }, function (error, response, body) {
             if (!error && response.statusCode === 200) {
                 var j = JSON.parse(body);
@@ -22,6 +22,4 @@ var promise = new Promise(function(resolve, reject) {
             }
         });
     });
-
-    return promise;
 }
