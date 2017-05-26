@@ -46,11 +46,23 @@ block content
             .user_login
                 form.loginForm
                     div.invalidInput Username or Password wrong!
+                    div.noSemesterSelected Please select a Semester!
                     label Username
                     input(type='text' name="username")
                     br
                     label Password
                     input(type='password' name="password")
+                    br
+                    label Semester
+                        select#selectSemester(name="semester")
+                            option(value="0") Semester wählen...
+                            option(value="1") 1. Semester
+                            option(value="2") 2. Semester
+                            option(value="3") 3. Semester
+                            option(value="4") 4. Semester
+                            option(value="5") 5. Semester
+                            option(value="6") 6. Semester
+                            option(value="7") 7. Semester
                     br
                     button.btn.btn_red(type='submit') Login
     //Chat history start!

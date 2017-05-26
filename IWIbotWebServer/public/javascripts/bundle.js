@@ -8789,6 +8789,7 @@ $(document).ready(function () {
         window.scrollTo(0, document.body.scrollHeight);
 
     });
+
     //Form submit in Chat view
     $('#chatForm').submit(function (event) {
         event.preventDefault();
@@ -8825,12 +8826,11 @@ $(document).ready(function () {
 
     //-------------Login-------------------
     var $invalidInput = $(".invalidInput");
-
+    var $noSemesterSelected = $(".noSemesterSelected");
     //Close Login-Overlay
     function close_modal() {
         $("#lean_overlay").fadeOut(200);
-        $("#modal").css({"display": "none"})
-
+        $("#modal").css({"display": "none"});
     }
 
     $("#modal_trigger").leanModal({
@@ -8854,38 +8854,45 @@ $(document).ready(function () {
         var values = {};
         $inputs.each(function () {
             values[this.name] = $(this).val();
-
-        });
-        $(".loginForm").trigger('reset');
-
-        $.ajax
-        ({
-            type: "GET",
-            //url: "https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/credential/validate",
-            url: "https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/credential/info",
-            async: false,
-            headers: {
-                "Authorization": "Basic " + btoa(values["username"] + ":" + values["password"])
-            },
-            success: function (data) {
-                console.log(data);
-                firstName = {payload: "Hallo " + data.firstName + ", du hast dich erfolgreich eingeloggt"};
-                firstName = JSON.stringify(firstName);
-                tts.tts(firstName).then;
-                $invalidInput.hide();
-                close_modal();
-                setItem("username", values["username"]);
-                setItem("password", values["password"]);
-                setItem("courseOfStudies", data.courseOfStudies);
-                console.log("courseOfStudies: " + getItem("courseOfStudies"));
-            },
-            error: function () {
-                $invalidInput.show();
-            }
-
         });
 
+        if(values.semester == 0) {
 
+           $noSemesterSelected.show();
+
+        } else {
+            $(".loginForm").trigger('reset');
+
+            $.ajax({
+                type: "GET",
+                //url: "https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/credential/validate",
+                url: "https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/credential/info",
+                async: false,
+                headers: {
+                    "Authorization": "Basic " + btoa(values.username + ":" + values.password)
+                },
+                success: function (data) {
+                    console.log(data);
+                    firstName = {payload: "Hallo " + data.firstName + ", du hast dich erfolgreich eingeloggt"};
+                    firstName = JSON.stringify(firstName);
+                    //tts.tts(firstName).then;
+                    $invalidInput.hide();
+                    $noSemesterSelected.hide();
+                    close_modal();
+                    setItem("username", values.username);
+                    setItem("password", values.password);
+                    setItem("semester", values.semester);
+                    setItem("courseOfStudies", data.courseOfStudies);
+                    console.log("courseOfStudies: " + getItem("courseOfStudies"));
+                    console.log("Semester: " + getItem("semester"));
+                },
+                error: function () {
+                    $noSemesterSelected.hide();
+                    $invalidInput.show();
+                }
+
+            });
+        }
     });
     //Hide collapsed navbar when link is clicked
     $(document).on('click','.navbar-collapse.in',function(e) {
@@ -8938,7 +8945,7 @@ exports.con = function (result) {
 
 
         }
-    }
+    };
     return new Promise(function (resolve, reject) {
 
         resolve($.ajax(options));
@@ -8946,7 +8953,7 @@ exports.con = function (result) {
     });
 
 
-}
+};
 },{}],64:[function(require,module,exports){
 var exports = module.exports = {};
 
@@ -8986,7 +8993,7 @@ exports.promise = function () {
                     }
 
                 }
-            })
+            });
             //Stop recording
             document.querySelector('.recording').onclick = stream.stop.bind(stream);
 
@@ -9007,21 +9014,21 @@ exports.promise = function () {
 
                 } else {
 
-                    $recordingButton.removeClass("recording").addClass("notRecording")
+                    $recordingButton.removeClass("recording").addClass("notRecording");
                     reject();
 
 
                 }
 
 
-            })
+            });
 
 
         }).catch(function (error) {
             console.log(error);
         });
     });
-}
+};
 
 },{"watson-speech/speech-to-text/recognize-microphone":50}],65:[function(require,module,exports){
 var exports = module.exports = {};
@@ -9056,16 +9063,11 @@ exports.tts = function (result) {
                 text: text,
                 token: token,
                 voice: voice
-            })
+            });
 
         });
-
         resolve();
-
-
     });
-
-
-}
+};
 
 },{"watson-speech/text-to-speech/synthesize":57}]},{},[62]);

@@ -63,6 +63,14 @@
     display: none;
 
 }
+.noSemesterSelected {
+
+    text-align: center;
+    color: red;
+    padding-bottom: 5px;
+    display: none;
+
+}
 
 .popupBody {
     padding: 20px;
@@ -81,9 +89,10 @@
 
 .user_login input[type="text"],
 .user_login input[type="email"],
+.user_login select,
 .user_login input[type="password"] {
     display: block;
-    width: 90%;
+    width: 100%;
     padding: 10px;
     border: 1px solid #DDD;
     color: #666;
