@@ -1,2 +1,0 @@
-C:\Users\Hen\Documents\Visual Studio 2017\Projects\IWIbot\IWIbotWebServer\obj\Debug\IWIbotWebServer.njsprojResolveAssemblyReference.cache
-C:\Users\Hen\Documents\Visual Studio 2017\Projects\IWIbot\IWIbotWebServer\bin\Microsoft.NodejsTools.WebRole.dll
