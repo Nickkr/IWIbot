@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d6dfda1-0bfd-4834-bf05-85262164f729" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
@@ -895,7 +894,7 @@
       <workItem from="1495586535111" duration="2538000" />
       <workItem from="1495721277896" duration="977000" />
       <workItem from="1495791303084" duration="181000" />
-      <workItem from="1495791512857" duration="570000" />
+      <workItem from="1495791512857" duration="581000" />
     </task>
     <task id="LOCAL-00001" summary="updated to new design with working sst">
       <created>1493166415316</created>
@@ -1219,11 +1218,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495791951635</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="added .trais.yml">
+      <created>1495792089947</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1495792089947</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="205260000" />
+    <option name="totallyTimeSpent" value="205271000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1361,7 +1367,8 @@
     <MESSAGE value="login integrated into router" />
     <MESSAGE value="added function to hide collapsed navbar when link got clicked" />
     <MESSAGE value="added trais.yml" />
-    <option name="LAST_COMMIT_MESSAGE" value="added trais.yml" />
+    <MESSAGE value="added .trais.yml" />
+    <option name="LAST_COMMIT_MESSAGE" value="added .trais.yml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
