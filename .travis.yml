@@ -4,7 +4,6 @@ node_js:
 before_script:
   - cd IWIbotWebServer
   - npm install
-  - npm install grunt-cli -g
   - npm test
   
   
