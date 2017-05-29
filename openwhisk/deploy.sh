@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source local.env
+
 COMMAND=$1
 
 if [ "$1" = "" ]; then
