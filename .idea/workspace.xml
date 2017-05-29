@@ -1,352 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/public/stylesheets/style.css" line="30" mnemonic="7" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="fa9c346b-b6ee-4f6d-a45a-f1262ef53c1d" name="Default" comment="Projekt aufgeräumt">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.vs/IWIbot/v15/.suo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.vs/ProjectSettings.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.vs/VSWorkspaceState.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.vs/slnx.sqlite" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/.cfignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/.idea/codeStyleSettings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/.project" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/.vs/IWIbotWebServer/v15/.suo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/IWIbotWebServer.njsproj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/IWIbotWebServer.sln" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/License.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/.bin/JSONStream" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/.bin/JSONStream.cmd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/.bin/acorn" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/.bin/acorn.cmd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/JSONStream/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/JSONStream/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/JSONStream/LICENSE.APACHE2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/JSONStream/LICENSE.MIT" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/JSONStream/examples/all_docs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/JSONStream/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/JSONStream/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/JSONStream/readme.markdown" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/JSONStream/test/bool.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/JSONStream/test/browser.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/JSONStream/test/destroy_missing.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/JSONStream/test/disabled/doubledot1.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/JSONStream/test/disabled/doubledot2.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/JSONStream/test/empty.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/JSONStream/test/fixtures/all_npm.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/JSONStream/test/fixtures/depth.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/JSONStream/test/fn.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/JSONStream/test/gen.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/JSONStream/test/issues.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/JSONStream/test/map.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/JSONStream/test/multiple_objects.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/JSONStream/test/multiple_objects_error.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/JSONStream/test/null.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/JSONStream/test/parsejson.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/JSONStream/test/stringify.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/JSONStream/test/stringify_object.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/JSONStream/test/test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/JSONStream/test/test2.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/JSONStream/test/two-ways.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/acorn/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/acorn/AUTHORS" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/acorn/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/acorn/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/acorn/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/acorn/bin/acorn" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/acorn/dist/.keep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/acorn/dist/acorn.es.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/acorn/dist/acorn.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/acorn/dist/acorn_loose.es.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/acorn/dist/acorn_loose.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/acorn/dist/walk.es.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/acorn/dist/walk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/acorn/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/acorn/src/bin/acorn.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/acorn/src/expression.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/acorn/src/identifier.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/acorn/src/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/acorn/src/location.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/acorn/src/locutil.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/acorn/src/loose/expression.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/acorn/src/loose/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/acorn/src/loose/parseutil.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/acorn/src/loose/state.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/acorn/src/loose/statement.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/acorn/src/loose/tokenize.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/acorn/src/lval.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/acorn/src/node.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/acorn/src/options.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/acorn/src/parseutil.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/acorn/src/state.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/acorn/src/statement.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/acorn/src/tokencontext.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/acorn/src/tokenize.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/acorn/src/tokentype.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/acorn/src/util.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/acorn/src/walk/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/acorn/src/whitespace.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/core-util-is/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/core-util-is/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/core-util-is/float.patch" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/core-util-is/lib/util.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/core-util-is/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/core-util-is/test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/function-bind/.eslintrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/function-bind/.jscs.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/function-bind/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/function-bind/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/function-bind/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/function-bind/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/function-bind/implementation.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/function-bind/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/function-bind/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/function-bind/test/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/has/.jshintrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/has/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/has/LICENSE-MIT" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/has/README.mkd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/has/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/has/src/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/has/test/.jshintrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/has/test/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/inherits/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/inherits/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/inherits/inherits.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/inherits/inherits_browser.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/inherits/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/is-buffer/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/is-buffer/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/is-buffer/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/is-buffer/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/is-buffer/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/is-buffer/test/basic.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/isarray/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/isarray/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/isarray/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/isarray/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/isarray/component.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/isarray/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/isarray/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/isarray/test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/json-stable-stringify/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/json-stable-stringify/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/json-stable-stringify/example/key_cmp.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/json-stable-stringify/example/nested.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/json-stable-stringify/example/str.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/json-stable-stringify/example/value_cmp.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/json-stable-stringify/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/json-stable-stringify/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/json-stable-stringify/readme.markdown" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/json-stable-stringify/test/cmp.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/json-stable-stringify/test/nested.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/json-stable-stringify/test/str.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/jsonify/README.markdown" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/jsonify/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/jsonify/lib/parse.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/jsonify/lib/stringify.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/jsonify/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/jsonify/test/parse.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/jsonify/test/stringify.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/jsonparse/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/jsonparse/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/jsonparse/README.markdown" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/jsonparse/bench.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/jsonparse/examples/twitterfeed.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/jsonparse/jsonparse.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/jsonparse/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/jsonparse/samplejson/basic.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/jsonparse/samplejson/basic2.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/jsonparse/test/big-token.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/jsonparse/test/boundary.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/jsonparse/test/offset.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/jsonparse/test/primitives.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/jsonparse/test/surrogate.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/jsonparse/test/unvalid.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/jsonparse/test/utf8.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/path-parse/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/path-parse/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/path-parse/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/path-parse/index.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/path-parse/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/path-parse/test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/path-parse/test.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/process-nextick-args/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/process-nextick-args/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/process-nextick-args/license.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/process-nextick-args/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/process-nextick-args/readme.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/process-nextick-args/test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/punycode/LICENSE-MIT.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/punycode/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/punycode/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/punycode/punycode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/readable-stream/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/readable-stream/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/readable-stream/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/readable-stream/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/readable-stream/doc/wg-meetings/2015-01-30.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/readable-stream/duplex.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/readable-stream/lib/_stream_duplex.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/readable-stream/lib/_stream_passthrough.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/readable-stream/lib/_stream_readable.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/readable-stream/lib/_stream_transform.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/readable-stream/lib/_stream_writable.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/readable-stream/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/readable-stream/passthrough.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/readable-stream/readable.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/readable-stream/transform.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/readable-stream/writable.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/.eslintignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/.eslintrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/appveyor.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/example/async.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/example/sync.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/lib/async.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/lib/caller.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/lib/core.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/lib/core.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/lib/node-modules-paths.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/lib/sync.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/readme.markdown" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/core.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/dotdot.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/dotdot/abc/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/dotdot/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/faulty_basedir.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/filter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/filter_sync.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/mock.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/mock_sync.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/module_dir.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/module_dir/xmodules/aaa/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/module_dir/ymodules/aaa/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/module_dir/zmodules/bbb/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/module_dir/zmodules/bbb/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/node-modules-paths.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/node_path.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/node_path/x/aaa/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/node_path/x/ccc/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/node_path/y/bbb/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/node_path/y/ccc/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/nonstring.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/pathfilter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/pathfilter/deep_ref/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/precedence.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/precedence/aaa.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/precedence/aaa/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/precedence/aaa/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/precedence/bbb.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/precedence/bbb/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/resolver.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/resolver/baz/doom.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/resolver/baz/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/resolver/baz/quux.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/resolver/cup.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/resolver/foo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/resolver/incorrect_main/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/resolver/incorrect_main/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/resolver/mug.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/resolver/mug.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/resolver/other_path/lib/other-lib.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/resolver/other_path/root.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/resolver/quux/foo/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/resolver/same_names/foo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/resolver/same_names/foo/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/resolver/without_basedir/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/resolver_sync.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/resolve/test/subdirs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/safe-buffer/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/safe-buffer/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/safe-buffer/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/safe-buffer/browser.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/safe-buffer/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/safe-buffer/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/safe-buffer/test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/source-map/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/source-map/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/string_decoder/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/string_decoder/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/string_decoder/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/string_decoder/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/string_decoder/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/through/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/through/LICENSE.APACHE2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/through/LICENSE.MIT" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/through/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/through/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/through/readme.markdown" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/through/test/async.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/through/test/auto-destroy.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/through/test/buffering.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/through/test/end.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/through/test/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/util-deprecate/History.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/util-deprecate/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/util-deprecate/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/util-deprecate/browser.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/util-deprecate/node.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/util-deprecate/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/xtend/.jshintrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/xtend/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/xtend/LICENCE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/xtend/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/xtend/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/xtend/immutable.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/xtend/mutable.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/xtend/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/node_modules/xtend/test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/nodejshelloworld.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/obj/Debug/CoreCompileInputs.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/obj/Debug/IWIbotWebServer.njsproj.FileListAbsolute.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IWIbotWebServer/obj/Debug/IWIbotWebServer.njsprojResolveAssemblyReference.cache" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/IWIbotWebServer/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/IWIbotWebServer/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/IWIbotWebServer/Web.Debug.config" afterPath="$PROJECT_DIR$/Web.Debug.config" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/IWIbotWebServer/Web.config" afterPath="$PROJECT_DIR$/Web.config" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/IWIbotWebServer/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/IWIbotWebServer/bin/ChangeConfig.ps1" afterPath="$PROJECT_DIR$/bin/ChangeConfig.ps1" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/IWIbotWebServer/bin/Microsoft.NodejsTools.WebRole.dll" afterPath="$PROJECT_DIR$/bin/Microsoft.NodejsTools.WebRole.dll" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/IWIbotWebServer/bin/download.ps1" afterPath="$PROJECT_DIR$/bin/download.ps1" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/IWIbotWebServer/bin/node.cmd" afterPath="$PROJECT_DIR$/bin/node.cmd" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/IWIbotWebServer/bin/setup_web.cmd" afterPath="$PROJECT_DIR$/bin/setup_web.cmd" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/IWIbotWebServer/bin/www" afterPath="$PROJECT_DIR$/bin/www" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/IWIbotWebServer/manifest.yml" afterPath="$PROJECT_DIR$/manifest.yml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/IWIbotWebServer/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/IWIbotWebServer/public/javascripts/Router.js" afterPath="$PROJECT_DIR$/public/javascripts/Router.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/IWIbotWebServer/public/javascripts/bundle.js" afterPath="$PROJECT_DIR$/public/javascripts/bundle.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/IWIbotWebServer/public/javascripts/bundle.min.js" afterPath="$PROJECT_DIR$/public/javascripts/bundle.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/IWIbotWebServer/public/javascripts/conversation.js" afterPath="$PROJECT_DIR$/public/javascripts/conversation.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/IWIbotWebServer/public/javascripts/jquery.leanModal.min.js" afterPath="$PROJECT_DIR$/public/javascripts/jquery.leanModal.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/IWIbotWebServer/public/javascripts/speechToText.js" afterPath="$PROJECT_DIR$/public/javascripts/speechToText.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/IWIbotWebServer/public/javascripts/tests/test.js" afterPath="$PROJECT_DIR$/public/javascripts/tests/test.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/IWIbotWebServer/public/javascripts/textToSpeech.js" afterPath="$PROJECT_DIR$/public/javascripts/textToSpeech.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/IWIbotWebServer/public/stylesheets/login.css" afterPath="$PROJECT_DIR$/public/stylesheets/login.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/IWIbotWebServer/public/stylesheets/style.css" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/IWIbotWebServer/routers/index.js" afterPath="$PROJECT_DIR$/routers/index.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/IWIbotWebServer/routers/users.js" afterPath="$PROJECT_DIR$/routers/users.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/IWIbotWebServer/stt-token.js" afterPath="$PROJECT_DIR$/stt-token.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/IWIbotWebServer/tts-token.js" afterPath="$PROJECT_DIR$/tts-token.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/IWIbotWebServer/views/error.pug" afterPath="$PROJECT_DIR$/views/error.pug" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/IWIbotWebServer/views/index.pug" afterPath="$PROJECT_DIR$/views/index.pug" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/IWIbotWebServer/views/layout.pug" afterPath="$PROJECT_DIR$/views/layout.pug" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/IWIbotWebServer/views/stream.pug" afterPath="$PROJECT_DIR$/views/stream.pug" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/IWIbotWebServer/views/textInput.pug" afterPath="$PROJECT_DIR$/views/textInput.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.cfignore" afterPath="$PROJECT_DIR$/.cfignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openwhisk/test-travis.sh" afterPath="$PROJECT_DIR$/openwhisk/test-travis.sh" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -362,8 +23,8 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="deploy.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/openwhisk/deploy.sh">
+      <file leaf-file-name="test.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/tests/test.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -372,21 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.js">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IWIbot.launch" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/launchConfigurations/IWIbot.launch">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="798">
+              <caret line="38" column="17" lean-forward="false" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -395,28 +46,84 @@
       <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="89">
+              <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tts-token.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tts-token.js">
+      <file leaf-file-name="Gruntfile.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gruntfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="22" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1496069588488" expanded="true" signature="91:2790" ph="{...}" />
+                <marker date="1496069588488" expanded="true" signature="145:1624" ph="{...}" />
+                <marker date="1496069588488" expanded="true" signature="605:1624" ph="{...}" />
+                <marker date="1496069588488" expanded="true" signature="1032:1624" ph="{&quot;latedef&quot;: &quot;nofunc&quot;...}" />
+                <marker date="1496069588488" expanded="true" signature="1439:1624" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stt-token.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/stt-token.js">
+      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="126">
+              <caret line="6" column="11" lean-forward="false" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="deploy.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/openwhisk/deploy.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="11" column="19" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_deploy.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/openwhisk/test_deploy.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="309">
+              <caret line="42" column="29" lean-forward="false" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test-travis.sh" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/openwhisk/test-travis.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="36" column="1" lean-forward="false" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stream.pug" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/stream.pug">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -437,6 +144,16 @@
       <list>
         <option value="$PROJECT_DIR$/IWIbotWebServer/app.js" />
         <option value="$PROJECT_DIR$/.cfignore" />
+        <option value="$PROJECT_DIR$/stt-token.js" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/openwhisk/speechToText.js" />
+        <option value="$PROJECT_DIR$/views/stream.pug" />
+        <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
+        <option value="$PROJECT_DIR$/openwhisk/test_deploy.sh" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
+        <option value="$PROJECT_DIR$/openwhisk/test-travis.sh" />
       </list>
     </option>
   </component>
@@ -446,12 +163,16 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1616" />
-    <option name="height" value="876" />
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -467,7 +188,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -480,25 +200,158 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IWIbot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IWIbot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="openwhisk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_interpreter_path" value="c:/program files/nodejs/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="GO_FMT" value="false" />
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Armin\Dropbox\Programmieren\Studium\IWIbot" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.travis.yml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Gruntfile.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/openwhisk/HsKaApi.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/openwhisk/speechToText.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/package.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/javascripts/tests/test.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/routers/index.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/routers/users.js</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -512,8 +365,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.app.js">
-    <configuration default="false" name="app.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="$PROJECT_DIR$/app.js" working-dir="$PROJECT_DIR$/IWIbotWebServer">
+  <component name="RunManager" selected="Node.js.www">
+    <configuration default="false" name="www" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="$PROJECT_DIR$/public/javascripts/www" working-dir="$PROJECT_DIR$">
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -662,7 +515,7 @@
     </configuration>
     <configuration default="true" type="BashConfigurationType" factoryName="Bash">
       <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="INTERPRETER_PATH" value="C:\Program Files\Git\usr\bin\bash.exe" />
+      <option name="INTERPRETER_PATH" value="c:\windows\system32\bash.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SCRIPT_NAME" value="" />
@@ -691,26 +544,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="IWIbot" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="TARGET" value="" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
       <method />
     </configuration>
     <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
@@ -760,26 +593,6 @@
       </option>
       <option name="moduleName" value="" />
       <option name="trusted" value="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
-      <module name="" />
-      <working_directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <method />
-    </configuration>
-    <configuration default="true" type="GoRunFileConfiguration" factoryName="Go Single File">
-      <module name="" />
-      <working_directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <method />
-    </configuration>
-    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
-      <module name="" />
-      <working_directory value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <kind value="DIRECTORY" />
       <method />
     </configuration>
     <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
@@ -849,6 +662,13 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
     <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
       <config-file value="" />
       <node-interpreter value="project" />
@@ -884,52 +704,6 @@
       <method />
     </configuration>
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
-      <method />
-    </configuration>
-    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="IWIbot" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="ADDITIONAL_ARGS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="IWIbot" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="ADDITIONAL_ARGS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="IWIbot" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -974,19 +748,6 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="Tox" factoryName="Tox">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <module name="IWIbot" />
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -1022,122 +783,12 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <configuration default="true" type="tests" factoryName="Attests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="IWIbot" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Doctests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="IWIbot" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Nosetests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="IWIbot" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="IWIbot" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="py.test">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="IWIbot" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="testToRun" value="" />
-      <option name="keywords" value="" />
-      <option name="params" value="" />
-      <option name="USE_PARAM" value="false" />
-      <option name="USE_KEYWORD" value="false" />
-      <method />
-    </configuration>
     <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Node.js.app.js" />
+      <item index="0" class="java.lang.String" itemvalue="Node.js.www" />
     </list>
     <recent_temporary>
       <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.app.js" />
+        <item index="0" class="java.lang.String" itemvalue="Node.js.www" />
       </list>
     </recent_temporary>
   </component>
@@ -1154,33 +805,48 @@
       <workItem from="1492959686679" duration="133000" />
       <workItem from="1495832219772" duration="461000" />
       <workItem from="1495833602861" duration="274000" />
+      <workItem from="1495837025569" duration="18000" />
+      <workItem from="1495837061036" duration="1109000" />
+      <workItem from="1495838204943" duration="277000" />
+      <workItem from="1495879152182" duration="1563000" />
+      <workItem from="1495923304209" duration="1318000" />
+      <workItem from="1495970279775" duration="6712000" />
+      <workItem from="1496052514701" duration="3917000" />
+      <workItem from="1496058194666" duration="4466000" />
+      <workItem from="1496068948137" duration="1073000" />
     </task>
+    <task id="LOCAL-00001" summary="added travis test script">
+      <created>1496069857768</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1496069857768</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="868000" />
+    <option name="totallyTimeSpent" value="21321000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="false" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286908" sideWeight="0.4974293" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32729805" sideWeight="0.50771207" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32729805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3272933" sideWeight="0.52255636" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32729805" sideWeight="0.4922879" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3272933" sideWeight="0.4774436" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.4935553" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32729805" sideWeight="0.4974293" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3272933" sideWeight="0.47368422" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25642672" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29162192" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1191,7 +857,9 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32729805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286908" sideWeight="0.4974293" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1204,7 +872,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Projekt aufgeräumt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Projekt aufgeräumt" />
+    <MESSAGE value="added travis test script" />
+    <option name="LAST_COMMIT_MESSAGE" value="added travis test script" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1215,15 +884,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
+        <state relative-caret-position="252">
           <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1231,7 +898,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tts-token.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="22" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stt-token.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1239,7 +926,69 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/launchConfigurations/IWIbot.launch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tts-token.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="22" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stt-token.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/openwhisk/deploy.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/launchConfigurations/IWIbot.launch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/openwhisk/deploy.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1247,33 +996,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/IWIbotWebServer/.project" />
-    <entry file="file://$PROJECT_DIR$/openwhisk/deploy.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/openwhisk/test.js" />
     <entry file="file://$PROJECT_DIR$/IWIbotWebServer/.project" />
-    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml" />
     <entry file="file://$PROJECT_DIR$/.cfignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1282,34 +1015,39 @@
     <entry file="file://$PROJECT_DIR$/IWIbotWebServer/nodejshelloworld.iml" />
     <entry file="file://$PROJECT_DIR$/obj/Debug/CoreCompileInputs.cache" />
     <entry file="file://$PROJECT_DIR$/obj/Debug/IWIbotWebServer.njsproj.FileListAbsolute.txt" />
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/launchConfigurations/IWIbot.launch">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manifest.yml">
+    <entry file="file://$PROJECT_DIR$/License.txt" />
+    <entry file="file://$PROJECT_DIR$/tts-token.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="126">
+          <caret line="6" column="22" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/License.txt">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/www">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1318,23 +1056,41 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/manifest.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tts-token.js">
+    <entry file="file://$PROJECT_DIR$/Web.config">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="22" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web.Debug.config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/openwhisk/HsKaApi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/openwhisk/speechToText.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1342,6 +1098,92 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/tests/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Bild1.png" />
+    <entry file="file://$PROJECT_DIR$/views/stream.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="38" column="17" lean-forward="false" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/openwhisk/deploy.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="19" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1496069588488" expanded="true" signature="91:2790" ph="{...}" />
+            <marker date="1496069588488" expanded="true" signature="145:1624" ph="{...}" />
+            <marker date="1496069588488" expanded="true" signature="605:1624" ph="{...}" />
+            <marker date="1496069588488" expanded="true" signature="1032:1624" ph="{&quot;latedef&quot;: &quot;nofunc&quot;...}" />
+            <marker date="1496069588488" expanded="true" signature="1439:1624" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="11" lean-forward="false" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/openwhisk/test_deploy.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="42" column="29" lean-forward="false" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/openwhisk/test-travis.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="36" column="1" lean-forward="false" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
           <folding />
         </state>
       </provider>

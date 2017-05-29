@@ -33,8 +33,8 @@ touch local.env #Configurations defined in travis-ci console
 echo "Deploying wsk actions, etc."
 ./test_deploy.sh --install
 
-echo "Find and set Fibonacci API URL"
-export FIBONACCI_API_URL=`wsk api-experimental list | tail -1 | awk '{print $4}'`
+#echo "Find and set Fibonacci API URL"
+#export FIBONACCI_API_URL=`wsk api-experimental list | tail -1 | awk '{print $4}'`
 
 echo "Tests"
 
