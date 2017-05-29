@@ -1,11 +1,13 @@
 language: node_js
+sudo: true
 node_js:
   - "0.10"
 notifications:
   email: false
+provider: script
 script:
     - cd openwhisk
-    - sudo bash test-travis.sh
+    - ./test-travis.sh
     - cd ..
     - npm test
 
