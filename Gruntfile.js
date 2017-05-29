@@ -73,17 +73,6 @@ module.exports = function(grunt) {
                 files: '<%= uglify.build.src %>',
                 tasks: ['uglify']
             }*/
-        },
-
-        // Here you can execute javascripts
-        // ~~~!!!It's just a template!!!~~~
-        execute: {
-            target: {
-                options: {
-                    args: ['update']
-                },
-                src: ['public/javascripts/Router.js']
-            }
         }
     });
 
@@ -92,7 +81,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-nodeunit'); // Unittest engine?
     grunt.loadNpmTasks('grunt-contrib-uglify'); // Minifier
     grunt.loadNpmTasks('grunt-contrib-watch'); //
-    grunt.loadNpmTasks('grunt-execute'); // Plugin to execute Javascript
 
     // Default task.
     grunt.registerTask('default', ['nodeunit','jshint']);

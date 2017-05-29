@@ -1,3 +1,9 @@
+language: bash
+sudo: true
+
+script:
+  - echo "Haaaallllllllllllllllllllooooooooooooooooooooooooooooooooooo"
+
 language: node_js
 node_js:
   - "0.10"

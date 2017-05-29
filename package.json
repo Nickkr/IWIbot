@@ -34,8 +34,6 @@
     "grunt-contrib-nodeunit": "~1.0.0",
     "grunt-contrib-uglify": "~3.0.1",
     "grunt-contrib-watch": "^1.0.0",
-    "grunt-execute": "^0.2.2",
-    "grunt-sh": "^0.1.4",
     "source-map": "^0.5.6"
   }
 }
