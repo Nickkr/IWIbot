@@ -27,11 +27,10 @@ module.exports = {
         });
     },
     'Integrationtest 3' : function(test) {
-        test.expect(2);
+        test.expect(1);
         request({url: jokeUrl}, function (error, response, body) {
             body = JSON.parse(body);
-            test.equal(body.timetables[0].entries[0].lectureName, 'IT-Service-Management');
-            test.equal(response.statusCode,200);
+            test.equal(body.type, 'success');
             test.done();
         });
     }
