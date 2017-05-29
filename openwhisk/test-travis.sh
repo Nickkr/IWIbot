@@ -37,7 +37,7 @@ touch local.env #Configurations defined in travis-ci console
 
 echo "Deploying wsk actions, etc."
 wsk action list
-sudo bash deploy.sh --install
+./test_deploy.sh --install
 
 #echo "Find and set Fibonacci API URL"
 #export FIBONACCI_API_URL=`wsk api-experimental list | tail -1 | awk '{print $4}'`
@@ -47,4 +47,4 @@ echo "Tests"
 
 
 echo "Uninstalling wsk actions, etc."
-sudo bash deploy.sh --uninstall
+./test_deploy.sh --uninstall
