@@ -31,14 +31,23 @@ module.exports = function(grunt) {
                     '!public/javascripts/bundle.min.js'],
             options: {
                 "curly": true,
-                "eqnull": true,
                 "eqeqeq": true,
-                "undef": false,
+                "immed": true,
+                "latedef": "nofunc",
+                "newcap": true,
+                "noarg": true,
+                "sub": true,
+                "undef": true,
+                "unused": true,
+                "boss": true,
+                "eqnull": true,
+                "node": true,
                 "globals": {
                     "jQuery": true,
                     "require": true,
                     "__dirname": true,
-                    "module": true
+                    "module": true,
+                    "Promise": true
                 },
                 "reporterOutput": "" // This is to ommit bug!
             }
@@ -61,15 +70,27 @@ module.exports = function(grunt) {
                 files: '<%= uglify.build.src %>',
                 tasks: ['uglify']
             }*/
+        },
+
+        // Here you can execute javascripts
+        // ~~~!!!It's just a template!!!~~~
+        execute: {
+            target: {
+                options: {
+                    args: ['update']
+                },
+                src: ['public/javascripts/Router.js']
+            }
         }
     });
 
     // These plugins provide necessary tasks.
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-nodeunit');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-jshint'); // Linter
+    grunt.loadNpmTasks('grunt-contrib-nodeunit'); // Unittest engine?
+    grunt.loadNpmTasks('grunt-contrib-uglify'); // Minifier
+    grunt.loadNpmTasks('grunt-contrib-watch'); //
+    grunt.loadNpmTasks('grunt-execute'); // Plugin to execute Javascript
 
     // Default task.
-    grunt.registerTask('default', ['jshint', 'nodeunit', 'uglify']);
+    grunt.registerTask('default', ['jshint', 'nodeunit']);
 };
