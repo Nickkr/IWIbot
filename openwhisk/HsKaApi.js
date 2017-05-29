@@ -1,7 +1,7 @@
 var request = require('request');
-var url = 'https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/canteen/2/2017-04-27';
+var url = 'https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/canteen/2/2017-05-29';
 
-function main() {
+function main() { // jshint ignore:line
     return new Promise(function(resolve, reject) {
         request({
             url: url

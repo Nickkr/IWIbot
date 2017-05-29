@@ -47,7 +47,10 @@ module.exports = function(grunt) {
                     "require": true,
                     "__dirname": true,
                     "module": true,
-                    "Promise": true
+                    "Promise": true,
+                    "window": true,
+                    "document": true,
+                    "localStorage": true
                 },
                 "reporterOutput": "" // This is to ommit bug!
             }
@@ -92,5 +95,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-execute'); // Plugin to execute Javascript
 
     // Default task.
-    grunt.registerTask('default', ['jshint', 'nodeunit']);
+    grunt.registerTask('default', ['nodeunit','jshint']);
 };
