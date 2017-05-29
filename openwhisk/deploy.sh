@@ -18,7 +18,7 @@ if [ "$COMMAND" = "--install" ]; then
     echo "Initiating deploy sequence..."
     SAVEIFS=$IFS
     IFS=$(echo -en "\n\b")
-    for file in *; do
+    for file in *.js; do
       wsk action create ${file/.js/} $file --web true;
     done
     IFS=$SAVEIFS
@@ -28,7 +28,7 @@ elif [ "$COMMAND" = "--uninstall" ]; then
     echo "Initiating delete sequence..."
     SAVEIFS=$IFS
     IFS=$(echo -en "\n\b")
-    for file in *; do
+    for file in *.js; do
       wsk action delete ${file/.js/};
     done
     IFS=$SAVEIFS
@@ -38,7 +38,7 @@ elif [ "$COMMAND" = "--update" ]; then
     echo "Initiating update sequence..."
     SAVEIFS=$IFS
     IFS=$(echo -en "\n\b")
-    for file in *; do
+    for file in *.js; do
       wsk action update ${file/.js/} $file --web true;
     done
     IFS=$SAVEIFS
