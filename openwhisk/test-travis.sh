@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 ##############################################################################
-set -e
+set -x
 
 #OPEN_WHISK_BIN=/home/ubuntu/bin
 #LINK=https://openwhisk.ng.bluemix.net/cli/go/download/linux/amd64/wsk
