@@ -1,14 +1,10 @@
-language: bash
-sudo: true
-
-script:
-  - echo "Haaaallllllllllllllllllllooooooooooooooooooooooooooooooooooo"
-
 language: node_js
 node_js:
   - "0.10"
 notifications:
   email: false
+script:
+    - echo "Haaaallllllllllllllllllllooooooooooooooooooooooooooooooooooo"
 #before_script:
   #- npm install
   #- npm install source-map
