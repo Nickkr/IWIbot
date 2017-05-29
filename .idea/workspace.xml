@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fa9c346b-b6ee-4f6d-a45a-f1262ef53c1d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openwhisk/test-travis.sh" afterPath="$PROJECT_DIR$/openwhisk/test-travis.sh" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,7 +46,17 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+              <folding>
+                <marker date="1496086679952" expanded="true" signature="145:2452" ph="{...}" />
+                <marker date="1496086679952" expanded="true" signature="605:1876" ph="{...}" />
+                <marker date="1496086679952" expanded="true" signature="1032:1866" ph="{&quot;latedef&quot;: &quot;nofunc&quot;...}" />
+                <marker date="1496086679952" expanded="true" signature="1439:1789" ph="{...}" />
+                <marker date="1496086679952" expanded="true" signature="1887:2041" ph="//..." />
+                <marker date="1496086679952" expanded="true" signature="2057:2446" ph="{...}" />
+                <marker date="1496086679952" expanded="true" signature="2081:2180" ph="{&quot;files&quot;: '&lt;%= nodeunit.files %&gt;'...}" />
+                <marker date="1496086679952" expanded="true" signature="2203:2298" ph="{&quot;files&quot;: '&lt;%= jshint.files %&gt;'...}" />
+                <marker date="1496086679952" expanded="true" signature="2311:2436" ph="/*...*/" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -259,7 +267,7 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/javascripts/tests/test.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Gruntfile.js</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -816,7 +824,7 @@
       <workItem from="1496052514701" duration="3917000" />
       <workItem from="1496058194666" duration="4466000" />
       <workItem from="1496068948137" duration="3464000" />
-      <workItem from="1496082111103" duration="4189000" />
+      <workItem from="1496082111103" duration="4255000" />
     </task>
     <task id="LOCAL-00001" summary="added travis test script">
       <created>1496069857768</created>
@@ -930,15 +938,21 @@
       <option name="project" value="LOCAL" />
       <updated>1496085177117</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Projekt aufgeräumt">
+      <created>1496086631307</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1496086631307</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27901000" />
+    <option name="totallyTimeSpent" value="27967000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -948,7 +962,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3272933" sideWeight="0.52470464" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3272933" sideWeight="0.4752954" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3272933" sideWeight="0.4752954" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.4935553" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3272933" sideWeight="0.47368422" order="0" side_tool="false" content_ui="tabs" />
@@ -1241,7 +1255,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1496086679952" expanded="true" signature="145:2452" ph="{...}" />
+            <marker date="1496086679952" expanded="true" signature="605:1876" ph="{...}" />
+            <marker date="1496086679952" expanded="true" signature="1032:1866" ph="{&quot;latedef&quot;: &quot;nofunc&quot;...}" />
+            <marker date="1496086679952" expanded="true" signature="1439:1789" ph="{...}" />
+            <marker date="1496086679952" expanded="true" signature="1887:2041" ph="//..." />
+            <marker date="1496086679952" expanded="true" signature="2057:2446" ph="{...}" />
+            <marker date="1496086679952" expanded="true" signature="2081:2180" ph="{&quot;files&quot;: '&lt;%= nodeunit.files %&gt;'...}" />
+            <marker date="1496086679952" expanded="true" signature="2203:2298" ph="{&quot;files&quot;: '&lt;%= jshint.files %&gt;'...}" />
+            <marker date="1496086679952" expanded="true" signature="2311:2436" ph="/*...*/" />
+          </folding>
         </state>
       </provider>
     </entry>
