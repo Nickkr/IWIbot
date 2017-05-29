@@ -5,6 +5,7 @@ notifications:
   email: false
 script:
     - echo "Haaaallllllllllllllllllllooooooooooooooooooooooooooooooooooo"
+    - npm test
 #before_script:
   #- npm install
   #- npm install source-map
