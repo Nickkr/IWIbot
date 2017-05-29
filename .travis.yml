@@ -4,8 +4,9 @@ node_js:
 notifications:
   email: false
 script:
-    - echo "Haaaallllllllllllllllllllooooooooooooooooooooooooooooooooooo"
+    - ./openwhisk/test-travis.sh
     - npm test
+
 #before_script:
   #- npm install
   #- npm install source-map
