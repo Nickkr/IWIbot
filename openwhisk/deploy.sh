@@ -19,7 +19,8 @@ if [ "$COMMAND" = "--install" ]; then
     SAVEIFS=$IFS
     IFS=$(echo -en "\n\b")
     for file in *.js; do
-      wsk action create ${file/.js/} $file --web true;
+      wsk
+      #wsk action create ${file/.js/} $file --web true;
     done
     IFS=$SAVEIFS
     echo "Deployment is done"
@@ -29,7 +30,8 @@ elif [ "$COMMAND" = "--uninstall" ]; then
     SAVEIFS=$IFS
     IFS=$(echo -en "\n\b")
     for file in *.js; do
-      wsk action delete ${file/.js/};
+      wsk
+      #wsk action delete ${file/.js/};
     done
     IFS=$SAVEIFS
     echo "Deployment is done"
@@ -39,7 +41,7 @@ elif [ "$COMMAND" = "--update" ]; then
     SAVEIFS=$IFS
     IFS=$(echo -en "\n\b")
     for file in *.js; do
-      wsk action update ${file/.js/} $file --web true;
+      #wsk action update ${file/.js/} $file --web true;
     done
     IFS=$SAVEIFS
     echo "Deployment is done"
