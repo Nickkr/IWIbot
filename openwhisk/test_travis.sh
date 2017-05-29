@@ -36,7 +36,7 @@ echo "Configure local.env"
 touch local.env #Configurations defined in travis-ci console
 
 echo "Deploying wsk actions, etc."
-wsk action list
+
 ./test_deploy.sh --install
 
 #echo "Find and set Fibonacci API URL"

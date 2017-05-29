@@ -7,9 +7,9 @@ notifications:
 provider: script
 script:
     - cd openwhisk
-    - chmod +x ./test-travis.sh
+    - chmod +x ./test_travis.sh
     - chmod +x ./test_deploy.sh
-    - ./test-travis.sh
+    - ./test_travis.sh
     - cd ..
     - npm test
 
