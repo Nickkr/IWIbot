@@ -50,7 +50,8 @@ module.exports = function(grunt) {
                     "Promise": true,
                     "window": true,
                     "document": true,
-                    "localStorage": true
+                    "localStorage": true,
+                    "$": true
                 },
                 "reporterOutput": "" // This is to ommit bug!
             }
