@@ -8,7 +8,8 @@ exports.tts = function (result) {
 
     //Get and set voice from json
     result = JSON.parse(result);
-    text = result.payload.toString();
+    var text = result.payload.toString();
+    var voice;
     if (typeof result.voice !== "undefined") {
 
         voice = result.voice;
@@ -18,7 +19,7 @@ exports.tts = function (result) {
         voice = 'de-DE_DieterVoice';
     }
 
-    return new Promise(function (resolve, reject) {
+    return new Promise(function (resolve) {
 
         //Get API-Token from server
         fetch('/api/text-to-speech/token')
@@ -26,7 +27,7 @@ exports.tts = function (result) {
                 return response.text();
             }).then(function (token) {
 
-            var synth = synthesize({
+            synthesize({
                 text: text,
                 token: token,
                 voice: voice

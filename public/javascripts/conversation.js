@@ -17,10 +17,10 @@ exports.con = function (result) {
         processData: false,
         success: function (data) {
 
-            valueRecived = JSON.parse(data);
+            var valueRecived = JSON.parse(data);
             console.log("CONVERSATION_recivedData: " + data);
             console.log("CONVERSATION_htmlText: " + data.htmlText);
-            htmlText = valueRecived.htmlText;
+            var htmlText = valueRecived.htmlText;
             valueRecived = valueRecived.payload.toString();
             var msgRecived = '<div class="row msg "><div class="col-lg-3"></div><div class="col-lg-4"><div class="msg-recived">' + valueRecived + '</div></div><div class="col-lg-5"></div></div>';
             $(msgRecived).appendTo("#chat div.container").hide().fadeIn();
@@ -42,7 +42,7 @@ exports.con = function (result) {
 
         }
     };
-    return new Promise(function (resolve, reject) {
+    return new Promise(function (resolve) {
 
         resolve($.ajax(options));
 

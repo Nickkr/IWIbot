@@ -51,7 +51,10 @@ module.exports = function(grunt) {
                     "window": true,
                     "document": true,
                     "localStorage": true,
-                    "$": true
+                    "$": true,
+                    "event": true,
+                    "btoa": true,
+                    "fetch": true
                 },
                 "reporterOutput": "" // This is to ommit bug!
             }

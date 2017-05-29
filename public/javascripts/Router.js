@@ -7,7 +7,7 @@ $(document).ready(function () {
 
     var $recordingButton = $(".btn-circle");
     var notificationNumber = 0;
-    var greeting = "Hallo, ich bin Claudio, dein persönlicher Assistent. Wie kann ich dir helfen?";
+    //var greeting = "Hallo, ich bin Claudio, dein persönlicher Assistent. Wie kann ich dir helfen?";
     // tts.tts(greeting).then();
 
     //Onclick toggle between Chat and Voice view
@@ -104,8 +104,8 @@ $(document).ready(function () {
                 },
                 success: function (data) {
                     console.log(data);
-                    firstName = {payload: "Hallo " + data.firstName + ", du hast dich erfolgreich eingeloggt"};
-                    firstName = JSON.stringify(firstName);
+                    //var firstName = {payload: "Hallo " + data.firstName + ", du hast dich erfolgreich eingeloggt"};
+                    //firstName = JSON.stringify(firstName);
                     //tts.tts(firstName).then;
                     $invalidInput.hide();
                     $noSemesterSelected.hide();
