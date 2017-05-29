@@ -16,13 +16,18 @@
 ##############################################################################
 set -e
 
-OPEN_WHISK_BIN=/home/ubuntu/bin
-LINK=https://openwhisk.ng.bluemix.net/cli/go/download/linux/amd64/wsk
+#OPEN_WHISK_BIN=/home/ubuntu/bin
+#LINK=https://openwhisk.ng.bluemix.net/cli/go/download/linux/amd64/wsk
 
 echo "Downloading OpenWhisk CLI from '$LINK'...\n"
-curl -O $LINK
-chmod u+x wsk
-export PATH=$PATH:`pwd`
+#curl -O $LINK
+#chmod u+x wsk
+#export PATH=$PATH:`pwd`
+# Get the OpenWhisk CLI
+mkdir ~/wsk
+curl https://openwhisk.ng.bluemix.net/cli/go/download/linux/amd64/wsk > ~/wsk/wsk
+chmod +x ~/wsk/wsk
+export PATH=$PATH:~/wsk
 
 echo "Configuring CLI from apihost and API key\n"
 wsk property set --apihost openwhisk.ng.bluemix.net --auth $OPEN_WHISK_KEY > /dev/null 2>&1
