@@ -30,13 +30,14 @@ chmod +x ~/wsk/wsk
 export PATH=$PATH:~/wsk
 
 echo "Configuring CLI from apihost and API key\n"
-wsk property set --apihost openwhisk.ng.bluemix.net --auth $OPEN_WHISK_KEY > /dev/null 2>&1
+wsk property set --apihost openwhisk.ng.bluemix.net --auth c94e0a14-5339-4cff-a194-0fedac6775b9:ROiJqIpMfl4VWQlFAEmSyu2l5yKxoT6vJSgWEax2opAmKY2mfc8s9uPC1lN9oOCy > /dev/null 2>&1
 
 echo "Configure local.env"
 touch local.env #Configurations defined in travis-ci console
 
 echo "Deploying wsk actions, etc."
-sudo bash deploy.sh --install
+wsk action list
+bash deploy.sh --install
 
 #echo "Find and set Fibonacci API URL"
 #export FIBONACCI_API_URL=`wsk api-experimental list | tail -1 | awk '{print $4}'`
@@ -46,4 +47,4 @@ echo "Tests"
 
 
 echo "Uninstalling wsk actions, etc."
-sudo bash deploy.sh --uninstall
+bash deploy.sh --uninstall
