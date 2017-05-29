@@ -1,4 +1,4 @@
-$(document).ready(function () {
+ $(document).ready(function () {
     //Require Watson Modules
     var stt = require("./speechToText");
     var con = require("./conversation");
