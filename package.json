@@ -23,6 +23,7 @@
     "express": "^4.15.3",
     "morgan": "^1.8.2",
     "pug": "^2.0.0-rc.1",
+    "request": "^2.81.0",
     "serve-favicon": "^2.4.3",
     "watson-developer-cloud": "^2.32.1",
     "watson-speech": "^0.33.0"
