@@ -41,6 +41,7 @@ elif [ "$COMMAND" = "--update" ]; then
     SAVEIFS=$IFS
     IFS=$(echo -en "\n\b")
     for file in *.js; do
+      wsk
       #wsk action update ${file/.js/} $file --web true;
     done
     IFS=$SAVEIFS
