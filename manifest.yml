@@ -5,4 +5,4 @@ applications:
   name: IWIbotWebServer
   host: IWIbotWebServer
   disk_quota: 1024M
-
+  domain: mybluemix.net
