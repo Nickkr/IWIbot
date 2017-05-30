@@ -97,7 +97,27 @@
     border: 1px solid #DDD;
     color: #666;
 }
+.user_register input[type="checkbox"] {
+    float: left;
+    margin-right: 20px;
 
+}
+
+.user_register input[type="checkbox"]+label {
+    float: left;
+}
+
+.user_register .checkbox {
+    position: absolute;
+    margin-bottom: 10px;
+    clear: both;
+    overflow: hidden;
+
+}
+.checkbox input[type="checkbox"] {
+
+    margin-left: 0;
+}
 
 
 

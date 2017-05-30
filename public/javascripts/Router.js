@@ -1,4 +1,4 @@
- $(document).ready(function () {
+$(document).ready(function () {
     //Require Watson Modules
     var stt = require("./speechToText");
     var con = require("./conversation");
@@ -33,7 +33,6 @@
         con.con(value).then();
 
 
-
     });
     //Recording
     $(document).on('click', '.notRecording', function () {
@@ -44,14 +43,14 @@
             return con.con(result);
 
         }).then(function (result) {
-                //Add new notification, stop loader animation and show recording button again
-                notificationNumber++;
-                $("#mainDiv").removeClass("loader");
-                $recordingButton.show();
-                $(".notification").show().text(notificationNumber.toString());
+            //Add new notification, stop loader animation and show recording button again
+            notificationNumber++;
+            $("#mainDiv").removeClass("loader");
+            $recordingButton.show();
+            $(".notification").show().text(notificationNumber.toString());
 
-                return tts.tts(result);
-            });
+            return tts.tts(result);
+        });
 
     });
 
@@ -73,11 +72,13 @@
     function setItem(key, value) {
         localStorage.setItem(key, value);
     }
+
     //Get local storage
     function getItem(key) {
         return localStorage.getItem(key);
     }
 
+    //Login Form
     $('.loginForm').on('submit', function () {
         event.preventDefault();
 
@@ -85,11 +86,12 @@
         var values = {};
         $inputs.each(function () {
             values[this.name] = $(this).val();
+            console.log(values[this.name]);
         });
 
-        if(values.semester ===  "0") {
+        if (values.semester === "0") {
 
-           $noSemesterSelected.show();
+            $noSemesterSelected.show();
 
         } else {
             $(".loginForm").trigger('reset');
@@ -110,13 +112,21 @@
                     $invalidInput.hide();
                     $noSemesterSelected.hide();
                     close_modal();
+
                     setItem("username", values.username);
                     setItem("password", values.password);
                     setItem("semester", values.semester);
                     setItem("courseOfStudies", data.courseOfStudies);
                     console.log("courseOfStudies: " + getItem("courseOfStudies"));
                     console.log("Semester: " + getItem("semester"));
-                },
+
+
+                   /* sessionStorage.setItem("semester", values.semester);
+                    sessionStorage.setItem("courseOfStudies", data.courseOfStudies);
+                    console.log("Session storage");*/
+
+                }
+                ,
                 error: function () {
                     $noSemesterSelected.hide();
                     $invalidInput.show();
@@ -126,8 +136,8 @@
         }
     });
     //Hide collapsed navbar when link is clicked
-    $(document).on('click','.navbar-collapse.in',function(e) {
-        if( $(e.target).is('a') ) {
+    $(document).on('click', '.navbar-collapse.in', function (e) {
+        if ($(e.target).is('a')) {
             $(this).collapse('hide');
         }
     });
