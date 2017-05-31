@@ -2,7 +2,7 @@
  * Created by Armin on 25.05.2017.
  */
 var request = require('request');
-var canteenUrl = 'https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/canteen/2/2017-05-29';
+var canteenUrl = 'https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/canteen/2/2017-06-01';
 var timetableUrl = 'https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/timetable/INFB/0/5?format=json';
 var jokeUrl = 'http://api.icndb.com/jokes/random';
 

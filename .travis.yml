@@ -9,7 +9,6 @@ script:
     - chmod +x ./travis_test.sh
     - chmod +x ./deploy_test.sh
     - ./travis_test.sh
-    - npm test
 deploy:
     provider: bluemixcloudfoundry
     skip_cleanup: true

@@ -17,10 +17,6 @@
 # Load configuration variables
 source local.env
 
-
-
-
-
 function usage() {
   echo -e "Usage: $0 [--install,--uninstall,--env]"
 }
@@ -33,7 +29,7 @@ function install() {
   # preserve dev deps
   mv node_modules .mod
   # install only prod deps
-  npm install --only=production
+  npm install --production
   # zip all but skip the dev deps
   zip -rq action.zip package.json lib node_modules
   # delete prod deps
@@ -50,7 +46,7 @@ function install() {
   # preserve dev deps
   mv node_modules .mod
   # install only prod deps
-  npm install --only=production
+  npm install --production
   # zip all but skip the dev deps
   zip -rq action.zip package.json lib node_modules
   # delete prod deps
@@ -67,7 +63,7 @@ function install() {
   # preserve dev deps
   mv node_modules .mod
   # install only prod deps
-  npm install --only=production
+  npm install --production
   # zip all but skip the dev deps
   zip -rq action.zip package.json lib node_modules
   # delete prod deps
@@ -84,7 +80,7 @@ function install() {
   # preserve dev deps
   mv node_modules .mod
   # install only prod deps
-  npm install --only=production
+  npm install --production
   # zip all but skip the dev deps
   zip -rq action.zip package.json lib node_modules
   # delete prod deps
