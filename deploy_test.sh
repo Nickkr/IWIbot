@@ -17,6 +17,10 @@
 # Load configuration variables
 source local.env
 
+
+
+
+
 function usage() {
   echo -e "Usage: $0 [--install,--uninstall,--env]"
 }
