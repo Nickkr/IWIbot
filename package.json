@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./public/javascripts/www",
-    "test": "grunt"
+    "test": "grunt",
+    "browserify": "browserify ./public/javascripts/Router.js -o ./public/javascripts/bundle.js"
   },
   "description": "IWIbotWebServer",
   "authors": [

@@ -8894,8 +8894,7 @@ $(document).ready(function () {
                     sessionStorage.setItem("courseOfStudies", data.courseOfStudies);
                     console.log("Session storage");*/
 
-                }
-                ,
+                },
                 error: function () {
                     $noSemesterSelected.hide();
                     $invalidInput.show();

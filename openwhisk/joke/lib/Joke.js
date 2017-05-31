@@ -1,16 +1,21 @@
+var url = "http://api.icndb.com/jokes/random";
 var request = require('request');
-var url = 'https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/canteen/2/2017-05-29';
 
-function main() { // jshint ignore:line
-    return new Promise(function(resolve, reject) {
+function main(params) {
+
+    var promise = new Promise(function (resolve, reject) {
+
         request({
-            url: url
+            url: url,
         }, function (error, response, body) {
+
             if (!error && response.statusCode === 200) {
-                var j = JSON.parse(body);
-                console.log(j.name);
-                resolve(j);
-            } else {
+                body = JSON.parse(body);
+                var joke = {"payload": body.value.joke, "voice": "en-US_MichaelVoice"};
+                resolve(joke);
+            }
+
+            else {
                 console.log('http status code:', (response || {}).statusCode);
                 console.log('error:', error);
                 console.log('body:', body);
@@ -22,4 +27,7 @@ function main() { // jshint ignore:line
             }
         });
     });
+
+    return promise;
 }
+exports.main = main;

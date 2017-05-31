@@ -16,18 +16,13 @@
 ##############################################################################
 set -x
 
-#OPEN_WHISK_BIN=/home/ubuntu/bin
-#LINK=https://openwhisk.ng.bluemix.net/cli/go/download/linux/amd64/wsk
+OPEN_WHISK_BIN=/home/ubuntu/bin
+LINK=https://openwhisk.ng.bluemix.net/cli/go/download/linux/amd64/wsk
 
 echo "Downloading OpenWhisk CLI from '$LINK'...\n"
-#curl -O $LINK
-#chmod u+x wsk
-#export PATH=$PATH:`pwd`
-# Get the OpenWhisk CLI
-mkdir ~/wsk
-curl https://openwhisk.ng.bluemix.net/cli/go/download/linux/amd64/wsk > ~/wsk/wsk
-chmod +x ~/wsk/wsk
-export PATH=$PATH:~/wsk
+curl -O $LINK
+chmod u+x wsk
+export PATH=$PATH:`pwd`
 
 echo "Configuring CLI from apihost and API key\n"
 wsk property set --apihost openwhisk.ng.bluemix.net --auth $OPEN_WHISK_KEY > /dev/null 2>&1
@@ -36,15 +31,14 @@ echo "Configure local.env"
 touch local.env #Configurations defined in travis-ci console
 
 echo "Deploying wsk actions, etc."
+./deploy_test.sh --install
 
-./test_deploy.sh --install
+echo "Find and set Joke API URL"
+export JOKE_API_URL=`wsk api list | tail -1 | awk '{print $4}'`
 
-#echo "Find and set Fibonacci API URL"
-#export FIBONACCI_API_URL=`wsk api-experimental list | tail -1 | awk '{print $4}'`
-
-echo "Tests"
+echo "Running tests"
 
 
 
 echo "Uninstalling wsk actions, etc."
-./test_deploy.sh --uninstall
+./deploy_test.sh --uninstall

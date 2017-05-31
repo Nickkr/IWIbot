@@ -5,3 +5,8 @@ node_modules/
 
 # .. and these files
 /.idea/workspace.xml
+/openwhisk/joke/node_modules/
+/openwhisk/meal/action.zip
+/openwhisk/joke/action.zip
+/openwhisk/routerV2/action.zip
+/openwhisk/timetables/action.zip
