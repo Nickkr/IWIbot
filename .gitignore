@@ -4,6 +4,7 @@ launchConfigurations/
 node_modules/
 
 # .. and these files
+
 /.idea/workspace.xml
 /openwhisk/joke/node_modules/
 /openwhisk/meal/action.zip
