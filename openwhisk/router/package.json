@@ -7,7 +7,7 @@
     "url": "https://github.com/Nickkr/IWIbot.git"
   },
   "version": "0.0.1",
-  "main": "lib/RouterV2.js",
+  "main": "lib/Router.js",
   "scripts": {
     "test": "grunt"
   },

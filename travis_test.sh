@@ -20,13 +20,16 @@ OPEN_WHISK_BIN=/home/ubuntu/bin
 LINK=https://openwhisk.ng.bluemix.net/cli/go/download/linux/amd64/wsk
 
 echo "Downloading OpenWhisk CLI from '$LINK'...\n"
+
 curl -O $LINK
 chmod u+x wsk
 export PATH=$PATH:`pwd`
 
 echo "Configuring CLI from apihost and API key\n"
+
 wsk property set --apihost openwhisk.ng.bluemix.net --auth $OPEN_WHISK_KEY > /dev/null 2>&1
 wsk bluemix login --user $BLUEMIX_USER --password $BLUEMIX_PASS --namespace Hochschule_Test
+
 echo "Configure local.env"
 touch local.env #Configurations defined in travis-ci console
 

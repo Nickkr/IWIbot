@@ -99,7 +99,7 @@ $(document).ready(function () {
             $.ajax({
                 type: "GET",
                 //url: "https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/credential/validate",
-                url: "https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/credential/info",
+                //url: "https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/credential/info",
                 async: false,
                 headers: {
                     "Authorization": "Basic " + btoa(values.username + ":" + values.password)

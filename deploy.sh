@@ -16,8 +16,9 @@
 
 # Load configuration variables
 source local.env
+
 export PATH=$PATH:/mnt/c/Users/nkreu/openwhisk
-export PATH=$PATH:/mnt/c/Program\ Files/nodejs
+
 function usage() {
   echo -e "Usage: $0 [--install,--uninstall,--env]"
 }
@@ -60,8 +61,8 @@ function install() {
   wsk api create /iwibot /meal post Meal --response-type json
   cd ../..
 
-   echo "Installing GET RouterV2 Action"
-  cd openwhisk/routerV2
+   echo "Installing GET Router Action"
+  cd openwhisk/router
   # preserve dev deps
   mv node_modules .mod
   # install only prod deps
@@ -73,8 +74,8 @@ function install() {
   # recover dev deps
   mv .mod node_modules
   # install zip in openwhisk
-  wsk action create RouterV2 --kind nodejs:6 action.zip --web true
-  wsk api create /iwibot /router post RouterV2 --response-type http
+  wsk action create Router --kind nodejs:6 action.zip --web true
+  wsk api create /iwibot /router post Router --response-type http
   cd ../..
 
    echo "Installing GET Timetables Action"
@@ -106,7 +107,7 @@ function uninstall() {
   echo "Removing actions..."
   #wsk action delete get
    wsk action delete Meal
-   wsk action delete RouterV2
+   wsk action delete Router
    wsk action delete Timetables
    wsk action delete Joke
   echo -e "Uninstall Complete"

@@ -8868,7 +8868,7 @@ $(document).ready(function () {
             $.ajax({
                 type: "GET",
                 //url: "https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/credential/validate",
-                url: "https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/credential/info",
+                //url: "https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/credential/info",
                 async: false,
                 headers: {
                     "Authorization": "Basic " + btoa(values.username + ":" + values.password)
@@ -8924,7 +8924,8 @@ exports.con = function (result) {
              "semester": localStorage.getItem("semester") };
 
     var options = {
-        url: 'https://openwhisk.ng.bluemix.net/api/v1/web/Hochschule_Test/default/RouterV2.http',
+        //url: 'https://openwhisk.ng.bluemix.net/api/v1/web/Hochschule_Test/default/RouterV2.http',
+        url: 'https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/2b5bfd7bced95ed3c16e36929ac1576f8ca11a7df301beca57861caf482d1b7e/iwibot/router',
         type: 'POST',
         data: JSON.stringify(result),
         contentType: "application/json",
