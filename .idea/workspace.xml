@@ -4,9 +4,10 @@
     <bookmark url="file://$PROJECT_DIR$/public/stylesheets/style.css" line="30" mnemonic="7" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa9c346b-b6ee-4f6d-a45a-f1262ef53c1d" name="Default" comment="">
+    <list default="true" id="fa9c346b-b6ee-4f6d-a45a-f1262ef53c1d" name="Default" comment="removed .idea and launchConfigurations">
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/launchConfigurations/IWIbot.launch" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,8 +36,18 @@
       <file leaf-file-name="deploy.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/deploy.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="252">
+              <caret line="26" column="2" lean-forward="false" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -52,12 +63,49 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+              <folding>
+                <marker date="1496315196779" expanded="true" signature="81394:81436" ph="..." />
+                <marker date="1496315196779" expanded="true" signature="81394:81454" ph="..." />
+                <marker date="1496315196779" expanded="true" signature="81394:81467" ph="..." />
+                <marker date="1496315196779" expanded="true" signature="81394:81482" ph="..." />
+                <marker date="1496315196779" expanded="true" signature="81517:83666" ph="..." />
+                <marker date="1496315196779" expanded="true" signature="81530:83651" ph="..." />
+                <marker date="1496315196779" expanded="true" signature="81584:81879" ph="..." />
+                <marker date="1496315196779" expanded="true" signature="81603:81864" ph="..." />
+                <marker date="1496315196779" expanded="true" signature="81666:81844" ph="..." />
+                <marker date="1496315196779" expanded="true" signature="81706:81810" ph="..." />
+                <marker date="1496315196779" expanded="true" signature="81727:81788" ph="..." />
+                <marker date="1496315196779" expanded="true" signature="81929:82256" ph="..." />
+                <marker date="1496315196779" expanded="true" signature="81948:82241" ph="..." />
+                <marker date="1496315196779" expanded="true" signature="82043:82221" ph="..." />
+                <marker date="1496315196779" expanded="true" signature="82083:82187" ph="..." />
+                <marker date="1496315196779" expanded="true" signature="82104:82165" ph="..." />
+                <marker date="1496315196779" expanded="true" signature="82307:82572" ph="..." />
+                <marker date="1496315196779" expanded="true" signature="82326:82557" ph="..." />
+                <marker date="1496315196779" expanded="true" signature="82359:82537" ph="..." />
+                <marker date="1496315196779" expanded="true" signature="82399:82503" ph="..." />
+                <marker date="1496315196779" expanded="true" signature="82420:82481" ph="..." />
+                <marker date="1496315196779" expanded="true" signature="82615:82921" ph="..." />
+                <marker date="1496315196779" expanded="true" signature="82634:82906" ph="..." />
+                <marker date="1496315196779" expanded="true" signature="82708:82886" ph="..." />
+                <marker date="1496315196779" expanded="true" signature="82748:82852" ph="..." />
+                <marker date="1496315196779" expanded="true" signature="82769:82830" ph="..." />
+                <marker date="1496315196779" expanded="true" signature="82972:83320" ph="..." />
+                <marker date="1496315196779" expanded="true" signature="82991:83305" ph="..." />
+                <marker date="1496315196779" expanded="true" signature="83068:83285" ph="..." />
+                <marker date="1496315196779" expanded="true" signature="83108:83251" ph="..." />
+                <marker date="1496315196779" expanded="true" signature="83129:83229" ph="..." />
+                <marker date="1496315196779" expanded="true" signature="83372:83637" ph="..." />
+                <marker date="1496315196779" expanded="true" signature="83391:83622" ph="..." />
+                <marker date="1496315196779" expanded="true" signature="83424:83602" ph="..." />
+                <marker date="1496315196779" expanded="true" signature="83464:83568" ph="..." />
+                <marker date="1496315196779" expanded="true" signature="83485:83546" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -77,16 +125,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="420">
               <caret line="20" column="12" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Timetables.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/openwhisk/timetables/lib/Timetables.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -176,7 +214,6 @@
         <option value="$PROJECT_DIR$/openwhisk/timetables/.jshintrc" />
         <option value="$PROJECT_DIR$/openwhisk/joke/.jshintrc" />
         <option value="$PROJECT_DIR$/openwhisk/routerV2/RouterV2.js" />
-        <option value="$PROJECT_DIR$/deploy.sh" />
         <option value="$PROJECT_DIR$/openwhisk/joke/package.json" />
         <option value="$PROJECT_DIR$/openwhisk/meal/package.json" />
         <option value="$PROJECT_DIR$/openwhisk/routerV2/package.json" />
@@ -185,7 +222,6 @@
         <option value="$PROJECT_DIR$/openwhisk/meal/lib/Meal.js" />
         <option value="$PROJECT_DIR$/openwhisk/routerV2/lib/RouterV2.js" />
         <option value="$PROJECT_DIR$/openwhisk/timetables/lib/Timetables.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/public/javascripts/conversation.js" />
         <option value="$PROJECT_DIR$/local_test.sh" />
         <option value="$PROJECT_DIR$/travis_test.sh" />
@@ -194,6 +230,8 @@
         <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/deploy_test.sh" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/deploy.sh" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -249,20 +287,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="IWIbot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IWIbot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IWIbot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="launchConfigurations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -774,7 +798,7 @@
       <workItem from="1496243491810" duration="1183000" />
       <workItem from="1496254598245" duration="321000" />
       <workItem from="1496268970506" duration="5110000" />
-      <workItem from="1496311723227" duration="2927000" />
+      <workItem from="1496311723227" duration="3552000" />
     </task>
     <task id="LOCAL-00001" summary="added travis test script">
       <created>1496069857768</created>
@@ -993,11 +1017,25 @@
       <option name="project" value="LOCAL" />
       <updated>1496314553883</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="removed .idea and launchConfigurations">
+      <created>1496314663440</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1496314663440</updated>
+    </task>
+    <task id="LOCAL-00033" summary="removed .idea and launchConfigurations">
+      <created>1496315166461</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1496315166461</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72694000" />
+    <option name="totallyTimeSpent" value="73319000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1017,12 +1055,12 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38717067" sideWeight="0.45548317" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38717067" sideWeight="0.4576547" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3272933" sideWeight="0.4752954" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33676976" sideWeight="0.47448426" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38717067" sideWeight="0.5445168" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38717067" sideWeight="0.5423453" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34581977" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1327,14 +1365,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/local_test.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1399,14 +1429,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deploy.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/deploy_test.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1394">
@@ -1419,6 +1441,59 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1496315196779" expanded="true" signature="81394:81436" ph="..." />
+            <marker date="1496315196779" expanded="true" signature="81394:81454" ph="..." />
+            <marker date="1496315196779" expanded="true" signature="81394:81467" ph="..." />
+            <marker date="1496315196779" expanded="true" signature="81394:81482" ph="..." />
+            <marker date="1496315196779" expanded="true" signature="81517:83666" ph="..." />
+            <marker date="1496315196779" expanded="true" signature="81530:83651" ph="..." />
+            <marker date="1496315196779" expanded="true" signature="81584:81879" ph="..." />
+            <marker date="1496315196779" expanded="true" signature="81603:81864" ph="..." />
+            <marker date="1496315196779" expanded="true" signature="81666:81844" ph="..." />
+            <marker date="1496315196779" expanded="true" signature="81706:81810" ph="..." />
+            <marker date="1496315196779" expanded="true" signature="81727:81788" ph="..." />
+            <marker date="1496315196779" expanded="true" signature="81929:82256" ph="..." />
+            <marker date="1496315196779" expanded="true" signature="81948:82241" ph="..." />
+            <marker date="1496315196779" expanded="true" signature="82043:82221" ph="..." />
+            <marker date="1496315196779" expanded="true" signature="82083:82187" ph="..." />
+            <marker date="1496315196779" expanded="true" signature="82104:82165" ph="..." />
+            <marker date="1496315196779" expanded="true" signature="82307:82572" ph="..." />
+            <marker date="1496315196779" expanded="true" signature="82326:82557" ph="..." />
+            <marker date="1496315196779" expanded="true" signature="82359:82537" ph="..." />
+            <marker date="1496315196779" expanded="true" signature="82399:82503" ph="..." />
+            <marker date="1496315196779" expanded="true" signature="82420:82481" ph="..." />
+            <marker date="1496315196779" expanded="true" signature="82615:82921" ph="..." />
+            <marker date="1496315196779" expanded="true" signature="82634:82906" ph="..." />
+            <marker date="1496315196779" expanded="true" signature="82708:82886" ph="..." />
+            <marker date="1496315196779" expanded="true" signature="82748:82852" ph="..." />
+            <marker date="1496315196779" expanded="true" signature="82769:82830" ph="..." />
+            <marker date="1496315196779" expanded="true" signature="82972:83320" ph="..." />
+            <marker date="1496315196779" expanded="true" signature="82991:83305" ph="..." />
+            <marker date="1496315196779" expanded="true" signature="83068:83285" ph="..." />
+            <marker date="1496315196779" expanded="true" signature="83108:83251" ph="..." />
+            <marker date="1496315196779" expanded="true" signature="83129:83229" ph="..." />
+            <marker date="1496315196779" expanded="true" signature="83372:83637" ph="..." />
+            <marker date="1496315196779" expanded="true" signature="83391:83622" ph="..." />
+            <marker date="1496315196779" expanded="true" signature="83424:83602" ph="..." />
+            <marker date="1496315196779" expanded="true" signature="83464:83568" ph="..." />
+            <marker date="1496315196779" expanded="true" signature="83485:83546" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deploy.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="26" column="2" lean-forward="false" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
           <folding />
         </state>
       </provider>

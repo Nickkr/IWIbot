@@ -10,3 +10,9 @@ node_modules/
 /openwhisk/joke/action.zip
 /openwhisk/routerV2/action.zip
 /openwhisk/timetables/action.zip
+/launchConfigurations/
+/.idea/
+openwhisk/joke/test/
+openwhisk/meal/test/
+openwhisk/routerV2/test/
+openwhisk/timetables/test/
