@@ -4,7 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/public/stylesheets/style.css" line="30" mnemonic="7" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa9c346b-b6ee-4f6d-a45a-f1262ef53c1d" name="Default" comment="removed .idea">
+    <list default="true" id="fa9c346b-b6ee-4f6d-a45a-f1262ef53c1d" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/launchConfigurations/IWIbot.launch" afterPath="" />
     </list>
@@ -263,20 +263,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="launchConfigurations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IWIbot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IWIbot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value=".idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -788,7 +774,7 @@
       <workItem from="1496243491810" duration="1183000" />
       <workItem from="1496254598245" duration="321000" />
       <workItem from="1496268970506" duration="5110000" />
-      <workItem from="1496311723227" duration="332000" />
+      <workItem from="1496311723227" duration="983000" />
     </task>
     <task id="LOCAL-00001" summary="added travis test script">
       <created>1496069857768</created>
@@ -993,11 +979,18 @@
       <option name="project" value="LOCAL" />
       <updated>1496274063832</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="removed .idea and launchConfigurations">
+      <created>1496312083019</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1496312083019</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70099000" />
+    <option name="totallyTimeSpent" value="70750000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1057,7 +1050,8 @@
     <MESSAGE value="added openwhisk actions and updated travis deploy script" />
     <MESSAGE value="modified travis_test to include bluemix login to get the api token" />
     <MESSAGE value="removed npm test from travis.yml" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed npm test from travis.yml" />
+    <MESSAGE value="removed .idea and launchConfigurations" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed .idea and launchConfigurations" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
