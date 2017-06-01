@@ -23,6 +23,7 @@ function usage() {
 }
 
 function install() {
+
   echo -e "Installing OpenWhisk actions, triggers, and rules for IWIBot"
 
   echo "Installing GET Joke Action"
