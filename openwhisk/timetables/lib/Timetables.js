@@ -12,18 +12,23 @@ weekday[5] = "Freitag";
 weekday[6] = "Samstag";
 var currentDayString = weekday[currentDay];
 
-
 function main(params) {
+
+    console.log("------Timetable Action started!------");
+    console.log("TimetableAction Params:" + JSON.stringify(params));
     console.log("Day: " + currentDay);
     console.log("DayString: " + currentDayString);
 
-    if (params.semester !== undefined && params.courseOfStudies !== undefined) {
-        url = 'https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/timetable/' + params.courseOfStudies + '/0/' + params.semester + '?format=json';
-    }
     return new Promise(function (resolve, reject) {
+        var resultObject = {};
         var dayIndex = convertDayToHskaDay(currentDay), dayValue = currentDayString;
-        console.log('Action Timetable');
-        console.log("Params: " + JSON.stringify(params));
+
+        if (params.semester !== undefined && params.courseOfStudies !== undefined) {
+            url = 'https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/timetable/' + params.courseOfStudies + '/0/' + params.semester + '?format=json';
+        } else {
+            resultObject.payload = "Es wurde kein Semester angegeben!";
+            reject(resultObject);
+        }
 
         if (params.entities.length !== 0) {
             console.log('Entitie Value: ' + params.entities[0].value);
@@ -66,7 +71,7 @@ function main(params) {
         request({
             url: url
         }, function (error, response, body) {
-            var resultObject = {}, ulStart = '<ul>';
+            var ulStart = '<ul>';
 
             if (!error && response.statusCode === 200) {
                 var responseObject = JSON.parse(body);
@@ -99,23 +104,21 @@ function main(params) {
                 resultObject.payload = 'Hier ist der Stundenplan für ' + dayValue + ':';
 
                 resolve(resultObject);
+
             } else {
                 console.log('http status code:', (response || {}).statusCode);
                 console.log('error:', error);
                 console.log('body:', body);
-                reject({
-                    error: error,
-                    response: response,
-                    body: body
-                });
+                resultObject.payload = "Die HsKa-Api ist zur Zeit nicht erreichbar!";
+                reject(resultObject);
             }
         });
     });
 }
 
 function convertToHoursMins(value) {
-   var h = Math.floor(value / 60);
-   var m = value % 60;
+    var h = Math.floor(value / 60);
+    var m = value % 60;
     h = h < 10 ? '0' + h : h;
     m = m < 10 ? '0' + m : m;
     return h + ':' + m;
