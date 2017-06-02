@@ -15,7 +15,7 @@ module.exports = function(grunt) {
                 src: 'Gruntfile.js'
             },
             joke: {
-                src: ['Joke.js']
+                src: ['lib/Joke.js']
             }
 
         },

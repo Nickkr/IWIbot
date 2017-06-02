@@ -58,8 +58,8 @@ function install() {
   wsk api create /iwibotTest /meal post test/Meal --response-type json
   cd ../..
 
-   echo "Installing GET RouterV2 Action"
-  cd openwhisk/routerV2
+   echo "Installing GET Router Action"
+  cd openwhisk/router
   # preserve dev deps
   mv node_modules .mod
   # install only prod deps
@@ -71,8 +71,8 @@ function install() {
   # recover dev deps
   mv .mod node_modules
   # install zip in openwhisk
-  wsk action create test/RouterV2 --kind nodejs:6 action.zip --web true
-  wsk api create /iwibotTest /router post test/RouterV2 --response-type http
+  wsk action create test/Router --kind nodejs:6 action.zip --web true
+  wsk api create /iwibotTest /router post test/Router --response-type http
   cd ../..
 
    echo "Installing GET Timetables Action"
@@ -104,7 +104,7 @@ function uninstall() {
   echo "Removing actions..."
   #wsk action delete get
    wsk action delete test/Meal
-   wsk action delete test/RouterV2
+   wsk action delete test/Router
    wsk action delete test/Timetables
    wsk action delete test/Joke
   echo -e "Uninstall Complete"

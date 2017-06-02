@@ -14,8 +14,8 @@ module.exports = function(grunt) {
             gruntfile: {
                 src: 'Gruntfile.js'
             },
-            RouterV2: {
-                src: ['RouterV2.js']
+            Router: {
+                src: ['lib/Router.js']
             }
 
         },
