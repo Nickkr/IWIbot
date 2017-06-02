@@ -11,7 +11,7 @@ var entity;
 function main(params) {
 
     console.log("------Meal Action started!------");
-    console.log("Meal Action Params:" + params);
+    console.log("Meal Action Params:" + JSON.stringify(params));
 
     return new Promise(function (resolve, reject) {
 
@@ -68,21 +68,22 @@ function main(params) {
                     reject(resultObject);
 
 
+                } else {
+
+                    var mealsLength = meals.mealGroups[entity].meals.length;
+                    var mealsArray = meals.mealGroups[entity].meals;
+                    var ulStart = '<ul>';
+
+                    for (var i = 0; mealsLength > i; i++) {
+                        ulStart += '<li>' + mealsArray[i].name + '</li>';
+                    }
+
+                    ulStart += '</ul>';
+                    resultObject.payload = meals.mealGroups[entity].title + ' hat heute folgendes im Angebot:';
+                    resultObject.htmlText = ulStart;
+
+                    resolve(resultObject);
                 }
-
-                var mealsLength = meals.mealGroups[entity].meals.length;
-                var mealsArray = meals.mealGroups[entity].meals;
-                var ulStart = '<ul>';
-
-                for (var i = 0; mealsLength > i; i++) {
-                    ulStart += '<li>' + mealsArray[i].name + '</li>';
-                }
-
-                ulStart += '</ul>';
-                resultObject.payload = meals.mealGroups[entity].title + ' hat heute folgendes im Angebot:';
-                resultObject.htmlText = ulStart;
-
-                resolve(resultObject);
             } else {
                 console.log('http status code:', (response || {}).statusCode);
                 console.log('error:', error);
