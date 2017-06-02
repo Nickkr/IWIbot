@@ -27,7 +27,7 @@ function main(params) {
             url = 'https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/timetable/' + params.courseOfStudies + '/0/' + params.semester + '?format=json';
         } else {
             resultObject.payload = "Es wurde kein Semester angegeben!";
-            reject(resultObject);
+            resolve(resultObject);
         }
 
         if (params.entities.length !== 0) {
@@ -80,7 +80,7 @@ function main(params) {
                 var entries = responseObject.timetables[dayIndex].entries;
 
                 if (!entries || entries.length === 0) {
-                    reject({"payload": "Maybe it is a holiday today?"});
+                    resolve({"payload": "Maybe it is a holiday today?"});
                 }
                 for (var i = 0; entries.length > i; i++) {
                     var startTime = entries[i].startTime;
