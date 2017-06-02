@@ -65,7 +65,7 @@ function main(params) {
 
                     resultObject.payload = "Heute gibt es nichts zu essen in der Mensa, vielleicht sind Ferien?";
 
-                    reject(resultObject);
+                    resolve(resultObject);
 
 
                 } else {
