@@ -9,12 +9,13 @@ function main() {
         request({
             url: url,
         }, function (error, response, body) {
-            var jokeResponse;
+            var jokeResponse = {};
 
             if (!error && response.statusCode === 200) {
 
                 body = JSON.parse(body);
-                jokeResponse = {"payload": body.value.joke, "voice": voice};
+                jokeResponse.payload = body.value.joke;
+                jokeResponse.voice = voice;
                 resolve(jokeResponse);
 
             }
