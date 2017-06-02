@@ -5,49 +5,53 @@ var mm = today.getMonth() + 1;
 var yyyy = today.getFullYear();
 var url = 'https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/canteen/2/' + yyyy + '-' + mm + '-' + dd;
 
+var meal;
 var entity;
-var para;
 
 function main(params) {
-    console.log("Meal action");
-    console.log(params);
+
+    console.log("------Meal Action started!------");
+    console.log("Meal Action Params:" + params);
 
     return new Promise(function (resolve, reject) {
+
         if (params.entities.length !== 0) {
-            para = params.entities[0].value;
+            console.log("Entity found in Params");
+            entity = params.entities[0].value;
         } else {
-            console.log("else: Hey");
-            para = "-1";
+            console.log("No Entity in Params!");
+            entity = "-1";
         }
 
-        switch (para) {
+        switch (entity) {
             case '1':           //Wahlessen 1
-                entity = 0;
+                meal = 0;
                 break;
             case '2':           //Wahlessen 2
-                entity = 1;
+                meal = 1;
                 break;
 
             case '3':           //Aktionstheke
-                entity = 2;
+                meal = 2;
                 break;
 
             case '4':           //GutUndGuenstig
-                entity = 3;
+                meal = 3;
                 break;
 
             case '5':           //Buffet
-                entity = 4;
+                meal = 4;
                 break;
 
             default:            //Schnitzelbar
-                entity = 5;
+                meal = 5;
                 break;
         }
 
         request({
             url: url,
         }, function (error, response, body) {
+
             var resultObject = {};
 
             if (!error && response.statusCode === 200) {
@@ -59,10 +63,11 @@ function main(params) {
                     meals.mealGroups[entity] === undefined || meals.mealGroups[entity].meals.length === 0 ||
                     meals.mealGroups[entity].meals.length === undefined) {
 
-                    reject({
-                        error: 'Something is wrong with the HSKA-API',
-                        errorMessage: 'Maybe today is a holiday?'
-                    });
+                    resultObject.payload = "Heute gibt es nichts zu essen in der Mensa, vielleicht sind Ferien?";
+
+                    reject(resultObject);
+
+
                 }
 
                 var mealsLength = meals.mealGroups[entity].meals.length;
@@ -82,11 +87,9 @@ function main(params) {
                 console.log('http status code:', (response || {}).statusCode);
                 console.log('error:', error);
                 console.log('body:', body);
-                reject({
-                    error: error,
-                    response: response,
-                    body: body
-                });
+                resultObject.payload = "Die HsKa-Api ist zur Zeit nicht erreichbar!";
+                reject(resultObject);
+
             }
         });
     });
