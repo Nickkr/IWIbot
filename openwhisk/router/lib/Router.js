@@ -1,8 +1,8 @@
 var ConversationV1 = require('watson-developer-cloud/conversation/v1');
 var openwhisk = require('openwhisk');
 var conResponse;
-var semester;
-var courseOfStudies;
+var semester = undefined;
+var courseOfStudies = undefined;
 
 var conversation = new ConversationV1({
     username: "15bdf076-1ad9-4063-9bb1-6eb1db935f39",
@@ -62,7 +62,7 @@ function main(params) {
 
     }
 
-    var result = con().then(function (response) {
+    con().then(function (response) {
         response.semester = semester;
         response.courseOfStudies = courseOfStudies;
         console.log("Dispatch Response: " + JSON.stringify(response.courseOfStudies));
@@ -86,7 +86,6 @@ function main(params) {
 
     });
 
-    return result;
 }
 
 exports.main = main;

@@ -8919,15 +8919,21 @@ exports.con = function (result) {
     console.log("----------CONVERSATION_started----------");
     console.log("CONVERSATION_param: " + result);
 
-    result = {"transcript": result.toString(),
-             "courseOfStudies": localStorage.getItem("courseOfStudies") ,
-             "semester": localStorage.getItem("semester") };
-
+    var requestObject = {};
+    requestObject.transcript = result.toString();
+    if (localStorage.getItem("courseOfStudies ") !== null && localStorage.getItem("semester") !== null) {
+        requestObject.courseOfStudies = localStorage.getItem("courseOfStudies");
+        requestObject.semester = localStorage.getItem("semester");
+    }
+    /*result = {"transcript": result.toString(),
+     "courseOfStudies": localStorage.getItem("courseOfStudies") ,
+     "semester": localStorage.getItem("semester") };
+     */
     var options = {
         //url: 'https://openwhisk.ng.bluemix.net/api/v1/web/Hochschule_Test/default/RouterV2.http',
         url: 'https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/2b5bfd7bced95ed3c16e36929ac1576f8ca11a7df301beca57861caf482d1b7e/iwibot/router',
         type: 'POST',
-        data: JSON.stringify(result),
+        data: JSON.stringify(requestObject),
         contentType: "application/json",
         processData: false,
         success: function (data) {

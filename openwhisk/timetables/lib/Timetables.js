@@ -16,6 +16,7 @@ function main(params) {
 
     console.log("------Timetable Action started!------");
     console.log("TimetableAction Params:" + JSON.stringify(params));
+    console.log("Timetable Semester: " + params.semester);
     console.log("Day: " + currentDay);
     console.log("DayString: " + currentDayString);
 
@@ -23,9 +24,10 @@ function main(params) {
         var resultObject = {};
         var dayIndex = convertDayToHskaDay(currentDay), dayValue = currentDayString;
 
-        if (params.semester !== undefined && params.courseOfStudies !== undefined) {
+        if (params.semester !== null  && params.courseOfStudies !== null) {
             url = 'https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/timetable/' + params.courseOfStudies + '/0/' + params.semester + '?format=json';
         } else {
+            console.log("Es wurde kein Semester angegeben");
             resultObject.payload = "Es wurde kein Semester angegeben!";
             resolve(resultObject);
         }
