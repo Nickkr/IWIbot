@@ -1,8 +1,7 @@
 var ConversationV1 = require('watson-developer-cloud/conversation/v1');
 var openwhisk = require('openwhisk');
-var conResponse;
-var semester = undefined;
-var courseOfStudies = undefined;
+var semester;
+var courseOfStudies;
 
 var conversation = new ConversationV1({
     username: "15bdf076-1ad9-4063-9bb1-6eb1db935f39",
@@ -24,21 +23,53 @@ function main(params) {
 
     }
 
+    return con().then(function (response) {
+        console.log("Response from Watson Conversation Service: " + JSON.stringify(response));
+        response.semester = semester;
+        response.courseOfStudies = courseOfStudies;
+        return dispatch(response);
+
+    }, function (reason) {
+
+        console.log(reason);
+
+
+    }).then(function (response) {
+            response = response.response.result;
+
+            return {
+                headers: {'Access-Control-Allow-Origin': '*', 'Content-Type': 'text/plain'},
+                body: JSON.stringify(response),
+                code: 200
+            };
+
+        }, function(reason) {
+            console.log("Reason2:" + reason);
+
+            var response = {};
+            response.payload = reason.toString();
+
+            return {
+            headers: {'Access-Control-Allow-Origin': '*', 'Content-Type': 'text/plain'},
+            body: JSON.stringify(response),
+            code: 200
+
+        };
+
+    });
 
     function con() {
-        console.log("Conversation: " + JSON.stringify(params));
+        console.log("------Conversation Started!------");
         return new Promise(function (resolve, reject) {
-            console.log("hello");
-            // Start conversation with message from params
+
             conversation.message({
                 input: {text: params.transcript.toString()}
             }, processResponse);
 
-            // Process the conversation response.
             function processResponse(err, response) {
                 if (err) {
-                    console.error(err); // something went wrong
-                    return;
+                    console.error(err);
+                    reject(err);
                 }
 
                 // Display the output from dialog, if any.
@@ -52,34 +83,19 @@ function main(params) {
     }
 
     function dispatch(response) {
+        //Intent from Conversation Service is the action name getting invoked
+        console.log("Dispatch: action to be invoked: " + response.intents[0].intent);
         var name = response.intents[0].intent;
-        console.log("Action-Name: " + name);
-        const blocking = true, result = true;
-        const params = response;
         var ow = openwhisk();
-        console.log("openwhisk init");
+        const blocking = true, result = true;
+        //const params = response;
+
         return ow.actions.invoke({name, blocking, result, params});
 
     }
 
-    return con().then(function (response) {
-        response.semester = semester;
-        response.courseOfStudies = courseOfStudies;
-        console.log("Dispatch Response: " + JSON.stringify(response.courseOfStudies));
-        return dispatch(response);
-
-
-    }).then(function (response) {
-        response = response.response.result;
-
-        return {
-            headers: {'Access-Control-Allow-Origin': '*', 'Content-Type': 'text/plain'},
-            body: JSON.stringify(response),
-            code: 200
-        };
-
-    });
 
 }
+
 
 exports.main = main;
