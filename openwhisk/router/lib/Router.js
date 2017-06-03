@@ -31,8 +31,8 @@ function main(params) {
 
     }, function (reason) {
 
-        console.log("Conversation Error: " + reason);
-
+        console.error("Conversation Error: " + reason);
+        throw reason;
 
     }).then(function (response) {
         response = response.response.result;
@@ -57,6 +57,7 @@ function main(params) {
         };
 
     });
+
 
     function con() {
         console.log("------Conversation Started!------");
