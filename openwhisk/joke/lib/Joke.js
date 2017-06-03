@@ -29,7 +29,7 @@ function main() {
                     "voice": voice
                 };*/
 
-                reject(error.toString());
+                reject(error);
             }
         });
     });
