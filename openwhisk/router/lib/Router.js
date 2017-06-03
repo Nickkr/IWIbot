@@ -14,7 +14,7 @@ var conversation = new ConversationV1({
 function main(params) {
 
     console.log("------Router started!------");
-    console.log('RouterAction Params: ' + JSON.stringify(params));
+    console.log('Router Action Params: ' + JSON.stringify(params));
 
     if (typeof params.semester !== undefined && params.courseOfStudies !== undefined) {
 
@@ -24,32 +24,32 @@ function main(params) {
     }
 
     return con().then(function (response) {
-        console.log("Response from Watson Conversation Service: " + JSON.stringify(response));
+
         response.semester = semester;
         response.courseOfStudies = courseOfStudies;
         return dispatch(response);
 
     }, function (reason) {
 
-        console.log(reason);
+        console.log("Conversation Error: " + reason);
 
 
     }).then(function (response) {
-            response = response.response.result;
+        response = response.response.result;
 
-            return {
-                headers: {'Access-Control-Allow-Origin': '*', 'Content-Type': 'text/plain'},
-                body: JSON.stringify(response),
-                code: 200
-            };
+        return {
+            headers: {'Access-Control-Allow-Origin': '*', 'Content-Type': 'text/plain'},
+            body: JSON.stringify(response),
+            code: 200
+        };
 
-        }, function(reason) {
-            console.log("Reason2:" + reason);
+    }, function (reason) {
+        console.log("Dispatcher Error: " + reason);
 
-            var response = {};
-            response.payload = reason.toString();
+        var response = {};
+        response.payload = reason.toString();
 
-            return {
+        return {
             headers: {'Access-Control-Allow-Origin': '*', 'Content-Type': 'text/plain'},
             body: JSON.stringify(response),
             code: 200
@@ -63,17 +63,16 @@ function main(params) {
         return new Promise(function (resolve, reject) {
 
             conversation.message({
-                input: {text: params.transcript.toString()}
+                input: {text: params.transcript}
             }, processResponse);
 
             function processResponse(err, response) {
                 if (err) {
-                    console.error(err);
+                    console.error("Conversation Error: " + err);
                     reject(err);
                 }
 
-                // Display the output from dialog, if any.
-                console.log("Conversation_response: " + JSON.stringify(response));
+                console.log("Conversation Response: " + JSON.stringify(response));
                 resolve(response);
 
 
@@ -83,12 +82,13 @@ function main(params) {
     }
 
     function dispatch(response) {
-        //Intent from Conversation Service is the action name getting invoked
-        console.log("Dispatch: action to be invoked: " + response.intents[0].intent);
+        console.log("------Dispatcher started!------");
+        console.log("Action to be invoked: " + response.intents[0].intent);
+
+        const params = response;
         var name = response.intents[0].intent;
         var ow = openwhisk();
         const blocking = true, result = true;
-        //const params = response;
 
         return ow.actions.invoke({name, blocking, result, params});
 
