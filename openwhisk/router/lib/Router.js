@@ -13,7 +13,7 @@ var conversation = new ConversationV1({
 
 
 function main(params) {
-    //console.log("PARAMS: " + JSON.stringify(params.payload));
+
     console.log("------Router started!------");
     console.log('RouterAction Params: ' + JSON.stringify(params));
 
@@ -26,9 +26,9 @@ function main(params) {
 
 
     function con() {
-        console.log("Conversation: " + params);
+        console.log("Conversation: " + JSON.stringify(params));
         return new Promise(function (resolve, reject) {
-
+            console.log("hello");
             // Start conversation with message from params
             conversation.message({
                 input: {text: params.transcript.toString()}
@@ -62,17 +62,11 @@ function main(params) {
 
     }
 
-    con().then(function (response) {
+    return con().then(function (response) {
         response.semester = semester;
         response.courseOfStudies = courseOfStudies;
         console.log("Dispatch Response: " + JSON.stringify(response.courseOfStudies));
         return dispatch(response);
-
-    }).catch(function (err) {
-        console.log("Catch Error:" + err);
-        var obj = {"response": {"result": {"payload": conResponse.output.text[0]}}};
-        console.log("OBJ :" + obj);
-        return obj;
 
 
     }).then(function (response) {

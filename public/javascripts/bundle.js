@@ -7001,7 +7001,7 @@ function FormatStream(opts) {
 util.inherits(FormatStream, Transform);
 
 var reHesitation = /%HESITATION ?/g; // http://www.ibm.com/watson/developercloud/doc/speech-to-text/output.shtml#hesitation - D_ is handled below
-var reRepeatedCharacter = /([a-z])\1{2,}/ig; // detect the same character repeated three or more times and remove it
+var reRepeatedCharacter = /([a-z])\1{2,}/gi; // detect the same character repeated three or more times and remove it
 var reDUnderscoreWords = /D_[^\s]+/g; // replace D_(anything)
 
 /**
@@ -7088,43 +7088,34 @@ FormatStream.prototype.formatString = function(str, isInterim) {
 FormatStream.prototype.formatResult = function formatResult(data) {
   data = clone(data);
   if (Array.isArray(data.results)) {
-    data.results.forEach(
-      function(result, i) {
-        // if there are multiple interim results (as produced by the speaker stream),
-        // treat the text as final in all but the last result
-        var textFinal = result.final || i !== data.results.length - 1;
+    data.results.forEach(function(result, i) {
+      // if there are multiple interim results (as produced by the speaker stream),
+      // treat the text as final in all but the last result
+      var textFinal = result.final || i !== data.results.length - 1;
 
-        result.alternatives = result.alternatives.map(
-          function(alt) {
-            alt.transcript = this.formatString(alt.transcript, !textFinal);
-            if (alt.timestamps) {
-              alt.timestamps = alt.timestamps
-                .map(
-                  function(ts, j, arr) {
-                    // timestamps is an array of arrays, each sub-array is in the form ["word", startTime, endTime]'
-                    ts[0] = this.clean(ts[0]);
-                    if (j === 0) {
-                      ts[0] = this.capitalize(ts[0]);
-                    }
+      result.alternatives = result.alternatives.map(function(alt) {
+        alt.transcript = this.formatString(alt.transcript, !textFinal);
+        if (alt.timestamps) {
+          alt.timestamps = alt.timestamps
+            .map(function(ts, j, arr) {
+              // timestamps is an array of arrays, each sub-array is in the form ["word", startTime, endTime]'
+              ts[0] = this.clean(ts[0]);
+              if (j === 0) {
+                ts[0] = this.capitalize(ts[0]);
+              }
 
-                    if (j === arr.length - 1 && textFinal) {
-                      ts[0] = this.period(ts[0]);
-                    }
-                    return ts;
-                  },
-                  this
-                )
-                .filter(function(ts) {
-                  return ts[0]; // remove any timestamps without a word (due to cleaning out junk words)
-                });
-            }
-            return alt;
-          },
-          this
-        );
-      },
-      this
-    );
+              if (j === arr.length - 1 && textFinal) {
+                ts[0] = this.period(ts[0]);
+              }
+              return ts;
+            }, this)
+            .filter(function(ts) {
+              return ts[0]; // remove any timestamps without a word (due to cleaning out junk words)
+            });
+        }
+        return alt;
+      }, this);
+    }, this);
   }
   return data;
 };
@@ -7144,7 +7135,7 @@ module.exports = FormatStream;
 module.exports = function noTimestamps(data) {
   return data.results.some(function(result) {
     var alt = result.alternatives && result.alternatives[0];
-    return !!(alt && (alt.transcript.trim() && !alt.timestamps || !alt.timestamps.length));
+    return !!(alt && ((alt.transcript.trim() && !alt.timestamps) || !alt.timestamps.length));
   });
 };
 
@@ -7380,7 +7371,6 @@ var contentType = require('./content-type');
 var qs = require('../util/querystring.js');
 
 var OPENING_MESSAGE_PARAMS_ALLOWED = [
-  'continuous',
   'inactivity_timeout',
   'timestamps',
   'word_confidence',
@@ -7414,7 +7404,6 @@ var QUERY_PARAMS_ALLOWED = ['customization_id', 'model', 'watson-token', 'X-Wats
  * @param {Object} [options.headers] - Only works in Node.js, not in browsers. Allows for custom headers to be set, including an Authorization header (preventing the need for auth tokens)
  * @param {String} [options.content-type='audio/wav'] - content type of audio; can be automatically determined from file header in most cases. only wav, flac, and ogg/opus are supported
  * @param {Boolean} [options.interim_results=true] - Send back non-final previews of each "sentence" as it is being processed. These results are ignored in text mode.
- * @param {Boolean} [options.continuous=true] - set to false to automatically stop the transcription after the first "sentence"
  * @param {Boolean} [options.word_confidence=false] - include confidence scores with results. Defaults to true when in objectMode.
  * @param {Boolean} [options.timestamps=false] - include timestamps with results. Defaults to true when in objectMode.
  * @param {Number} [options.max_alternatives=1] - maximum number of alternative transcriptions to include. Defaults to 3 when in objectMode.
@@ -7422,7 +7411,7 @@ var QUERY_PARAMS_ALLOWED = ['customization_id', 'model', 'watson-token', 'X-Wats
  * @param {Number} [options.keywords_threshold] - Number between 0 and 1 representing the minimum confidence before including a keyword in the results. Required when options.keywords is set
  * @param {Number} [options.word_alternatives_threshold] - Number between 0 and 1 representing the minimum confidence before including an alternative word in the results. Must be set to enable word alternatives,
  * @param {Boolean} [options.profanity_filter=false] - set to true to filter out profanity and replace the words with *'s
- * @param {Number} [options.inactivity_timeout=30] - how many seconds of silence before automatically closing the stream (even if continuous is true). use -1 for infinity
+ * @param {Number} [options.inactivity_timeout=30] - how many seconds of silence before automatically closing the stream. use -1 for infinity
  * @param {Boolean} [options.readableObjectMode=false] - emit `result` objects instead of string Buffers for the `data` events. Does not affect input (which must be binary)
  * @param {Boolean} [options.objectMode=false] - alias for options.readableObjectMode
  * @param {Number} [options.X-Watson-Learning-Opt-Out=false] - set to true to opt-out of allowing Watson to use this request to improve it's services
@@ -7515,7 +7504,7 @@ RecognizeStream.prototype.initialize = function() {
 
   // node params: requestUrl, protocols, origin, headers, extraRequestOptions
   // browser params: requestUrl, protocols (all others ignored)
-  var socket = this.socket = new W3CWebSocket(url, null, null, options.headers, null);
+  var socket = (this.socket = new W3CWebSocket(url, null, null, options.headers, null));
 
   // when the input stops, let the service know that we're done
   self.on('finish', self.finish.bind(self));
@@ -7800,14 +7789,11 @@ ResultStream.prototype._transform = function(data, encoding, next) {
   // when speaker_labels is enabled, some messages won't have a results array
   if (Array.isArray(data.results)) {
     // usually there is exactly 1 result, but there can be 0 in some circumstances, and potentially more in future iterations
-    data.results.forEach(
-      function(result) {
-        var cloned = clone(result);
-        cloned.index = data.result_index;
-        this.push(cloned);
-      },
-      this
-    );
+    data.results.forEach(function(result) {
+      var cloned = clone(result);
+      cloned.index = data.result_index;
+      this.push(cloned);
+    }, this);
   } else {
     this.push(data);
   }
@@ -7990,26 +7976,23 @@ SpeakerStream.prototype.buildMessage = function() {
   });
 
   // group the words together into utterances by speaker
-  var utterances = words.reduce(
-    function(arr, word) {
-      var utterance = arr[arr.length - 1];
-      // any time the speaker changes or the (original) result changes, create a new utterance
-      if (!utterance || utterance.speaker !== word.speaker || utterance.result !== word.result) {
-        utterance = {
-          speaker: word.speaker,
-          timestamps: [word.timestamp],
-          result: word.result
-        };
-        // and add it to the list
-        arr.push(utterance);
-      } else {
-        // otherwise just append the current word to the current result
-        utterance.timestamps.push(word.timestamp);
-      }
-      return arr;
-    },
-    []
-  );
+  var utterances = words.reduce(function(arr, word) {
+    var utterance = arr[arr.length - 1];
+    // any time the speaker changes or the (original) result changes, create a new utterance
+    if (!utterance || utterance.speaker !== word.speaker || utterance.result !== word.result) {
+      utterance = {
+        speaker: word.speaker,
+        timestamps: [word.timestamp],
+        result: word.result
+      };
+      // and add it to the list
+      arr.push(utterance);
+    } else {
+      // otherwise just append the current word to the current result
+      utterance.timestamps.push(word.timestamp);
+    }
+    return arr;
+  }, []);
 
   // create new results
   var results = utterances.map(function(utterance, i) {
@@ -8028,11 +8011,12 @@ SpeakerStream.prototype.buildMessage = function() {
     result.speaker = utterance.speaker;
     // overwrite the transcript and timestamps on the first alternative
     var alt = result.alternatives[0];
-    alt.transcript = utterance.timestamps
-      .map(function(ts) {
-        return ts[WORD];
-      })
-      .join(' ') + ' ';
+    alt.transcript =
+      utterance.timestamps
+        .map(function(ts) {
+          return ts[WORD];
+        })
+        .join(' ') + ' ';
     alt.timestamps = utterance.timestamps;
     // overwrite the final value
     result.final = final;
@@ -8087,12 +8071,9 @@ SpeakerStream.prototype.handleResults = function(data) {
     .filter(function(result) {
       return result.final;
     })
-    .forEach(
-      function(result) {
-        this.results.push(result);
-      },
-      this
-    );
+    .forEach(function(result) {
+      this.results.push(result);
+    }, this);
 };
 
 // sorts by start time and then end time
@@ -8171,18 +8152,16 @@ SpeakerStream.prototype._flush = function(done) {
     .map(function(r) {
       return r.alternatives[0].timestamps;
     })
-    .reduce(
-      function(a, b) {
-        return a.concat(b);
-      },
-      []
-    );
+    .reduce(function(a, b) {
+      return a.concat(b);
+    }, []);
   if (timestamps.length !== this.speaker_labels.length) {
     var msg;
     if (timestamps.length && !this.speaker_labels.length) {
       msg = 'No speaker_labels found. SpeakerStream requires speaker_labels to be enabled.';
     } else {
-      msg = 'Mismatch between number of word timestamps (' +
+      msg =
+        'Mismatch between number of word timestamps (' +
         timestamps.length +
         ') and number of speaker_labels (' +
         this.speaker_labels.length +
@@ -8383,7 +8362,7 @@ WebAudioL16Stream.prototype.floatTo16BitPCM = function(input) {
   var output = new DataView(new ArrayBuffer(input.length * 2)); // length is in bytes (8-bit), so *2 to get 16-bit length
   for (var i = 0; i < input.length; i++) {
     var multiplier = input[i] < 0 ? 0x8000 : 0x7fff; // 16-bit signed range is -32768 to 32767
-    output.setInt16(i * 2, input[i] * multiplier | 0, true); // index, value, little edian
+    output.setInt16(i * 2, (input[i] * multiplier) | 0, true); // index, value, little edian
   }
   return Buffer.from(output.buffer);
 };
@@ -8497,17 +8476,14 @@ WritableElementStream.prototype.writeString = function writeString(text, encodin
 
 WritableElementStream.prototype.writeObject = function writeObject(data, encoding, next) {
   if (Array.isArray(data.results)) {
-    data.results.forEach(
-      function(result) {
-        if (result.final) {
-          this.finalizedText += result.alternatives[0].transcript;
-          this.el[this.prop] = this.finalizedText;
-        } else {
-          this.el[this.prop] = this.finalizedText + result.alternatives[0].transcript;
-        }
-      },
-      this
-    );
+    data.results.forEach(function(result) {
+      if (result.final) {
+        this.finalizedText += result.alternatives[0].transcript;
+        this.el[this.prop] = this.finalizedText;
+      } else {
+        this.el[this.prop] = this.finalizedText + result.alternatives[0].transcript;
+      }
+    }, this);
   }
   next();
 };
@@ -8868,7 +8844,7 @@ $(document).ready(function () {
             $.ajax({
                 type: "GET",
                 //url: "https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/credential/validate",
-                //url: "https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/credential/info",
+                url: "https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/credential/info",
                 async: false,
                 headers: {
                     "Authorization": "Basic " + btoa(values.username + ":" + values.password)
@@ -8921,7 +8897,8 @@ exports.con = function (result) {
 
     var requestObject = {};
     requestObject.transcript = result.toString();
-    if (localStorage.getItem("courseOfStudies ") !== null && localStorage.getItem("semester") !== null) {
+    console.log("Local Storage " + localStorage.getItem("courseOfStudies"));
+    if (localStorage.getItem("courseOfStudies") !== null && localStorage.getItem("semester") !== null) {
         requestObject.courseOfStudies = localStorage.getItem("courseOfStudies");
         requestObject.semester = localStorage.getItem("semester");
     }
@@ -8929,6 +8906,7 @@ exports.con = function (result) {
      "courseOfStudies": localStorage.getItem("courseOfStudies") ,
      "semester": localStorage.getItem("semester") };
      */
+    console.log("REsult Object : " + JSON.stringify(requestObject));
     var options = {
         //url: 'https://openwhisk.ng.bluemix.net/api/v1/web/Hochschule_Test/default/RouterV2.http',
         url: 'https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/2b5bfd7bced95ed3c16e36929ac1576f8ca11a7df301beca57861caf482d1b7e/iwibot/router',

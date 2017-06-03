@@ -7,7 +7,9 @@ exports.con = function (result) {
 
     var requestObject = {};
     requestObject.transcript = result.toString();
-    if (localStorage.getItem("courseOfStudies ") !== null && localStorage.getItem("semester") !== null) {
+    console.log("Local Storage " + localStorage.getItem("courseOfStudies"));
+
+    if (localStorage.getItem("courseOfStudies") !== null && localStorage.getItem("semester") !== null) {
         requestObject.courseOfStudies = localStorage.getItem("courseOfStudies");
         requestObject.semester = localStorage.getItem("semester");
     }
@@ -15,6 +17,7 @@ exports.con = function (result) {
      "courseOfStudies": localStorage.getItem("courseOfStudies") ,
      "semester": localStorage.getItem("semester") };
      */
+    console.log("REsult Object : " + JSON.stringify(requestObject));
     var options = {
         //url: 'https://openwhisk.ng.bluemix.net/api/v1/web/Hochschule_Test/default/RouterV2.http',
         url: 'https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/2b5bfd7bced95ed3c16e36929ac1576f8ca11a7df301beca57861caf482d1b7e/iwibot/router',

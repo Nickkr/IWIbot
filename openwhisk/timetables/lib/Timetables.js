@@ -24,7 +24,7 @@ function main(params) {
         var resultObject = {};
         var dayIndex = convertDayToHskaDay(currentDay), dayValue = currentDayString;
 
-        if (params.semester !== null  && params.courseOfStudies !== null) {
+        if (params.semester !== undefined && params.courseOfStudies !== undefined) {
             url = 'https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/timetable/' + params.courseOfStudies + '/0/' + params.semester + '?format=json';
         } else {
             console.log("Es wurde kein Semester angegeben");
@@ -82,7 +82,7 @@ function main(params) {
                 var entries = responseObject.timetables[dayIndex].entries;
 
                 if (!entries || entries.length === 0) {
-                    resolve({"payload": "Maybe it is a holiday today?"});
+                    resolve({"payload": "Heute findet keine Vorlesung statt."});
                 }
                 for (var i = 0; entries.length > i; i++) {
                     var startTime = entries[i].startTime;
