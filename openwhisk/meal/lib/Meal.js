@@ -63,7 +63,7 @@ function main(params) {
                     meals.mealGroups[entity] === undefined || meals.mealGroups[entity].meals.length === 0 ||
                     meals.mealGroups[entity].meals.length === undefined) {
 
-                    resultObject.payload = "Heute gibt es nichts zu essen in der Mensa, vielleicht sind Ferien?";
+                    resultObject.payload = "In der Mensa gibt es heute nichts zu essen, vielleicht sind Ferien?";
 
                     resolve(resultObject);
 
@@ -88,8 +88,8 @@ function main(params) {
                 console.log('http status code:', (response || {}).statusCode);
                 console.log('error:', error);
                 console.log('body:', body);
-                resultObject.payload = "Die HsKa-Api ist zur Zeit nicht erreichbar!";
-                reject(resultObject);
+                resultObject.payload = error.toString();
+                reject(error.toString());
 
             }
         });

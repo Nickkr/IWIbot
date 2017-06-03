@@ -111,8 +111,8 @@ function main(params) {
                 console.log('http status code:', (response || {}).statusCode);
                 console.log('error:', error);
                 console.log('body:', body);
-                resultObject.payload = "Die HsKa-Api ist zur Zeit nicht erreichbar!";
-                reject(resultObject);
+
+                reject(error.toString());
             }
         });
     });

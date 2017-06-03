@@ -24,12 +24,12 @@ function main() {
                 console.log('http status code:', (response || {}).statusCode);
                 console.log('error:', error);
                 console.log('body:', body);
-                jokeResponse = {
+                /*jokeResponse = {
                     "payload": "The is joke you requested is taking a coffee or tea break. Look at the kitchen, maybe it is sitting there.",
                     "voice": voice
-                };
+                };*/
 
-                reject(jokeResponse);
+                reject(error.toString());
             }
         });
     });
