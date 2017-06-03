@@ -111,8 +111,7 @@ function main(params) {
                 console.log('http status code:', (response || {}).statusCode);
                 console.log('error:', error);
                 console.log('body:', body);
-
-                reject(error.toString());
+                reject(error);
             }
         });
     });
