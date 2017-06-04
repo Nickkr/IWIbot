@@ -8743,71 +8743,6 @@ module.exports={
 }
 
 },{}],62:[function(require,module,exports){
-$(document).ready(function () {
-    //Require Watson Modules
-    var stt = require("./speechToText");
-    var con = require("./conversation");
-    var tts = require("./textToSpeech");
-    var chat = require("./chat.js");
-    var login = require("./login");
-
-    var $chatForm = $('#chatForm');
-    var $recordingButton = $(".btn-circle");
-    var $historyToggle = $(".historyToggle");
-    var $modalTrigger = $("#modal_trigger");
-    var $loginForm = $('.loginForm');
-    var notificationNumber = 0;
-
-    //Recording
-    $(document).on('click', '.notRecording', function () {
-
-        $recordingButton.removeClass("notRecording").addClass("recording");
-        stt.promise().then(function (result) {
-
-            return con.con(result);
-
-        }).then(function (result) {
-            //Add new notification, stop loader animation and show recording button again
-            notificationNumber++;
-            $("#mainDiv").removeClass("loader");
-            $recordingButton.show();
-            $(".notification").show().text(notificationNumber.toString());
-
-            return tts.tts(result);
-        });
-
-    });
-
-    //Toggle between chat and voice view
-    $historyToggle.click(function () {
-        notificationNumber = 0;
-        chat.chatToggle();
-    });
-    //Chat Submit
-    $chatForm.submit(function (event) {
-        event.preventDefault();
-        con.con(chat.chatSubmit());
-    });
-    //Open Login Window
-    $modalTrigger.leanModal({
-        top: 100,
-        overlay: 0.6,
-        closeButton: ".modal_close"
-    });
-    //Login Submit
-    $loginForm.on('submit', function () {
-        event.preventDefault();
-        login.loginSubmit();
-    });
-    //Hide collapsed navbar when link is clicked
-    $(document).on('click', '.navbar-collapse.in', function (e) {
-        if ($(e.target).is('a')) {
-            $(this).collapse('hide');
-        }
-    });
-
-});
-},{"./chat.js":63,"./conversation":64,"./login":65,"./speechToText":66,"./textToSpeech":67}],63:[function(require,module,exports){
 var exports = module.exports = {};
 
 exports.appendSendMessage = function appendSendMessage(msg) {
@@ -8856,7 +8791,7 @@ exports.chatToggle = function chatToggle() {
 
 
 };
-},{}],64:[function(require,module,exports){
+},{}],63:[function(require,module,exports){
 var exports = module.exports = {};
 var chat = require("./chat.js");
 exports.con = function (result) {
@@ -8911,7 +8846,7 @@ exports.con = function (result) {
     return $.ajax(options);
 
 };
-},{"./chat.js":63}],65:[function(require,module,exports){
+},{"./chat.js":62}],64:[function(require,module,exports){
 var exports = module.exports = {};
 
 
@@ -8985,7 +8920,72 @@ exports.loginSubmit = function() {
 
 };
 
-},{}],66:[function(require,module,exports){
+},{}],65:[function(require,module,exports){
+$(document).ready(function () {
+    //Require Watson Modules
+    var stt = require("./speechToText");
+    var con = require("./conversation");
+    var tts = require("./textToSpeech");
+    var chat = require("./chat.js");
+    var login = require("./login");
+
+    var $chatForm = $('#chatForm');
+    var $recordingButton = $(".btn-circle");
+    var $historyToggle = $(".historyToggle");
+    var $modalTrigger = $("#modal_trigger");
+    var $loginForm = $('.loginForm');
+    var notificationNumber = 0;
+
+    //Recording
+    $(document).on('click', '.notRecording', function () {
+
+        $recordingButton.removeClass("notRecording").addClass("recording");
+        stt.promise().then(function (result) {
+
+            return con.con(result);
+
+        }).then(function (result) {
+            //Add new notification, stop loader animation and show recording button again
+            notificationNumber++;
+            $("#mainDiv").removeClass("loader");
+            $recordingButton.show();
+            $(".notification").show().text(notificationNumber.toString());
+
+            return tts.tts(result);
+        });
+
+    });
+
+    //Toggle between chat and voice view
+    $historyToggle.click(function () {
+        notificationNumber = 0;
+        chat.chatToggle();
+    });
+    //Chat Submit
+    $chatForm.submit(function (event) {
+        event.preventDefault();
+        con.con(chat.chatSubmit());
+    });
+    //Open Login Window
+    $modalTrigger.leanModal({
+        top: 100,
+        overlay: 0.6,
+        closeButton: ".modal_close"
+    });
+    //Login Submit
+    $loginForm.on('submit', function () {
+        event.preventDefault();
+        login.loginSubmit();
+    });
+    //Hide collapsed navbar when link is clicked
+    $(document).on('click', '.navbar-collapse.in', function (e) {
+        if ($(e.target).is('a')) {
+            $(this).collapse('hide');
+        }
+    });
+
+});
+},{"./chat.js":62,"./conversation":63,"./login":64,"./speechToText":66,"./textToSpeech":67}],66:[function(require,module,exports){
 var exports = module.exports = {};
 
 var chat = require("./chat.js");
@@ -9059,7 +9059,7 @@ exports.promise = function () {
 
 };
 
-},{"./chat.js":63,"watson-speech/speech-to-text/recognize-microphone":50}],67:[function(require,module,exports){
+},{"./chat.js":62,"watson-speech/speech-to-text/recognize-microphone":50}],67:[function(require,module,exports){
 var exports = module.exports = {};
 
 exports.tts = function (result) {
@@ -9099,4 +9099,4 @@ exports.tts = function (result) {
 
 };
 
-},{"watson-speech/text-to-speech/synthesize":57}]},{},[62]);
+},{"watson-speech/text-to-speech/synthesize":57}]},{},[65]);
