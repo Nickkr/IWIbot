@@ -8,18 +8,14 @@ exports.tts = function (result) {
     var text = resultObj.payload;
 
     function getVoice(obj) {
-        var voice;
 
         if (obj.voice !== undefined) {
-
-            voice = obj.voice;
-
+            return obj.voice;
         }
         else {
-            voice = 'de-DE_DieterVoice';
+            return 'de-DE_DieterVoice';
         }
 
-        return voice
     }
 
     fetch('/api/text-to-speech/token')
