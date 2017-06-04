@@ -64,7 +64,7 @@ function main(params) {
         return new Promise(function (resolve, reject) {
 
             conversation.message({
-                input: {text: params.transcript}
+                input: {text: params.payload}
             }, processResponse);
 
             function processResponse(err, response) {

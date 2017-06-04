@@ -1,11 +1,13 @@
 var exports = module.exports = {};
 
+var chat = require("./chat.js");
+
 exports.promise = function () {
     console.log("----------STT_started----------");
     //Require Watson Module
     var recognizeMicrophone = require('watson-speech/speech-to-text/recognize-microphone');
-
     var $recordingButton = $(".btn-circle");
+    var $mainDiv = $("#mainDiv");
     var sttResponse;
 
     return new Promise(function (resolve, reject) {
@@ -16,10 +18,8 @@ exports.promise = function () {
             }).then(function (token) {
             var stream = recognizeMicrophone({
                 token: token,
-                //continuous: false,
                 outputElement: '#sttContent' // CSS selector or DOM Element
             });
-
             stream.on('error', function (err) {
                 //Remove recording animation on error
                 $recordingButton.removeClass("recording").addClass("notRecording");
@@ -47,12 +47,9 @@ exports.promise = function () {
                 if (typeof sttResponse !== "undefined") {
                     //Hide recording button and show loader animation
                     $recordingButton.removeClass("recording").addClass("notRecording").hide();
-
                     //Append final stt response to chat view
-                    $("#mainDiv").addClass("loader");
-                    var msgSend = '<div class="row msg "><div class="col-lg-5"></div><div class="col-lg-4"><div class="msg-send">' + sttResponse + '</div></div><div class="col-lg-3"></div></div>';
-                    $(msgSend).appendTo("#chat div.container");
-
+                    $mainDiv.addClass("loader");
+                    chat.appendSendMessage(sttResponse);
                     resolve(sttResponse);
 
                 } else {
@@ -71,4 +68,5 @@ exports.promise = function () {
             console.log(error);
         });
     });
+
 };

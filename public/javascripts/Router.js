@@ -3,37 +3,16 @@ $(document).ready(function () {
     var stt = require("./speechToText");
     var con = require("./conversation");
     var tts = require("./textToSpeech");
+    var chat = require("./chat.js");
+    var login = require("./login");
 
-
+    var $chatForm = $('#chatForm');
     var $recordingButton = $(".btn-circle");
+    var $historyToggle = $(".historyToggle");
+    var $modalTrigger = $("#modal_trigger");
+    var $loginForm = $('.loginForm');
     var notificationNumber = 0;
-    //var greeting = "Hallo, ich bin Claudio, dein persönlicher Assistent. Wie kann ich dir helfen?";
-    // tts.tts(greeting).then();
 
-    //Onclick toggle between Chat and Voice view
-    $(".historyToggle").click(function () {
-        notificationNumber = 0;
-        $(".notification").hide().text();
-        $("i.toggleIcon").toggleClass(".fa fa-microphone");
-        $(".voice , .history").toggle();
-        $("#chatForm").toggle();
-        window.scrollTo(0, document.body.scrollHeight);
-
-    });
-
-    //Form submit in Chat view
-    $('#chatForm').submit(function (event) {
-        event.preventDefault();
-        //Append submitted message to Chat
-        var value = $('#messageField').val().toString();
-        var msgSend = '<div class="row msg "><div class="col-lg-5"></div><div class="col-lg-4"><div class="msg-send">' + value + '</div></div><div class="col-lg-3"></div></div>';
-        $(msgSend).appendTo("#chat div.container").hide().fadeIn();
-        window.scrollTo(0, document.body.scrollHeight);
-        //then()
-        con.con(value);
-
-
-    });
     //Recording
     $(document).on('click', '.notRecording', function () {
 
@@ -54,85 +33,26 @@ $(document).ready(function () {
 
     });
 
-    //-------------Login-------------------
-    var $invalidInput = $(".invalidInput");
-    var $noSemesterSelected = $(".noSemesterSelected");
-    //Close Login-Overlay
-    function close_modal() {
-        $("#lean_overlay").fadeOut(200);
-        $("#modal").css({"display": "none"});
-    }
-
-    $("#modal_trigger").leanModal({
+    //Toggle between chat and voice view
+    $historyToggle.click(function () {
+        notificationNumber = 0;
+        chat.chatToggle();
+    });
+    //Chat Submit
+    $chatForm.submit(function (event) {
+        event.preventDefault();
+        con.con(chat.chatSubmit());
+    });
+    //Open Login Window
+    $modalTrigger.leanModal({
         top: 100,
         overlay: 0.6,
         closeButton: ".modal_close"
     });
-    //Set local storage
-    function setItem(key, value) {
-        localStorage.setItem(key, value);
-    }
-
-    //Get local storage
-    function getItem(key) {
-        return localStorage.getItem(key);
-    }
-
-    //Login Form
-    $('.loginForm').on('submit', function () {
+    //Login Submit
+    $loginForm.on('submit', function () {
         event.preventDefault();
-
-        var $inputs = $('.loginForm :input');
-        var values = {};
-        $inputs.each(function () {
-            values[this.name] = $(this).val();
-            console.log(values[this.name]);
-        });
-
-        if (values.semester === "0") {
-
-            $noSemesterSelected.show();
-
-        } else {
-            $(".loginForm").trigger('reset');
-
-            $.ajax({
-                type: "GET",
-                //url: "https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/credential/validate",
-                url: "https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/credential/info",
-                async: false,
-                headers: {
-                    "Authorization": "Basic " + btoa(values.username + ":" + values.password)
-                },
-                success: function (data) {
-                    console.log(data);
-                    //var firstName = {payload: "Hallo " + data.firstName + ", du hast dich erfolgreich eingeloggt"};
-                    //firstName = JSON.stringify(firstName);
-                    //tts.tts(firstName).then;
-                    $invalidInput.hide();
-                    $noSemesterSelected.hide();
-                    close_modal();
-
-                    setItem("username", values.username);
-                    setItem("password", values.password);
-                    setItem("semester", values.semester);
-                    setItem("courseOfStudies", data.courseOfStudies);
-                    console.log("courseOfStudies: " + getItem("courseOfStudies"));
-                    console.log("Semester: " + getItem("semester"));
-
-
-                   /* sessionStorage.setItem("semester", values.semester);
-                    sessionStorage.setItem("courseOfStudies", data.courseOfStudies);
-                    console.log("Session storage");*/
-
-                },
-                error: function () {
-                    $noSemesterSelected.hide();
-                    $invalidInput.show();
-                }
-
-            });
-        }
+        login.loginSubmit();
     });
     //Hide collapsed navbar when link is clicked
     $(document).on('click', '.navbar-collapse.in', function (e) {

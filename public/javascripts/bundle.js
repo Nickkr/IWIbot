@@ -8748,37 +8748,16 @@ $(document).ready(function () {
     var stt = require("./speechToText");
     var con = require("./conversation");
     var tts = require("./textToSpeech");
+    var chat = require("./chat.js");
+    var login = require("./login");
 
-
+    var $chatForm = $('#chatForm');
     var $recordingButton = $(".btn-circle");
+    var $historyToggle = $(".historyToggle");
+    var $modalTrigger = $("#modal_trigger");
+    var $loginForm = $('.loginForm');
     var notificationNumber = 0;
-    //var greeting = "Hallo, ich bin Claudio, dein persönlicher Assistent. Wie kann ich dir helfen?";
-    // tts.tts(greeting).then();
 
-    //Onclick toggle between Chat and Voice view
-    $(".historyToggle").click(function () {
-        notificationNumber = 0;
-        $(".notification").hide().text();
-        $("i.toggleIcon").toggleClass(".fa fa-microphone");
-        $(".voice , .history").toggle();
-        $("#chatForm").toggle();
-        window.scrollTo(0, document.body.scrollHeight);
-
-    });
-
-    //Form submit in Chat view
-    $('#chatForm').submit(function (event) {
-        event.preventDefault();
-        //Append submitted message to Chat
-        var value = $('#messageField').val().toString();
-        var msgSend = '<div class="row msg "><div class="col-lg-5"></div><div class="col-lg-4"><div class="msg-send">' + value + '</div></div><div class="col-lg-3"></div></div>';
-        $(msgSend).appendTo("#chat div.container").hide().fadeIn();
-        window.scrollTo(0, document.body.scrollHeight);
-        //then()
-        con.con(value);
-
-
-    });
     //Recording
     $(document).on('click', '.notRecording', function () {
 
@@ -8799,34 +8778,147 @@ $(document).ready(function () {
 
     });
 
-    //-------------Login-------------------
-    var $invalidInput = $(".invalidInput");
-    var $noSemesterSelected = $(".noSemesterSelected");
-    //Close Login-Overlay
-    function close_modal() {
-        $("#lean_overlay").fadeOut(200);
-        $("#modal").css({"display": "none"});
-    }
-
-    $("#modal_trigger").leanModal({
+    //Toggle between chat and voice view
+    $historyToggle.click(function () {
+        notificationNumber = 0;
+        chat.chatToggle();
+    });
+    //Chat Submit
+    $chatForm.submit(function (event) {
+        event.preventDefault();
+        con.con(chat.chatSubmit());
+    });
+    //Open Login Window
+    $modalTrigger.leanModal({
         top: 100,
         overlay: 0.6,
         closeButton: ".modal_close"
     });
-    //Set local storage
-    function setItem(key, value) {
-        localStorage.setItem(key, value);
-    }
-
-    //Get local storage
-    function getItem(key) {
-        return localStorage.getItem(key);
-    }
-
-    //Login Form
-    $('.loginForm').on('submit', function () {
+    //Login Submit
+    $loginForm.on('submit', function () {
         event.preventDefault();
+        login.loginSubmit();
+    });
+    //Hide collapsed navbar when link is clicked
+    $(document).on('click', '.navbar-collapse.in', function (e) {
+        if ($(e.target).is('a')) {
+            $(this).collapse('hide');
+        }
+    });
 
+});
+},{"./chat.js":63,"./conversation":64,"./login":65,"./speechToText":66,"./textToSpeech":67}],63:[function(require,module,exports){
+var exports = module.exports = {};
+
+exports.appendSendMessage = function appendSendMessage(msg) {
+
+
+    var msgSend = '<div class="row msg "><div class="col-lg-5">'
+        + '</div><div class="col-lg-4"><div class="msg-send">'
+        + msg + '</div></div><div class="col-lg-3"></div></div>';
+    $(msgSend).appendTo("#chat div.container").hide().fadeIn();
+    window.scrollTo(0, document.body.scrollHeight);
+
+};
+
+exports.appendReceivedMessage = function appendReceivedMessage(msg) {
+
+    var msgReceived = '<div class="row msg "><div class="col-lg-3">'
+        + '</div><div class="col-lg-4"><div class="msg-recived">'
+        + msg + '</div></div><div class="col-lg-5"></div></div>';
+
+    $(msgReceived).appendTo("#chat div.container").hide().fadeIn();
+
+    window.scrollTo(0, document.body.scrollHeight);
+};
+
+exports.chatSubmit = function chatSubmit() {
+
+    var $messageField = $('#messageField');
+    var value = $messageField.val().toString();
+    exports.appendSendMessage(value);
+    window.scrollTo(0, document.body.scrollHeight);
+    return value;
+};
+exports.chatToggle = function chatToggle() {
+
+    var $notification = $(".notification");
+    var $toggleIcon = $("i.toggleIcon");
+    var $voiceChatToggle = $(".voice , .history");
+    var $chatForm = $('#chatForm');
+
+    $notification.hide().text();
+    $toggleIcon.toggleClass(".fa fa-microphone");
+    $voiceChatToggle.toggle(400, function () {
+
+    });
+    $chatForm.toggle();
+
+
+};
+},{}],64:[function(require,module,exports){
+var exports = module.exports = {};
+var chat = require("./chat.js");
+exports.con = function (result) {
+
+        console.log("----------CONVERSATION_started----------");
+        console.log("CONVERSATION_param: " + result);
+        var $mainDiv = $("#mainDiv");
+        var $btnCircle = $(".btn-circle");
+        var requestObject = {};
+        requestObject.payload = result.toString();
+
+        if (localStorage.getItem("courseOfStudies") !== null && localStorage.getItem("semester") !== null) {
+
+            requestObject.courseOfStudies = localStorage.getItem("courseOfStudies");
+            requestObject.semester = localStorage.getItem("semester");
+        }
+
+        console.log("CONVERSATION_RequestObject : " + JSON.stringify(requestObject));
+
+        var options = {
+            url: 'https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/2b5bfd7bced95ed3c16e36929ac1576f8ca11a7df301beca57861caf482d1b7e/iwibot/router',
+            type: 'POST',
+            data: JSON.stringify(requestObject),
+            contentType: "application/json",
+            processData: false,
+            success: function (data) {
+
+                console.log("CONVERSATION_recivedData: " + data);
+                console.log("CONVERSATION_htmlText: " + data.htmlText);
+                var dataObj = JSON.parse(data);
+                var payload = dataObj.payload.toString();
+
+                chat.appendReceivedMessage(payload);
+
+                if(typeof dataObj.htmlText !== 'undefined') {
+
+                    chat.appendReceivedMessage(dataObj.htmlText.toString());
+
+                }
+
+            },
+            error: function (err) {
+                console.log("CONVERSATION_err: " + JSON.stringify(err));
+                //remove loader animation and show recording button
+                $mainDiv.removeClass("loader");
+                $btnCircle.show();
+
+
+            }
+        };
+
+    return $.ajax(options);
+
+};
+},{"./chat.js":63}],65:[function(require,module,exports){
+var exports = module.exports = {};
+
+
+exports.loginSubmit = function() {
+
+        var $invalidInput = $(".invalidInput");
+        var $noSemesterSelected = $(".noSemesterSelected");
         var $inputs = $('.loginForm :input');
         var values = {};
         $inputs.each(function () {
@@ -8866,9 +8958,9 @@ $(document).ready(function () {
                     console.log("Semester: " + getItem("semester"));
 
 
-                   /* sessionStorage.setItem("semester", values.semester);
-                    sessionStorage.setItem("courseOfStudies", data.courseOfStudies);
-                    console.log("Session storage");*/
+                    /* sessionStorage.setItem("semester", values.semester);
+                     sessionStorage.setItem("courseOfStudies", data.courseOfStudies);
+                     console.log("Session storage");*/
 
                 },
                 error: function () {
@@ -8878,85 +8970,32 @@ $(document).ready(function () {
 
             });
         }
-    });
-    //Hide collapsed navbar when link is clicked
-    $(document).on('click', '.navbar-collapse.in', function (e) {
-        if ($(e.target).is('a')) {
-            $(this).collapse('hide');
-        }
-    });
+    function close_modal() {
+        $("#lean_overlay").fadeOut(200);
+        $("#modal").css({"display": "none"});
+    }
+    function setItem(key, value) {
+        localStorage.setItem(key, value);
+    }
 
-});
-},{"./conversation":63,"./speechToText":64,"./textToSpeech":65}],63:[function(require,module,exports){
-var exports = module.exports = {};
+    function getItem(key) {
+        return localStorage.getItem(key);
+    }
 
-
-exports.con = function (result) {
-
-        console.log("----------CONVERSATION_started----------");
-        console.log("CONVERSATION_param: " + result);
-
-        var requestObject = {};
-        requestObject.transcript = result.toString();
-        console.log("Local Storage " + localStorage.getItem("courseOfStudies"));
-
-        if (localStorage.getItem("courseOfStudies") !== null && localStorage.getItem("semester") !== null) {
-            requestObject.courseOfStudies = localStorage.getItem("courseOfStudies");
-            requestObject.semester = localStorage.getItem("semester");
-        }
-        /*result = {"transcript": result.toString(),
-         "courseOfStudies": localStorage.getItem("courseOfStudies") ,
-         "semester": localStorage.getItem("semester") };
-         */
-        console.log("Result Object : " + JSON.stringify(requestObject));
-        var options = {
-            //url: 'https://openwhisk.ng.bluemix.net/api/v1/web/Hochschule_Test/default/RouterV2.http',
-            url: 'https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/2b5bfd7bced95ed3c16e36929ac1576f8ca11a7df301beca57861caf482d1b7e/iwibot/router',
-            type: 'POST',
-            data: JSON.stringify(requestObject),
-            contentType: "application/json",
-            processData: false,
-            success: function (data) {
-
-                var valueRecived = JSON.parse(data);
-                console.log("CONVERSATION_recivedData: " + data);
-                console.log("CONVERSATION_htmlText: " + data.htmlText);
-                var htmlText = valueRecived.htmlText;
-                valueRecived = valueRecived.payload.toString();
-                var msgRecived = '<div class="row msg "><div class="col-lg-3"></div><div class="col-lg-4"><div class="msg-recived">' + valueRecived + '</div></div><div class="col-lg-5"></div></div>';
-                $(msgRecived).appendTo("#chat div.container").hide().fadeIn();
-
-                if (typeof htmlText !== 'undefined') {
-
-                    var html = '<div class="row msg "><div class="col-lg-3"></div><div class="col-lg-4"><div class="html-recived">' + htmlText + '</div></div><div class="col-lg-5"></div></div>';
-                    $(html).appendTo("#chat div.container").hide().fadeIn();
-                }
-                window.scrollTo(0, document.body.scrollHeight);
-
-            },
-            error: function (err) {
-                console.log("CONVERSATION_err: " + JSON.stringify(err));
-                //remove loader animation and show recording button
-                $("#mainDiv").removeClass("loader");
-                $(".btn-circle").show();
-
-
-            }
-        };
-
-
-    return $.ajax(options);
 
 };
-},{}],64:[function(require,module,exports){
+
+},{}],66:[function(require,module,exports){
 var exports = module.exports = {};
+
+var chat = require("./chat.js");
 
 exports.promise = function () {
     console.log("----------STT_started----------");
     //Require Watson Module
     var recognizeMicrophone = require('watson-speech/speech-to-text/recognize-microphone');
-
     var $recordingButton = $(".btn-circle");
+    var $mainDiv = $("#mainDiv");
     var sttResponse;
 
     return new Promise(function (resolve, reject) {
@@ -8967,10 +9006,8 @@ exports.promise = function () {
             }).then(function (token) {
             var stream = recognizeMicrophone({
                 token: token,
-                //continuous: false,
                 outputElement: '#sttContent' // CSS selector or DOM Element
             });
-
             stream.on('error', function (err) {
                 //Remove recording animation on error
                 $recordingButton.removeClass("recording").addClass("notRecording");
@@ -8998,12 +9035,9 @@ exports.promise = function () {
                 if (typeof sttResponse !== "undefined") {
                     //Hide recording button and show loader animation
                     $recordingButton.removeClass("recording").addClass("notRecording").hide();
-
                     //Append final stt response to chat view
-                    $("#mainDiv").addClass("loader");
-                    var msgSend = '<div class="row msg "><div class="col-lg-5"></div><div class="col-lg-4"><div class="msg-send">' + sttResponse + '</div></div><div class="col-lg-3"></div></div>';
-                    $(msgSend).appendTo("#chat div.container");
-
+                    $mainDiv.addClass("loader");
+                    chat.appendSendMessage(sttResponse);
                     resolve(sttResponse);
 
                 } else {
@@ -9022,14 +9056,16 @@ exports.promise = function () {
             console.log(error);
         });
     });
+
 };
 
-},{"watson-speech/speech-to-text/recognize-microphone":50}],65:[function(require,module,exports){
+},{"./chat.js":63,"watson-speech/speech-to-text/recognize-microphone":50}],67:[function(require,module,exports){
 var exports = module.exports = {};
 
 exports.tts = function (result) {
     console.log('----------TTS_started----------');
     console.log('TTS_params: ' + result);
+
     var synthesize = require('watson-speech/text-to-speech/synthesize');
     var resultObj = JSON.parse(result);
     var text = resultObj.payload;
@@ -9037,9 +9073,7 @@ exports.tts = function (result) {
     function getVoice(obj) {
 
         if (obj.voice !== undefined) {
-
             return obj.voice;
-
         }
         else {
             return 'de-DE_DieterVoice';
@@ -9047,6 +9081,7 @@ exports.tts = function (result) {
 
     }
 
+    //Get Api-Token from server
     fetch('/api/text-to-speech/token')
         .then(function (response) {
             return response.text();
