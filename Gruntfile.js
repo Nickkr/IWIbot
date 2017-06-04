@@ -59,15 +59,21 @@ module.exports = function(grunt) {
                 "reporterOutput": "" // This is to ommit bug!
             }
         },
+        browserify: {
+            build: {
+                src: 'public/javascripts/main.js',
+                dest: 'public/javascripts/bundle.js'
+            }
 
+        },
         // run once  --> grunt watch
         // After that every change on a file matching the patterns used bellow
         // will execute the corresponding task
         watch: {
-            unittest: {
+           /* unittest: {
                 files: '<%= nodeunit.files %>',
                 tasks: ['nodeunit']
-            },
+            },*/
             linting: {
                 files: '<%= jshint.files %>',
                 tasks: ['jshint']
@@ -85,7 +91,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-nodeunit'); // Unittest engine?
     grunt.loadNpmTasks('grunt-contrib-uglify'); // Minifier
     grunt.loadNpmTasks('grunt-contrib-watch'); //
-
+    grunt.loadNpmTasks('grunt-browserify');
     // Default task.
     grunt.registerTask('default', ['nodeunit','jshint']);
 };

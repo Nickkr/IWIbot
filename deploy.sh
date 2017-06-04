@@ -92,7 +92,7 @@ function install() {
   mv .mod node_modules
   # install zip in openwhisk
   wsk action create Timetables --kind nodejs:6 action.zip --web true
-  wsk api create /iwibotTest /timetables post Timetables --response-type json
+  wsk api create /iwibot /timetables post Timetables --response-type json
   cd ../..
 
   echo -e "Install Complete"

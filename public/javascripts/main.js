@@ -37,6 +37,7 @@ $(document).ready(function () {
     $historyToggle.click(function () {
         notificationNumber = 0;
         chat.chatToggle();
+
     });
     //Chat Submit
     $chatForm.submit(function (event) {
