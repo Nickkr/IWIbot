@@ -8829,6 +8829,7 @@ module.exports={
 
 },{}],62:[function(require,module,exports){
 var exports = module.exports = {};
+var lastScrollPosition;
 
 exports.appendSendMessage = function appendSendMessage(msg) {
 
@@ -8869,13 +8870,39 @@ exports.chatToggle = function chatToggle() {
 
     $notification.hide().text();
     $toggleIcon.toggleClass(".fa fa-microphone");
-    $voiceChatToggle.toggle(400, function () {
 
-    });
+    if($('.history').css('display') === 'block') {
+        exports.setLastScrollPosition(window.scrollY);
+    }
+
+    var options = {};
+    var tmpPosition = 0;
+    /*options.duration = 200;*/
+    options.start = function () {
+
+    };
+    options.complete = function () {
+        console.log('got invoked: ' + exports.getLastScrollPosition());
+        $(window).scrollTop(exports.getLastScrollPosition());
+    };
+    $voiceChatToggle.toggle(options);
     $chatForm.toggle();
+
+};
+exports.getLastScrollPosition = function getLastScrollPosition() {
+
+    return lastScrollPosition;
 
 
 };
+exports.setLastScrollPosition = function setLastScrollPosition(value) {
+
+     lastScrollPosition = value;
+     console.log(lastScrollPosition);
+ };
+
+
+
 },{}],63:[function(require,module,exports){
 var exports = module.exports = {};
 var chat = require("./chat.js");
@@ -8893,7 +8920,12 @@ exports.con = function (result) {
             requestObject.courseOfStudies = localStorage.getItem("courseOfStudies");
             requestObject.semester = localStorage.getItem("semester");
         }
+        if(localStorage.getItem("context") !== null) {
 
+            var temp = localStorage.getItem("context");
+            requestObject.context = JSON.parse(temp);
+            localStorage.setItem("context" , null);
+        }
         console.log("CONVERSATION_RequestObject : " + JSON.stringify(requestObject));
 
         var options = {
@@ -8914,6 +8946,11 @@ exports.con = function (result) {
                 if(typeof dataObj.htmlText !== 'undefined') {
 
                     chat.appendReceivedMessage(dataObj.htmlText.toString());
+
+                }
+                if("context" in dataObj) {
+
+                    localStorage.setItem("context" , JSON.stringify(dataObj.context));
 
                 }
 
@@ -9062,6 +9099,12 @@ $(document).ready(function () {
     $loginForm.on('submit', function () {
         event.preventDefault();
         login.loginSubmit();
+    });
+    $(window).scroll(function(){
+
+       // chat.setLastScrollPosition(this.scrollY);
+
+
     });
     //Hide collapsed navbar when link is clicked
     $(document).on('click', '.navbar-collapse.in', function (e) {

@@ -24,19 +24,36 @@ function main(params) {
     }
 
     return con().then(function (response) {
-
+        console.log('Conversation started inner: ' + response);
         response.semester = semester;
         response.courseOfStudies = courseOfStudies;
-        return dispatch(response);
+        if("skip" in response.output) {
 
+            var obj = {};
+            obj.payload = response.output.text[0];
+            obj.skip = response.output.skip;
+            obj.context = response.context;
+            obj.intents = response.intents;
+
+            return dispatch(obj);
+
+        } else {
+
+            return dispatch(response);
+        }
     }, function (reason) {
 
         console.error("Conversation Error: " + reason);
         throw reason;
 
     }).then(function (response) {
-        response = response.response.result;
-
+        console.log('LAST STEP -----------------------');
+        console.log('Inner Last Step: ' + typeof response.response);
+        console.log('Response: ' + JSON.stringify(response));
+        if("response" in response) {
+            console.log('In if ---------------------');
+            response = response.response.result;
+        }
         return {
             headers: {'Access-Control-Allow-Origin': '*', 'Content-Type': 'text/plain'},
             body: JSON.stringify(response),
@@ -64,7 +81,8 @@ function main(params) {
         return new Promise(function (resolve, reject) {
 
             conversation.message({
-                input: {text: params.payload}
+                input: {text: params.payload},
+                        context: params.context
             }, processResponse);
 
             function processResponse(err, response) {
@@ -84,14 +102,22 @@ function main(params) {
 
     function dispatch(response) {
         console.log("------Dispatcher started!------");
+        console.log('skip: ' + JSON.stringify(response));
         console.log("Action to be invoked: " + response.intents[0].intent);
+        if(!response.skip) {
+            console.log("Action Invoke");
+            const params = response;
+            var name = response.intents[0].intent;
+            var ow = openwhisk();
+            const blocking = true, result = true;
 
-        const params = response;
-        var name = response.intents[0].intent;
-        var ow = openwhisk();
-        const blocking = true, result = true;
-
-        return ow.actions.invoke({name, blocking, result, params});
+            return ow.actions.invoke({name, blocking, result, params});
+        } else {
+            return new Promise(function (resolve, reject) {
+               console.log("SKiped action");
+               resolve(response);
+            });
+        }
 
     }
 

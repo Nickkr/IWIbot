@@ -14,7 +14,12 @@ exports.con = function (result) {
             requestObject.courseOfStudies = localStorage.getItem("courseOfStudies");
             requestObject.semester = localStorage.getItem("semester");
         }
+        if(localStorage.getItem("context") !== null) {
 
+            var temp = localStorage.getItem("context");
+            requestObject.context = JSON.parse(temp);
+            localStorage.setItem("context" , null);
+        }
         console.log("CONVERSATION_RequestObject : " + JSON.stringify(requestObject));
 
         var options = {
@@ -35,6 +40,11 @@ exports.con = function (result) {
                 if(typeof dataObj.htmlText !== 'undefined') {
 
                     chat.appendReceivedMessage(dataObj.htmlText.toString());
+
+                }
+                if("context" in dataObj) {
+
+                    localStorage.setItem("context" , JSON.stringify(dataObj.context));
 
                 }
 

@@ -1,4 +1,5 @@
 var exports = module.exports = {};
+var lastScrollPosition;
 
 exports.appendSendMessage = function appendSendMessage(msg) {
 
@@ -39,10 +40,35 @@ exports.chatToggle = function chatToggle() {
 
     $notification.hide().text();
     $toggleIcon.toggleClass(".fa fa-microphone");
-    $voiceChatToggle.toggle(400, function () {
 
-    });
+    if($('.history').css('display') === 'block') {
+        exports.setLastScrollPosition(window.scrollY);
+    }
+
+    var options = {};
+    var tmpPosition = 0;
+    /*options.duration = 200;*/
+    options.start = function () {
+
+    };
+    options.complete = function () {
+        console.log('got invoked: ' + exports.getLastScrollPosition());
+        $(window).scrollTop(exports.getLastScrollPosition());
+    };
+    $voiceChatToggle.toggle(options);
     $chatForm.toggle();
+
+};
+exports.getLastScrollPosition = function getLastScrollPosition() {
+
+    return lastScrollPosition;
 
 
 };
+exports.setLastScrollPosition = function setLastScrollPosition(value) {
+
+     lastScrollPosition = value;
+     console.log(lastScrollPosition);
+ };
+
+

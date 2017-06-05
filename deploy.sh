@@ -41,7 +41,7 @@ function install() {
   mv .mod node_modules
   # install zip in openwhisk
   wsk action create Joke --kind nodejs:6 action.zip --web true
-  wsk api create /iwibot /joke get Joke --response-type json
+  #wsk api create /iwibot /joke get Joke --response-type json
   cd ../..
 
   echo "Installing GET Meal Action"
@@ -58,7 +58,7 @@ function install() {
   mv .mod node_modules
   # install zip in openwhisk
   wsk action create Meal --kind nodejs:6 action.zip --web true
-  wsk api create /iwibot /meal post Meal --response-type json
+  #wsk api create /iwibot /meal post Meal --response-type json
   cd ../..
 
    echo "Installing GET Router Action"
@@ -92,7 +92,7 @@ function install() {
   mv .mod node_modules
   # install zip in openwhisk
   wsk action create Timetables --kind nodejs:6 action.zip --web true
-  wsk api create /iwibot /timetables post Timetables --response-type json
+  #wsk api create /iwibot /timetables post Timetables --response-type json
   cd ../..
 
   echo -e "Install Complete"

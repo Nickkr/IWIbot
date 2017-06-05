@@ -55,6 +55,12 @@ $(document).ready(function () {
         event.preventDefault();
         login.loginSubmit();
     });
+    $(window).scroll(function(){
+
+       // chat.setLastScrollPosition(this.scrollY);
+
+
+    });
     //Hide collapsed navbar when link is clicked
     $(document).on('click', '.navbar-collapse.in', function (e) {
         if ($(e.target).is('a')) {

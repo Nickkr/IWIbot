@@ -38,7 +38,7 @@ echo "Deploying wsk actions, etc."
 
 echo "Find and set Joke API URL"
 export JOKE_API_URL=`wsk api list | tail -1 | awk '{print $4}'`
-
+$JOKE_API_URL
 echo "Running tests"
 
 
