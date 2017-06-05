@@ -18,7 +18,7 @@ module.exports = function(grunt) {
             }
         },
         nodeunit: {
-            files: ['public/javascripts/tests/**/*.js']
+            files: ['openwhisk/**/*test.js']
         },
         jshint: {
             files: ['**/*.js', // Alle javascript files außer nachfolgende
