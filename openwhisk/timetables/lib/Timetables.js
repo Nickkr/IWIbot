@@ -133,7 +133,7 @@ function combineStartAndEndTime(startTime, endTime) {
 
 function convertDayToHskaDay(day) {
     day = currentDay - 1;
-    if (day === 1) {
+    if (day === -1) {
         day = 6;
     }
     return day;

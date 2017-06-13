@@ -36,8 +36,8 @@ exports.loginSubmit = function() {
                     $noSemesterSelected.hide();
                     close_modal();
 
-                    setItem("username", values.username);
-                    setItem("password", values.password);
+                    //setItem("username", values.username);
+                    //setItem("password", values.password);
                     setItem("semester", values.semester);
                     setItem("courseOfStudies", data.courseOfStudies);
                     console.log("courseOfStudies: " + getItem("courseOfStudies"));

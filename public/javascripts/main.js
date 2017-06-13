@@ -13,6 +13,7 @@ $(document).ready(function () {
     var $loginForm = $('.loginForm');
     var notificationNumber = 0;
 
+
     //Recording
     $(document).on('click', '.notRecording', function () {
 

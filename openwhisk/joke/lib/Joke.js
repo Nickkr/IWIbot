@@ -1,6 +1,7 @@
 var request = require('request');
 var url = "http://api.icndb.com/jokes/random";
 var voice = "en-US_MichaelVoice";
+var jokeResponse = {};
 
 function main() {
 
@@ -9,7 +10,6 @@ function main() {
         request({
             url: url,
         }, function (error, response, body) {
-            var jokeResponse = {};
 
             if (!error && response.statusCode === 200) {
 
@@ -24,10 +24,6 @@ function main() {
                 console.log('http status code:', (response || {}).statusCode);
                 console.log('error:', error);
                 console.log('body:', body);
-                /*jokeResponse = {
-                    "payload": "The is joke you requested is taking a coffee or tea break. Look at the kitchen, maybe it is sitting there.",
-                    "voice": voice
-                };*/
 
                 reject(error);
             }

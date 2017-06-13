@@ -1,23 +1,13 @@
 var exports = module.exports = {};
+var synthesize = require('watson-speech/text-to-speech/synthesize');
 
 exports.tts = function (result) {
+
     console.log('----------TTS_started----------');
     console.log('TTS_params: ' + result);
 
-    var synthesize = require('watson-speech/text-to-speech/synthesize');
     var resultObj = JSON.parse(result);
     var text = resultObj.payload;
-
-    function getVoice(obj) {
-
-        if (obj.voice !== undefined) {
-            return obj.voice;
-        }
-        else {
-            return 'de-DE_DieterVoice';
-        }
-
-    }
 
     //Get Api-Token from server
     fetch('/api/text-to-speech/token')
@@ -33,6 +23,17 @@ exports.tts = function (result) {
         );
 
     });
+
+    function getVoice(obj) {
+
+        if ("voice" in obj) {
+            return obj.voice;
+        }
+        else {
+            return 'de-DE_DieterVoice';
+        }
+
+    }
 
 
 };

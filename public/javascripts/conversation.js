@@ -1,25 +1,24 @@
 var exports = module.exports = {};
 var chat = require("./chat.js");
+var context = null;
+var $mainDiv = $("#mainDiv");
+var $btnCircle = $(".btn-circle");
+
 exports.con = function (result) {
 
         console.log("----------CONVERSATION_started----------");
         console.log("CONVERSATION_param: " + result);
-        var $mainDiv = $("#mainDiv");
-        var $btnCircle = $(".btn-circle");
+
         var requestObject = {};
         requestObject.payload = result.toString();
+        requestObject.context = context;
 
         if (localStorage.getItem("courseOfStudies") !== null && localStorage.getItem("semester") !== null) {
 
             requestObject.courseOfStudies = localStorage.getItem("courseOfStudies");
             requestObject.semester = localStorage.getItem("semester");
         }
-        if(localStorage.getItem("context") !== null) {
 
-            var temp = localStorage.getItem("context");
-            requestObject.context = JSON.parse(temp);
-            localStorage.setItem("context" , null);
-        }
         console.log("CONVERSATION_RequestObject : " + JSON.stringify(requestObject));
 
         var options = {
@@ -31,7 +30,7 @@ exports.con = function (result) {
             success: function (data) {
 
                 console.log("CONVERSATION_recivedData: " + data);
-                console.log("CONVERSATION_htmlText: " + data.htmlText);
+
                 var dataObj = JSON.parse(data);
                 var payload = dataObj.payload.toString();
 
@@ -44,7 +43,7 @@ exports.con = function (result) {
                 }
                 if("context" in dataObj) {
 
-                    localStorage.setItem("context" , JSON.stringify(dataObj.context));
+                    context = dataObj.context;
 
                 }
 
