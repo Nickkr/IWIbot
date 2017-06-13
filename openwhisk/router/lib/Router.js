@@ -10,6 +10,12 @@ function main(params) {
     var semester;
     var courseOfStudies;
 
+    return {
+        headers: {'Access-Control-Allow-Origin': '*', 'Content-Type': 'text/plain'},
+        body: params,
+        code: 200
+    };
+
     function conversation() {
         if ("conInit" in params) {
 
