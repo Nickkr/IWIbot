@@ -1,26 +1,25 @@
 {
-    "name": "joke",
-    "description": "IWIBot module that returns a random joke.",
-    "license": "Apache-2.0",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/Nickkr/IWIbot.git"
-    },
-    "version": "0.0.1",
-    "main": "lib/Joke.js",
-    "scripts": {
-        "test": "grunt"
-    },
-    "dependencies": {
-    },
-    "devDependencies": {
-        "grunt": "~1.0.1",
-        "grunt-cli": "^1.2.0",
-        "grunt-contrib-jshint": "~1.1.0",
-        "grunt-contrib-nodeunit": "~1.0.0",
-        "grunt-contrib-uglify": "~3.0.1",
-        "grunt-contrib-watch": "^1.0.0"
-
-
-    }
+  "name": "joke",
+  "description": "IWIBot module that returns a random joke.",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nickkr/IWIbot.git"
+  },
+  "version": "0.0.1",
+  "main": "lib/Joke.js",
+  "scripts": {
+    "test": "grunt nodeunit"
+  },
+  "dependencies": {
+    "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "grunt": "~1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-jshint": "~1.1.0",
+    "grunt-contrib-nodeunit": "~1.0.0",
+    "grunt-contrib-uglify": "~3.0.1",
+    "grunt-contrib-watch": "^1.0.0"
+  }
 }
