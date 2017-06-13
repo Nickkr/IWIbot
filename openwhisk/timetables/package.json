@@ -9,10 +9,9 @@
   "version": "0.0.1",
   "main": "lib/Timetables.js",
   "scripts": {
-    "test": "grunt nodeunit"
+    "test": "grunt"
   },
   "dependencies": {
-    "request": "^2.81.0"
   },
   "devDependencies": {
     "grunt": "~1.0.1",
