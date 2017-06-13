@@ -34,7 +34,7 @@ function con(params) {
     console.log("------Conversation Started!------");
     console.log('Conversation Params: ' + params.payload);
     return new Promise(function (resolve, reject) {
-        resolve('Params: ' + params);
+
         conversation.message({
             input: {text: params.payload.toString()},
             context: params.context
