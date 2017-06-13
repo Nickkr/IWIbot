@@ -13,6 +13,11 @@ $(document).ready(function () {
     var $loginForm = $('.loginForm');
     var notificationNumber = 0;
 
+    con.conInit().then(function () {
+
+        notificationNumber++;
+        $(".notification").show().text(notificationNumber.toString());
+    });
 
     //Recording
     $(document).on('click', '.notRecording', function () {
@@ -56,12 +61,7 @@ $(document).ready(function () {
         event.preventDefault();
         login.loginSubmit();
     });
-    $(window).scroll(function(){
 
-       // chat.setLastScrollPosition(this.scrollY);
-
-
-    });
     //Hide collapsed navbar when link is clicked
     $(document).on('click', '.navbar-collapse.in', function (e) {
         if ($(e.target).is('a')) {

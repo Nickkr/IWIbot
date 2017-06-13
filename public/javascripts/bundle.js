@@ -8882,7 +8882,7 @@ exports.chatToggle = function chatToggle() {
 
     };
     options.complete = function () {
-        console.log('got invoked: ' + exports.getLastScrollPosition());
+
         $(window).scrollTop(exports.getLastScrollPosition());
     };
     $voiceChatToggle.toggle(options);
@@ -8965,6 +8965,49 @@ exports.con = function (result) {
         };
 
     return $.ajax(options);
+
+};
+exports.conInit = function () {
+
+    var conversationInit = {};
+    conversationInit.conInit = true;
+
+    var options = {
+        url: 'https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/2b5bfd7bced95ed3c16e36929ac1576f8ca11a7df301beca57861caf482d1b7e/iwibot/router',
+        type: 'POST',
+        data: JSON.stringify(conversationInit),
+        contentType: "application/json",
+        processData: false,
+        success: function (data) {
+
+            console.log("CONVERSATION_recivedData: " + data);
+
+            var dataObj = JSON.parse(data);
+            var payload = dataObj.payload.toString();
+
+            chat.appendReceivedMessage(payload);
+
+            if(typeof dataObj.htmlText !== 'undefined') {
+
+                chat.appendReceivedMessage(dataObj.htmlText.toString());
+
+            }
+            if("context" in dataObj) {
+
+                context = dataObj.context;
+
+            }
+
+        },
+        error: function (err) {
+            console.log("CONVERSATION_err: " + JSON.stringify(err));
+            //remove loader animation and show recording button
+        }
+    };
+
+    return $.ajax(options);
+
+
 
 };
 },{"./chat.js":62}],64:[function(require,module,exports){
@@ -9057,6 +9100,11 @@ $(document).ready(function () {
     var $loginForm = $('.loginForm');
     var notificationNumber = 0;
 
+    con.conInit().then(function () {
+
+        notificationNumber++;
+        $(".notification").show().text(notificationNumber.toString());
+    });
 
     //Recording
     $(document).on('click', '.notRecording', function () {
@@ -9100,12 +9148,7 @@ $(document).ready(function () {
         event.preventDefault();
         login.loginSubmit();
     });
-    $(window).scroll(function(){
 
-       // chat.setLastScrollPosition(this.scrollY);
-
-
-    });
     //Hide collapsed navbar when link is clicked
     $(document).on('click', '.navbar-collapse.in', function (e) {
         if ($(e.target).is('a')) {

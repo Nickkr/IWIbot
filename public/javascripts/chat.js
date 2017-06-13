@@ -52,7 +52,7 @@ exports.chatToggle = function chatToggle() {
 
     };
     options.complete = function () {
-        console.log('got invoked: ' + exports.getLastScrollPosition());
+
         $(window).scrollTop(exports.getLastScrollPosition());
     };
     $voiceChatToggle.toggle(options);
