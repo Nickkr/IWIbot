@@ -8,6 +8,7 @@ module.exports = {
     'Joke Action Test' : function (test) {
         test.expect(1);
         request.get(actionUrl, function (err, response, body) {
+            console.log('Body: ' + body);
             body = JSON.parse(body);
             test.ok(typeof body.payload == 'string');
             test.done();
