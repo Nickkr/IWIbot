@@ -41,7 +41,18 @@ export JOKE_API_URL=`wsk api list | tail -1 | awk '{print $4}'`
 $JOKE_API_URL
 echo "Running tests"
 
+cd openwhisk/joke
+npm test
 
+cd ../meal
+npm test
 
+cd ../router
+npm test
+
+cd ../timetables
+npm test
+
+cd ../..
 echo "Uninstalling wsk actions, etc."
 ./deploy_test.sh --uninstall

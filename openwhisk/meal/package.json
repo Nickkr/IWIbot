@@ -9,9 +9,10 @@
   "version": "0.0.1",
   "main": "lib/Meal.js",
   "scripts": {
-    "test": "grunt"
+    "test": "grunt nodeunit"
   },
   "dependencies": {
+    "request": "^2.81.0"
   },
   "devDependencies": {
     "grunt": "~1.0.1",
@@ -20,7 +21,5 @@
     "grunt-contrib-nodeunit": "~1.0.0",
     "grunt-contrib-uglify": "~3.0.1",
     "grunt-contrib-watch": "^1.0.0"
-
-
   }
 }

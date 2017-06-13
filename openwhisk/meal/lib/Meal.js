@@ -9,7 +9,6 @@ var meal;
 var entity;
 
 function main(params) {
-
     console.log("------Meal Action started!------");
     console.log("Meal Action Params:" + JSON.stringify(params));
 

@@ -13,3 +13,5 @@ openwhisk/joke/test/
 openwhisk/meal/test/
 openwhisk/router/test/
 openwhisk/timetables/test/
+
+wsk\.exe

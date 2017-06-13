@@ -9,7 +9,7 @@
   "version": "0.0.1",
   "main": "lib/Router.js",
   "scripts": {
-    "test": "grunt"
+    "test": "grunt nodeunit"
   },
   "dependencies": {
   },
@@ -20,7 +20,5 @@
     "grunt-contrib-nodeunit": "~1.0.0",
     "grunt-contrib-uglify": "~3.0.1",
     "grunt-contrib-watch": "^1.0.0"
-
-
   }
 }

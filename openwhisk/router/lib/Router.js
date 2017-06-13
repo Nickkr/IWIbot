@@ -48,13 +48,10 @@ function main(params) {
             headers: {'Access-Control-Allow-Origin': '*', 'Content-Type': 'text/plain'},
             body: JSON.stringify(response),
             code: 200
-
         };
 
     });
 
 
 }
-
-
 exports.main = main;
