@@ -10,6 +10,18 @@ function main(params) {
     var semester;
     var courseOfStudies;
 
+    function conversation() {
+        if ("conInit" in params) {
+
+            return con.coninit();
+
+        } else {
+
+            return con.con(params);
+
+        }
+
+    }
 
     if ("semester" in params && "courseOfStudies" in params) {
 
@@ -18,7 +30,7 @@ function main(params) {
 
     }
 
-    return con.con(params).then(function (response) {
+    return conversation().then(function (response) {
 
         response.semester = semester;
         response.courseOfStudies = courseOfStudies;
