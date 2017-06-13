@@ -13,6 +13,7 @@ module.exports = {
         test.expect(1);
         formData.payload = 'timetable friday';
         request.post({url: actionUrl, formData: formData}, function (err, response, body) {
+            console.log('Body: ' + body);
             body = JSON.parse(body);
             test.ok(typeof body.payload == 'string');
             test.done();
@@ -22,6 +23,7 @@ module.exports = {
         test.expect(1);
         formData.payload = 'Food 1';
         request.post({url: actionUrl, formData: formData}, function (err, response, body) {
+            console.log('Body: ' + body);
             body = JSON.parse(body);
             test.ok(typeof body.payload == 'string');
             test.done();
@@ -31,6 +33,7 @@ module.exports = {
         test.expect(1);
         formData.payload = 'joke';
         request.post({url: actionUrl, formData: formData}, function (err, response, body) {
+            console.log('Body: ' + body);
             body = JSON.parse(body);
             test.ok(typeof body.payload == 'string');
             test.done();

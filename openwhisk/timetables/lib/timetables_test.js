@@ -12,6 +12,7 @@ module.exports = {
     'Meal Action Test' : function (test) {
         test.expect(1);
         request.post({url: actionUrl, formData: formData}, function (err, response, body) {
+            console.log('Body: ' + body);
             body = JSON.parse(body);
             test.ok(typeof body.payload == 'string');
             test.done();
