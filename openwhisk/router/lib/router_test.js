@@ -13,8 +13,9 @@ module.exports = {
         test.expect(1);
         params.payload = 'timetable friday';
         request.post({
+            headers: {'content-type': 'text/plain'},
             url: actionUrl,
-            json: JSON.stringify(params)
+            body: JSON.stringify(params)
         }, function (err, response, body) {
             console.log('Body: ' + body);
             console.log('Error: ' + err);
@@ -28,8 +29,9 @@ module.exports = {
         test.expect(1);
         params.payload = 'Food 1';
         request.post({
+            headers: {'content-type': 'text/plain'},
             url: actionUrl,
-            json: JSON.stringify(params)
+            body: JSON.stringify(params)
         }, function (err, response, body) {
             console.log('Body: ' + body);
             console.log('Error: ' + err);
@@ -43,8 +45,9 @@ module.exports = {
         test.expect(1);
         params.payload = 'joke';
         request.post({
+            headers: {'content-type': 'text/plain'},
             url: actionUrl,
-            json: JSON.stringify(params)
+            body: JSON.stringify(params)
         }, function (err, response, body) {
             console.log('Body: ' + body);
             console.log('Error: ' + err);
