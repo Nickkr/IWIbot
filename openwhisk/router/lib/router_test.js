@@ -14,7 +14,7 @@ module.exports = {
         params.payload = 'timetable friday';
         request.post({
             url: actionUrl,
-            body: params
+            json: JSON.stringify(params)
         }, function (err, response, body) {
             console.log('Body: ' + body);
             console.log('Error: ' + err);
@@ -29,7 +29,7 @@ module.exports = {
         params.payload = 'Food 1';
         request.post({
             url: actionUrl,
-            body: params
+            json: JSON.stringify(params)
         }, function (err, response, body) {
             console.log('Body: ' + body);
             console.log('Error: ' + err);
@@ -44,7 +44,7 @@ module.exports = {
         params.payload = 'joke';
         request.post({
             url: actionUrl,
-            body: params
+            json: JSON.stringify(params)
         }, function (err, response, body) {
             console.log('Body: ' + body);
             console.log('Error: ' + err);
