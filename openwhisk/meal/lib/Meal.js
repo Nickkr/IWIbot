@@ -40,6 +40,7 @@ function main(params) {
 
             case '5':           //Buffet
                 meal = 4;
+                entity = 5;
                 break;
 
             default:            //Schnitzelbar
@@ -48,7 +49,7 @@ function main(params) {
         }
 
         request({
-            url: url,
+            url: url
         }, function (error, response, body) {
 
             var resultObject = {};
