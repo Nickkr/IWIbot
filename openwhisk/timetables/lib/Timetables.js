@@ -35,7 +35,7 @@ function main(params) {
         if (params.entities.length !== 0) {
             console.log('Entitie Value: ' + params.entities[0].value);
             switch (params.entities[0].value) {
-                case '0':
+                case '7':
                     dayIndex = 0;
                     dayValue = 'Montag';
                     break;
