@@ -23,8 +23,7 @@ echo "Downloading OpenWhisk CLI from '$LINK'...\n"
 
 curl -O $LINK
 chmod u+x wsk
-export PATH=$PATH:`pwd`:`pwd`"/node_modules/grunt-cli/bin":`pwd`"/node_modules/grunt-contrib-nodeunit"
-export PATH=$PATH:`pwd`"/node_modules/grunt-contrib-jshint":`pwd`"/node_modules/grunt-contrib-watch"
+export PATH=$PATH:`pwd`
 echo "Configuring CLI from apihost and API key\n"
 
 wsk property set --apihost openwhisk.ng.bluemix.net --auth $OPEN_WHISK_KEY > /dev/null 2>&1
@@ -41,16 +40,24 @@ export JOKE_API_URL=`wsk api list | tail -1 | awk '{print $4}'`
 $JOKE_API_URL
 echo "Running tests"
 
+echo "Running test joke"
 cd openwhisk/joke
+npm install
 npm test
 
+echo "Running test meal"
 cd ../meal
+npm install
 npm test
 
+echo "Running test router"
 cd ../router
+npm install
 npm test
 
+echo "Running test timetables"
 cd ../timetables
+npm install
 npm test
 
 cd ../..
