@@ -13,7 +13,7 @@ module.exports = {
         test.expect(1);
         params.payload = 'timetable friday';
         request.post({
-            headers: {'content-type': 'text/plain', 'accept': '*'},
+            headers: {'content-type': 'text/plain'},
             url: actionUrl,
             body: JSON.stringify(params)
         }, function (err, response, body) {

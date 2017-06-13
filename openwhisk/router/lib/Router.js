@@ -12,7 +12,7 @@ function main(params) {
 
     return {
         headers: {'Access-Control-Allow-Origin': '*', 'Content-Type': 'text/plain'},
-        body: params,
+        body: JSON.stringify(params),
         code: 200
     };
 
