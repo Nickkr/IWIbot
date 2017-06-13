@@ -11,11 +11,10 @@ var params = {
 module.exports = {
     'Router Action Test (timetables)' : function (test) {
         test.expect(1);
-        formData.payload = 'timetable friday';
+        params.payload = 'timetable friday';
         request.post({
-            headers: {'content-type' : 'application/x-www-form-urlencoded'},
             url: actionUrl,
-            body: params
+            json: params
         }, function (err, response, body) {
             console.log('Body: ' + body);
             console.log('Error: ' + err);
@@ -27,8 +26,11 @@ module.exports = {
     },
     'Router Action Test (meal)' : function (test) {
         test.expect(1);
-        formData.payload = 'Food 1';
-        request.post({url: actionUrl, formData: formData}, function (err, response, body) {
+        params.payload = 'Food 1';
+        request.post({
+            url: actionUrl,
+            json: params
+        }, function (err, response, body) {
             console.log('Body: ' + body);
             console.log('Error: ' + err);
             console.log('Response: ' + JSON.stringify(response));
@@ -39,8 +41,11 @@ module.exports = {
     },
     'Router Action Test (joke)' : function (test) {
         test.expect(1);
-        formData.payload = 'joke';
-        request.post({url: actionUrl, formData: formData}, function (err, response, body) {
+        params.payload = 'joke';
+        request.post({
+            url: actionUrl,
+            json: params
+        }, function (err, response, body) {
             console.log('Body: ' + body);
             console.log('Error: ' + err);
             console.log('Response: ' + JSON.stringify(response));
