@@ -23,7 +23,7 @@ echo "Downloading OpenWhisk CLI from '$LINK'...\n"
 
 curl -O $LINK
 chmod u+x wsk
-export PATH=$PATH:`pwd`
+export PATH=$PATH:`pwd`:`pwd`"/node_modules/grunt-cli/bin"
 
 echo "Configuring CLI from apihost and API key\n"
 
