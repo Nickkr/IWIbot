@@ -23,7 +23,7 @@ function main(params) {
     return new Promise(function (resolve, reject) {
         var resultObject = {};
         var dayIndex = convertDayToHskaDay(currentDay), dayValue = currentDayString;
-        resolve(params);
+
         if (params.semester !== undefined && params.courseOfStudies !== undefined) {
             url = 'https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/timetable/' + params.courseOfStudies + '/0/' + params.semester + '?format=json';
         } else {
