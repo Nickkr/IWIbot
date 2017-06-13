@@ -7,8 +7,10 @@ var actionUrl = 'https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/2
 module.exports = {
     'Meal Action Test' : function (test) {
         test.expect(1);
-        request.get(actionUrl, function (err, response, body) {
+        request.post({url: actionUrl, formData: {}}, function (err, response, body) {
             console.log('Body: ' + body);
+            console.log('Error: ' + err);
+            console.log('Response: ' + response);
             body = JSON.parse(body);
             test.ok(typeof body.payload == 'string');
             test.done();

@@ -13,6 +13,8 @@ module.exports = {
         test.expect(1);
         request.post({url: actionUrl, formData: formData}, function (err, response, body) {
             console.log('Body: ' + body);
+            console.log('Error: ' + err);
+            console.log('Response: ' + response);
             body = JSON.parse(body);
             test.ok(typeof body.payload == 'string');
             test.done();
