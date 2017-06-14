@@ -13,7 +13,7 @@ function main(params) {
 
     return new Promise(function (resolve, reject) {
 
-        if (params.entities != undefined && params.entities.length !== 0) {
+        if (params.entities !== undefined && params.entities.length !== 0) {
             console.log("Entity found in Params");
             entity = params.entities[0].value;
         } else {

@@ -23,7 +23,7 @@ var params = {
 
 module.exports = {
     'Router Action Test (timetables)' : function (test) {
-        test.expect(1);
+        test.expect(2);
         params.payload = 'timetable friday';
         request.post({
             headers: {'content-type': 'text/plain'},
@@ -34,12 +34,13 @@ module.exports = {
             console.log('Error: ' + err);
             console.log('Response: ' + JSON.stringify(response));
             body = JSON.parse(body);
-            test.ok(typeof body.payload == 'string');
+            test.ok(typeof body.payload === 'string');
+            test.ok(!(body.payload.indexOf('Error') || body.payload.indexOf('error')));
             test.done();
         });
     },
     'Router Action Test (meal)' : function (test) {
-        test.expect(1);
+        test.expect(2);
         params.payload = 'Food 1';
         request.post({
             headers: {'content-type': 'text/plain'},
@@ -50,12 +51,13 @@ module.exports = {
             console.log('Error: ' + err);
             console.log('Response: ' + JSON.stringify(response));
             body = JSON.parse(body);
-            test.ok(typeof body.payload == 'string');
+            test.ok(typeof body.payload === 'string');
+            test.ok(!(body.payload.indexOf('Error') || body.payload.indexOf('error')));
             test.done();
         });
     },
     'Router Action Test (joke)' : function (test) {
-        test.expect(1);
+        test.expect(2);
         params.payload = 'joke';
         request.post({
             headers: {'content-type': 'text/plain'},
@@ -66,7 +68,8 @@ module.exports = {
             console.log('Error: ' + err);
             console.log('Response: ' + JSON.stringify(response));
             body = JSON.parse(body);
-            test.ok(typeof body.payload == 'string');
+            test.ok(typeof body.payload === 'string');
+            test.ok(!(body.payload.indexOf('Error') || body.payload.indexOf('error')));
             test.done();
         });
     }

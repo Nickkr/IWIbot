@@ -36,7 +36,7 @@ function main(params) {
             resolve(resultObject);
         }
 
-        if (params.entities != undefined && params.entities.length !== 0) {
+        if (params.entities !== undefined && params.entities.length !== 0) {
             console.log('Entitie Value: ' + params.entities[0].value);
             switch (params.entities[0].value) {
                 case '7':
