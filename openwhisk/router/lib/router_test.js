@@ -35,7 +35,7 @@ module.exports = {
             console.log('Response: ' + JSON.stringify(response));
             body = JSON.parse(body);
             test.ok(typeof body.payload === 'string');
-            test.ok((!(body.payload.indexOf('Error') || body.payload.indexOf('error'))));
+            test.ok(body.payload.indexOf('Error') == -1 && body.payload.indexOf('error') == -1);
             test.done();
         });
     },
@@ -52,7 +52,7 @@ module.exports = {
             console.log('Response: ' + JSON.stringify(response));
             body = JSON.parse(body);
             test.ok(typeof body.payload === 'string');
-            test.ok((!(body.payload.indexOf('Error') || body.payload.indexOf('error'))));
+            test.ok(body.payload.indexOf('Error') == -1 && body.payload.indexOf('error') == -1);
             test.done();
         });
     },
@@ -69,7 +69,7 @@ module.exports = {
             console.log('Response: ' + JSON.stringify(response));
             body = JSON.parse(body);
             test.ok(typeof body.payload === 'string');
-            test.ok((!(body.payload.indexOf('Error') || body.payload.indexOf('error'))));
+            test.ok(body.payload.indexOf('Error') == -1 && body.payload.indexOf('error') == -1);
             test.done();
         });
     }
