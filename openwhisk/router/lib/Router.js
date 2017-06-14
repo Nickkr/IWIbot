@@ -10,11 +10,9 @@ function main(params) {
     var semester;
     var courseOfStudies;
 
-    return {
-        headers: {'Access-Control-Allow-Origin': '*', 'Content-Type': 'text/plain'},
-        body: JSON.stringify(params),
-        code: 200
-    };
+    if("__ow_body" in params) { // For testing this action!!
+        params = JSON.parse(params.__ow_body);
+    }
 
     function conversation() {
         if ("conInit" in params) {
