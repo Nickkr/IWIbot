@@ -5,7 +5,20 @@ var request = require('request');
 var actionUrl = 'https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/2b5bfd7bced95ed3c16e36929ac1576f8ca11a7df301beca57861caf482d1b7e/iwibotTest/router';
 var params = {
     semester: 5,
-    courseOfStudies: 'INFB'
+    courseOfStudies: 'INFB',
+    context:{ // If this test is not successful, try to get a new context! (Log and paste it here!)
+        conversation_id: '8b3c7145-70f7-496b-80eb-248311c25776',
+        system:{
+            dialog_stack:[{dialog_node: 'root'}],
+            dialog_turn_counter: 1,
+            dialog_request_counter: 1,
+            _node_output_map:{
+                node_2_1496758852004: [0]
+            },
+            branch_exited: true,
+            branch_exited_reason: 'completed'
+        }
+    }
 };
 
 module.exports = {
