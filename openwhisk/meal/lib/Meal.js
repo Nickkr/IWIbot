@@ -23,19 +23,19 @@ function main(params) {
 
         switch (entity) {
             case '1':           //Wahlessen 1
-                entity -= 1;
+                entity = 0;
                 break;
             case '2':           //Wahlessen 2
-                entity -= 1;
+                entity = 1;
                 break;
             case '3':           //Aktionstheke
-                entity -= 1;
+                entity = 2;
                 break;
             case '4':           //GutUndGuenstig
-                entity -= 1;
+                entity = 3;
                 break;
             case '5':           //Buffet
-                entity -= 1;
+                entity = 4;
                 break;
             default:            //Schnitzelbar
                 entity = 5;
