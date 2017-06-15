@@ -8834,9 +8834,9 @@ var lastScrollPosition;
 exports.appendSendMessage = function appendSendMessage(msg) {
 
 
-    var msgSend = '<div class="row msg "><div class="col-lg-5">'
-        + '</div><div class="col-lg-4"><div class="msg-send">'
-        + msg + '</div></div><div class="col-lg-3"></div></div>';
+    var msgSend = '<div class="row msg "><div class="col-lg-5">' +
+        '</div><div class="col-lg-4"><div class="msg-send">' +
+        msg + '</div></div><div class="col-lg-3"></div></div>';
     $(msgSend).appendTo("#chat div.container").hide().fadeIn();
     window.scrollTo(0, document.body.scrollHeight);
 
@@ -8844,9 +8844,9 @@ exports.appendSendMessage = function appendSendMessage(msg) {
 
 exports.appendReceivedMessage = function appendReceivedMessage(msg) {
 
-    var msgReceived = '<div class="row msg "><div class="col-lg-3">'
-        + '</div><div class="col-lg-4"><div class="msg-recived">'
-        + msg + '</div></div><div class="col-lg-5"></div></div>';
+    var msgReceived = '<div class="row msg "><div class="col-lg-3">' +
+        '</div><div class="col-lg-4"><div class="msg-recived">' +
+        msg + '</div></div><div class="col-lg-5"></div></div>';
 
     $(msgReceived).appendTo("#chat div.container").hide().fadeIn();
 
@@ -8876,7 +8876,6 @@ exports.chatToggle = function chatToggle() {
     }
 
     var options = {};
-    var tmpPosition = 0;
     /*options.duration = 200;*/
     options.start = function () {
 
@@ -9022,6 +9021,7 @@ var exports = module.exports = {};
 
 exports.loginSubmit = function () {
 
+
     var $invalidInput = $(".invalidInput");
     var $noSemesterSelected = $(".noSemesterSelected");
     var $rememberMeChecked = $("#remember").is(':checked');
@@ -9083,6 +9083,21 @@ exports.loginSubmit = function () {
     function close_modal() {
         $("#lean_overlay").fadeOut(200);
         $("#modal").css({"display": "none"});
+        resetLoginForm();
+    }
+
+    function resetLoginForm() {
+
+        $('#selectSemester').prop('selectedIndex', 0);
+        $('#remember').prop('checked' , false);
+        $('.loginForm').find('input').each(function () {
+            console.log($(this).prop("tagName"));
+
+            $(this).val('');
+
+        });
+
+
     }
 
 };

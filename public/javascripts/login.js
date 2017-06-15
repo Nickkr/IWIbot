@@ -3,6 +3,7 @@ var exports = module.exports = {};
 
 exports.loginSubmit = function () {
 
+
     var $invalidInput = $(".invalidInput");
     var $noSemesterSelected = $(".noSemesterSelected");
     var $rememberMeChecked = $("#remember").is(':checked');
@@ -64,6 +65,21 @@ exports.loginSubmit = function () {
     function close_modal() {
         $("#lean_overlay").fadeOut(200);
         $("#modal").css({"display": "none"});
+        resetLoginForm();
+    }
+
+    function resetLoginForm() {
+
+        $('#selectSemester').prop('selectedIndex', 0);
+        $('#remember').prop('checked' , false);
+        $('.loginForm').find('input').each(function () {
+            console.log($(this).prop("tagName"));
+
+            $(this).val('');
+
+        });
+
+
     }
 
 };
