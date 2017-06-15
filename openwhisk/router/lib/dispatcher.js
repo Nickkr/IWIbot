@@ -15,7 +15,7 @@ function dispatch(response) {
 
         return action(name, blocking, result, params).then(function (response) {
             console.log("openwhisk response: " + JSON.stringify(response));
-            return new Promise(function (resolve, reject) {
+            return new Promise(function (resolve) {
 
                 responseObject = response.response.result;
                 responseObject.context = context;
@@ -31,7 +31,7 @@ function dispatch(response) {
         responseObject.payload = response.output.text[0];
         responseObject.context = context;
 
-        return new Promise(function (resolve, reject) {
+        return new Promise(function (resolve) {
             console.log("Skiped action");
             console.log("ResponseObject " + JSON.stringify(responseObject));
             resolve(responseObject);

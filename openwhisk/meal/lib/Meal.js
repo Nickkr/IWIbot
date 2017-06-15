@@ -5,7 +5,6 @@ var mm = today.getMonth() + 1;
 var yyyy = today.getFullYear();
 var url = 'https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/canteen/2/' + yyyy + '-' + mm + '-' + dd;
 
-var meal;
 var entity;
 
 function main(params) {
@@ -14,7 +13,7 @@ function main(params) {
 
     return new Promise(function (resolve, reject) {
 
-        if (params.entities.length !== 0) {
+        if (params.entities !== undefined && params.entities.length !== 0) {
             console.log("Entity found in Params");
             entity = params.entities[0].value;
         } else {
@@ -24,31 +23,27 @@ function main(params) {
 
         switch (entity) {
             case '1':           //Wahlessen 1
-                meal = 0;
+                entity = 0;
                 break;
             case '2':           //Wahlessen 2
-                meal = 1;
+                entity = 1;
                 break;
-
             case '3':           //Aktionstheke
-                meal = 2;
+                entity = 2;
                 break;
-
             case '4':           //GutUndGuenstig
-                meal = 3;
+                entity = 3;
                 break;
-
             case '5':           //Buffet
-                meal = 4;
+                entity = 4;
                 break;
-
             default:            //Schnitzelbar
-                meal = 5;
+                entity = 5;
                 break;
         }
 
         request({
-            url: url,
+            url: url
         }, function (error, response, body) {
 
             var resultObject = {};

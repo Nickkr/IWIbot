@@ -20,6 +20,10 @@ function main(params) {
     console.log("Day: " + currentDay);
     console.log("DayString: " + currentDayString);
 
+    if("__ow_body" in params) { // For testing this action!!
+        params = JSON.parse(params.__ow_body);
+    }
+
     return new Promise(function (resolve, reject) {
         var resultObject = {};
         var dayIndex = convertDayToHskaDay(currentDay), dayValue = currentDayString;
@@ -32,10 +36,10 @@ function main(params) {
             resolve(resultObject);
         }
 
-        if (params.entities.length !== 0) {
+        if (params.entities !== undefined && params.entities.length !== 0) {
             console.log('Entitie Value: ' + params.entities[0].value);
             switch (params.entities[0].value) {
-                case '0':
+                case '7':
                     dayIndex = 0;
                     dayValue = 'Montag';
                     break;

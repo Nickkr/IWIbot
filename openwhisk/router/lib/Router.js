@@ -10,6 +10,10 @@ function main(params) {
     var semester;
     var courseOfStudies;
 
+    if("__ow_body" in params) { // For testing this action!!
+        params = JSON.parse(params.__ow_body);
+    }
+
     function conversation() {
         if ("conInit" in params) {
 

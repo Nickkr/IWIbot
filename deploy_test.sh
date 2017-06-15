@@ -24,7 +24,7 @@ function usage() {
 function install() {
   echo -e "Installing OpenWhisk actions, triggers, and rules for IWIBot"
 
-  echo "Installing GET Joke Action"
+  echo "Installing Joke Action with HTTP-VERB GET"
   cd openwhisk/joke
   # preserve dev deps
   mv node_modules .mod
@@ -41,7 +41,7 @@ function install() {
   wsk api create /iwibotTest /joke get test/Joke --response-type json
   cd ../..
 
-  echo "Installing GET Meal Action"
+  echo "Installing Meal Action with HTTP-VERB GET"
   cd openwhisk/meal
   # preserve dev deps
   mv node_modules .mod
@@ -55,10 +55,10 @@ function install() {
   mv .mod node_modules
   # install zip in openwhisk
   wsk action create test/Meal --kind nodejs:6 action.zip --web true
-  wsk api create /iwibotTest /meal post test/Meal --response-type json
+  wsk api create /iwibotTest /meal get test/Meal --response-type json
   cd ../..
 
-   echo "Installing GET Router Action"
+   echo "Installing Router Action with HTTP-VERB POST"
   cd openwhisk/router
   # preserve dev deps
   mv node_modules .mod
@@ -75,7 +75,7 @@ function install() {
   wsk api create /iwibotTest /router post test/Router --response-type http
   cd ../..
 
-   echo "Installing GET Timetables Action"
+   echo "Installing Timetables Action with HTTP-VERB POST"
   cd openwhisk/timetables
   # preserve dev deps
   mv node_modules .mod
