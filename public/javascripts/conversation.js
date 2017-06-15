@@ -13,10 +13,16 @@ exports.con = function (result) {
         requestObject.payload = result.toString();
         requestObject.context = context;
 
-        if (localStorage.getItem("courseOfStudies") !== null && localStorage.getItem("semester") !== null) {
+        if ("courseOfStudies" in localStorage && "semester" in localStorage) {
 
             requestObject.courseOfStudies = localStorage.getItem("courseOfStudies");
             requestObject.semester = localStorage.getItem("semester");
+
+        } else if ("courseOfStudies" in sessionStorage && "semester" in sessionStorage) {
+
+            requestObject.courseOfStudies = sessionStorage.getItem("courseOfStudies");
+            requestObject.semester = sessionStorage.getItem("semester");
+
         }
 
         console.log("CONVERSATION_RequestObject : " + JSON.stringify(requestObject));
@@ -36,7 +42,7 @@ exports.con = function (result) {
 
                 chat.appendReceivedMessage(payload);
 
-                if(typeof dataObj.htmlText !== 'undefined') {
+                if("htmlText" in dataObj) {
 
                     chat.appendReceivedMessage(dataObj.htmlText.toString());
 

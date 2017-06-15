@@ -8919,10 +8919,16 @@ exports.con = function (result) {
         requestObject.payload = result.toString();
         requestObject.context = context;
 
-        if (localStorage.getItem("courseOfStudies") !== null && localStorage.getItem("semester") !== null) {
+        if ("courseOfStudies" in localStorage && "semester" in localStorage) {
 
             requestObject.courseOfStudies = localStorage.getItem("courseOfStudies");
             requestObject.semester = localStorage.getItem("semester");
+
+        } else if ("courseOfStudies" in sessionStorage && "semester" in sessionStorage) {
+
+            requestObject.courseOfStudies = sessionStorage.getItem("courseOfStudies");
+            requestObject.semester = sessionStorage.getItem("semester");
+
         }
 
         console.log("CONVERSATION_RequestObject : " + JSON.stringify(requestObject));
@@ -8942,7 +8948,7 @@ exports.con = function (result) {
 
                 chat.appendReceivedMessage(payload);
 
-                if(typeof dataObj.htmlText !== 'undefined') {
+                if("htmlText" in dataObj) {
 
                     chat.appendReceivedMessage(dataObj.htmlText.toString());
 
@@ -9014,73 +9020,70 @@ exports.conInit = function () {
 var exports = module.exports = {};
 
 
-exports.loginSubmit = function() {
+exports.loginSubmit = function () {
 
-        var $invalidInput = $(".invalidInput");
-        var $noSemesterSelected = $(".noSemesterSelected");
-        var $inputs = $('.loginForm :input');
-        var values = {};
-        $inputs.each(function () {
-            values[this.name] = $(this).val();
-            console.log(values[this.name]);
-        });
+    var $invalidInput = $(".invalidInput");
+    var $noSemesterSelected = $(".noSemesterSelected");
+    var $rememberMeChecked = $("#remember").is(':checked');
+    var $loginForm = $(".loginForm");
+    var $inputs = $('.loginForm :input');
+    var values = {};
 
-        if (values.semester === "0") {
+    $inputs.each(function () {
+        values[this.name] = $(this).val();
+    });
 
-            $noSemesterSelected.show();
+    if (values.semester === "0") {
 
-        } else {
-            $(".loginForm").trigger('reset');
+        $noSemesterSelected.show();
 
-            $.ajax({
-                type: "GET",
-                //url: "https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/credential/validate",
-                url: "https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/credential/info",
-                async: false,
-                headers: {
-                    "Authorization": "Basic " + btoa(values.username + ":" + values.password)
-                },
-                success: function (data) {
-                    console.log(data);
-                    //var firstName = {payload: "Hallo " + data.firstName + ", du hast dich erfolgreich eingeloggt"};
-                    //firstName = JSON.stringify(firstName);
-                    //tts.tts(firstName).then;
-                    $invalidInput.hide();
-                    $noSemesterSelected.hide();
-                    close_modal();
+    } else {
 
-                    //setItem("username", values.username);
-                    //setItem("password", values.password);
-                    setItem("semester", values.semester);
-                    setItem("courseOfStudies", data.courseOfStudies);
-                    console.log("courseOfStudies: " + getItem("courseOfStudies"));
-                    console.log("Semester: " + getItem("semester"));
+        $loginForm.trigger('reset');
+
+        $.ajax({
+            type: "GET",
+            url: "https://www.iwi.hs-karlsruhe.de/Intranetaccess/REST/credential/info",
+            headers: {
+                "Authorization": "Basic " + btoa(values.username + ":" + values.password)
+            },
+            success: function (data) {
+
+                console.log(data);
+
+                $invalidInput.hide();
+                $noSemesterSelected.hide();
+                close_modal();
 
 
-                    /* sessionStorage.setItem("semester", values.semester);
-                     sessionStorage.setItem("courseOfStudies", data.courseOfStudies);
-                     console.log("Session storage");*/
+                if ($rememberMeChecked) {
 
-                },
-                error: function () {
-                    $noSemesterSelected.hide();
-                    $invalidInput.show();
+                    localStorage.setItem("semester", values.semester);
+                    localStorage.setItem("courseOfStudies", data.courseOfStudies);
+                    console.log("courseOfStudies: " + localStorage.getItem("courseOfStudies"));
+                    console.log("Semester: " + localStorage.getItem("semester"));
+
+                } else {
+
+                    sessionStorage.setItem("semester", values.semester);
+                    sessionStorage.setItem("courseOfStudies", data.courseOfStudies);
+                    console.log("Session storage");
+                    console.log("courseOfStudies: " + sessionStorage.getItem("courseOfStudies"));
+                    console.log("Semester: " + sessionStorage.getItem("semester"));
+
                 }
+            },
+            error: function () {
+                $noSemesterSelected.hide();
+                $invalidInput.show();
+            }
 
-            });
-        }
+        });
+    }
     function close_modal() {
         $("#lean_overlay").fadeOut(200);
         $("#modal").css({"display": "none"});
     }
-    function setItem(key, value) {
-        localStorage.setItem(key, value);
-    }
-
-    function getItem(key) {
-        return localStorage.getItem(key);
-    }
-
 
 };
 
@@ -9144,8 +9147,7 @@ $(document).ready(function () {
         closeButton: ".modal_close"
     });
     //Login Submit
-    $loginForm.on('submit', function () {
-        event.preventDefault();
+    $(".btn_red").on('click', function () {
         login.loginSubmit();
     });
 

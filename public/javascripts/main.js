@@ -57,8 +57,7 @@ $(document).ready(function () {
         closeButton: ".modal_close"
     });
     //Login Submit
-    $loginForm.on('submit', function () {
-        event.preventDefault();
+    $(".btn_red").on('click', function () {
         login.loginSubmit();
     });
 
