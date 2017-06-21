@@ -3,8 +3,8 @@ var synthesize = require('watson-speech/text-to-speech/synthesize');
 
 exports.tts = function (result) {
 
-    console.log('----------TTS_started----------');
-    console.log('TTS_params: ' + result);
+    //console.log('----------TTS_started----------');
+    //console.log('TTS_params: ' + result);
 
     var resultObj = JSON.parse(result);
     var text = resultObj.payload;

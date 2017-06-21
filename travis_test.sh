@@ -14,7 +14,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 ##############################################################################
-set -x
+# set -x trace
+set -e # terminate after non-null return value
 LINK=https://openwhisk.ng.bluemix.net/cli/go/download/linux/amd64/wsk
 
 echo "Downloading OpenWhisk CLI from '$LINK'...\n"

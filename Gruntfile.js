@@ -30,33 +30,8 @@ module.exports = function(grunt) {
                     '!public/javascripts/bundle.js',
                     '!public/javascripts/bundle.min.js'],
             options: {
-                "curly": true,
-                "eqeqeq": true,
-                "immed": true,
-                "latedef": "nofunc",
-                "newcap": true,
-                "noarg": true,
-                "sub": true,
-                "undef": true,
-                "unused": true,
-                "boss": true,
-                "eqnull": true,
-                "node": true,
-                "globals": {
-                    "jQuery": true,
-                    "require": true,
-                    "__dirname": true,
-                    "module": true,
-                    "Promise": true,
-                    "window": true,
-                    "document": true,
-                    "localStorage": true,
-                    "$": true,
-                    "event": true,
-                    "btoa": true,
-                    "fetch": true
-                },
-                "reporterOutput": "" // This is to ommit bug!
+                jshintrc: '.jshintrc',
+                reporterOutput: "" // This is to ommit bug!
             }
         },
         browserify: {

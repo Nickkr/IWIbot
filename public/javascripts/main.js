@@ -10,7 +10,6 @@ $(document).ready(function () {
     var $recordingButton = $(".btn-circle");
     var $historyToggle = $(".historyToggle");
     var $modalTrigger = $("#modal_trigger");
-    var $loginForm = $('.loginForm');
     var notificationNumber = 0;
 
     con.conInit().then(function () {

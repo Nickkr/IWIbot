@@ -1,0 +1,29 @@
+{
+  "curly": true,
+  "eqeqeq": true,
+  "immed": true,
+  "latedef": "nofunc",
+  "newcap": true,
+  "noarg": true,
+  "sub": true,
+  "undef": true,
+  "unused": true,
+  "boss": true,
+  "eqnull": true,
+  "node": true,
+  "globals": {
+    "jQuery": true,
+    "require": true,
+    "__dirname": true,
+    "module": true,
+    "Promise": true,
+    "window": true,
+    "document": true,
+    "localStorage": true,
+    "sessionStorage": true,
+    "$": true,
+    "event": true,
+    "btoa": true,
+    "fetch": true
+  }
+}

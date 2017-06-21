@@ -8,10 +8,10 @@ function dispatch(response) {
     if ("actionToInvoke" in response.output) {
         console.log("Action to be invoked: " + response.output.actionToInvoke);
         console.log("Context : " + JSON.stringify(context));
-        const params = response;
+        var params = response;
         //const name = response.intents[0].intent;
-        const name = response.output.actionToInvoke;
-        const blocking = true, result = true;
+        var name = response.output.actionToInvoke;
+        var blocking = true, result = true;
 
         return action(name, blocking, result, params).then(function (response) {
             console.log("openwhisk response: " + JSON.stringify(response));
@@ -41,7 +41,7 @@ function dispatch(response) {
     function action(name, blocking, result, params) {
 
         var ow = openwhisk();
-        return ow.actions.invoke({name, blocking, result, params});
+        return ow.actions.invoke({name, blocking, result, params}); // jshint ignore:line
     }
 
 }

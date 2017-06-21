@@ -67,7 +67,7 @@ exports.getLastScrollPosition = function getLastScrollPosition() {
 exports.setLastScrollPosition = function setLastScrollPosition(value) {
 
      lastScrollPosition = value;
-     console.log(lastScrollPosition);
+     //console.log(lastScrollPosition);
  };
 
 

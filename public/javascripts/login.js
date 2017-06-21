@@ -31,7 +31,7 @@ exports.loginSubmit = function () {
             },
             success: function (data) {
 
-                console.log(data);
+                //console.log(data);
 
                 $invalidInput.hide();
                 $noSemesterSelected.hide();
@@ -42,16 +42,16 @@ exports.loginSubmit = function () {
 
                     localStorage.setItem("semester", values.semester);
                     localStorage.setItem("courseOfStudies", data.courseOfStudies);
-                    console.log("courseOfStudies: " + localStorage.getItem("courseOfStudies"));
-                    console.log("Semester: " + localStorage.getItem("semester"));
+                    //console.log("courseOfStudies: " + localStorage.getItem("courseOfStudies"));
+                    //console.log("Semester: " + localStorage.getItem("semester"));
 
                 } else {
 
                     sessionStorage.setItem("semester", values.semester);
                     sessionStorage.setItem("courseOfStudies", data.courseOfStudies);
-                    console.log("Session storage");
-                    console.log("courseOfStudies: " + sessionStorage.getItem("courseOfStudies"));
-                    console.log("Semester: " + sessionStorage.getItem("semester"));
+                    //console.log("Session storage");
+                    //console.log("courseOfStudies: " + sessionStorage.getItem("courseOfStudies"));
+                    //console.log("Semester: " + sessionStorage.getItem("semester"));
 
                 }
             },
@@ -73,7 +73,7 @@ exports.loginSubmit = function () {
         $('#selectSemester').prop('selectedIndex', 0);
         $('#remember').prop('checked' , false);
         $('.loginForm').find('input').each(function () {
-            console.log($(this).prop("tagName"));
+            //console.log($(this).prop("tagName"));
 
             $(this).val('');
 
