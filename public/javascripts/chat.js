@@ -13,9 +13,9 @@ exports.appendSendMessage = function appendSendMessage(msg) {
 };
 
 exports.appendReceivedMessage = function appendReceivedMessage(msg) {
-
+    var isMsgWithHtml = msg.indexOf('<ul>') != -1;
     var msgReceived = '<div class="row msg "><div class="col-lg-3">' +
-        '</div><div class="col-lg-4"><div class="msg-recived">' +
+        '</div><div class="col-lg-4"><div class="msg-recived" '+isMsgWithHtml?'style="text-align:left;"':''+'>' +
         msg + '</div></div><div class="col-lg-5"></div></div>';
 
     $(msgReceived).appendTo("#chat div.container").hide().fadeIn();
