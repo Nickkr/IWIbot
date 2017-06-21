@@ -15,7 +15,14 @@ provider: script
 script:
     - chmod +x ./travis_test.sh
     - chmod +x ./deploy_test.sh
+    - chmod +x ./deploy.sh
+    - echo "Bundle selected Javascript files"
+    - npm run-script browserify
+    - echo "Uglify Bundle.js"
+    - grunt uglify
     - ./travis_test.sh
+    - ./deploy.sh --uninstall
+    - ./deploy.sh --install
 deploy:
     provider: bluemixcloudfoundry
     skip_cleanup: true

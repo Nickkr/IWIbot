@@ -32,12 +32,6 @@ wsk bluemix login --user $BLUEMIX_USER --password $BLUEMIX_PASS --namespace Hoch
 echo "Configure local.env"
 touch local.env #Configurations defined in travis-ci console
 
-echo "Bundle selected Javascript files"
-npm run-script browserify
-
-echo "Uglify Bundle.js"
-grunt uglify
-
 echo "Deploying wsk actions, etc."
 ./deploy_test.sh --install
 
