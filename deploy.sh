@@ -17,7 +17,7 @@
 # Load configuration variables
 source local.env
 
-export PATH=$PATH:/mnt/c/Users/nkreu/openwhisk
+export PATH=$PATH:`pwd`
 
 function usage() {
   echo -e "Usage: $0 [--install,--uninstall,--env]"

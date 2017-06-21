@@ -15,8 +15,6 @@
 # limitations under the License.
 ##############################################################################
 set -x
-
-OPEN_WHISK_BIN=/home/ubuntu/bin
 LINK=https://openwhisk.ng.bluemix.net/cli/go/download/linux/amd64/wsk
 
 echo "Downloading OpenWhisk CLI from '$LINK'...\n"
