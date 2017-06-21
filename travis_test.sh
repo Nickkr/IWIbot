@@ -31,12 +31,8 @@ wsk bluemix login --user $BLUEMIX_USER --password $BLUEMIX_PASS --namespace Hoch
 echo "Configure local.env"
 touch local.env #Configurations defined in travis-ci console
 
-echo "Deploying wsk actions, etc."
+echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Deploying wsk actions, etc.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 ./deploy_test.sh --install
-
-echo "Find and set Joke API URL"
-export JOKE_API_URL=`wsk api list | tail -1 | awk '{print $4}'`
-$JOKE_API_URL
 echo "Running tests"
 
 echo "Running test joke"
@@ -60,5 +56,5 @@ npm install
 npm test
 
 cd ../..
-echo "Uninstalling wsk actions, etc."
+echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Uninstalling wsk actions, etc.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 ./deploy_test.sh --uninstall
