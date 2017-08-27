@@ -27,7 +27,7 @@ function install() {
 
   echo -e "Installing OpenWhisk actions, triggers, and rules for IWIBot"
 
-  echo "Installing GET Joke Action"
+   echo "Installing GET Joke Action"
   cd openwhisk/joke
   # preserve dev deps
   mv node_modules .mod
@@ -41,10 +41,9 @@ function install() {
   mv .mod node_modules
   # install zip in openwhisk
   wsk action create Joke --kind nodejs:6 action.zip --web true
-  #wsk api create /iwibot /joke get Joke --response-type json
   cd ../..
 
-  echo "Installing GET Meal Action"
+   echo "Installing GET Meal Action"
   cd openwhisk/meal
   # preserve dev deps
   mv node_modules .mod
@@ -58,7 +57,6 @@ function install() {
   mv .mod node_modules
   # install zip in openwhisk
   wsk action create Meal --kind nodejs:6 action.zip --web true
-  #wsk api create /iwibot /meal post Meal --response-type json
   cd ../..
 
    echo "Installing GET Router Action"
@@ -92,10 +90,25 @@ function install() {
   mv .mod node_modules
   # install zip in openwhisk
   wsk action create Timetables --kind nodejs:6 action.zip --web true
-  #wsk api create /iwibot /timetables post Timetables --response-type json
   cd ../..
 
-  echo -e "Install Complete"
+  echo "Installing POST Weather Action"
+  cd openwhisk/weather
+  # preserve dev deps
+  mv node_modules .mod
+  # install only prod deps
+  npm install --production
+  # zip all but skip the dev deps
+  zip -rq action.zip package.json lib node_modules
+  # delete prod deps
+  rm -rf node_modules
+  # recover dev deps
+  mv .mod node_modules
+  # install zip in openwhisk
+  wsk action create Weather --kind nodejs:6 action.zip --web true
+  cd ../..
+
+  echo -e "Installation Complete"
 }
 
 function uninstall() {
@@ -105,12 +118,12 @@ function uninstall() {
   wsk api delete /iwibot
 
   echo "Removing actions..."
-  #wsk action delete get
-   wsk action delete Meal
-   wsk action delete Router
-   wsk action delete Timetables
-   wsk action delete Joke
-  echo -e "Uninstall Complete"
+  wsk action delete Meal
+  wsk action delete Router
+  wsk action delete Timetables
+  wsk action delete Joke
+  wsk action delete Weather
+  echo -e "Uninstallation Complete"
 }
 
 function showenv() {

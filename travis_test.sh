@@ -55,6 +55,12 @@ cd ../timetables
 npm install
 npm test
 
+echo "Running test weather"
+cd ../weather
+npm install
+npm test
+
 cd ../..
+
 echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Uninstalling wsk actions, etc.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 ./deploy_test.sh --uninstall

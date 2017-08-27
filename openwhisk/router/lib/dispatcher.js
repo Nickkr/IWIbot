@@ -1,4 +1,4 @@
-var openwhisk = require('openwhisk');
+var openwhisk = require('openwhisk')();
 
 function dispatch(response) {
     console.log("------Dispatcher started!------");
@@ -13,21 +13,15 @@ function dispatch(response) {
         var name = response.output.actionToInvoke;
         var blocking = true, result = true;
 
-        return action(name, blocking, result, params).then(function (response) {
+        return openwhisk.actions.invoke(name, blocking, result, params).then(function (response) {
             console.log("openwhisk response: " + JSON.stringify(response));
             return new Promise(function (resolve) {
-
                 responseObject = response.response.result;
                 responseObject.context = context;
                 resolve(responseObject);
             });
-
-
         });
-
-
     } else {
-
         responseObject.payload = response.output.text[0];
         responseObject.context = context;
 
@@ -37,15 +31,6 @@ function dispatch(response) {
             resolve(responseObject);
         });
     }
-
-    function action(name, blocking, result, params) {
-
-        var ow = openwhisk();
-        return ow.actions.invoke({name, blocking, result, params}); // jshint ignore:line
-    }
-
 }
-
-
 
 exports.dispatch = dispatch;

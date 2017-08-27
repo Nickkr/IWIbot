@@ -1,7 +1,9 @@
+'use strict';
+
 $(document).ready(function () {
     //Require Watson Modules
     var stt = require("./speechToText");
-    var con = require("./conversation");
+    var conversation = require("./conversation");
     var tts = require("./textToSpeech");
     var chat = require("./chat.js");
     var login = require("./login");
@@ -12,20 +14,17 @@ $(document).ready(function () {
     var $modalTrigger = $("#modal_trigger");
     var notificationNumber = 0;
 
-    con.conInit().then(function () {
-
+    conversation.sendMessage(true, {}).then(function () {
         notificationNumber++;
         $(".notification").show().text(notificationNumber.toString());
     });
 
     //Recording
     $(document).on('click', '.notRecording', function () {
-
         $recordingButton.removeClass("notRecording").addClass("recording");
-        stt.promise().then(function (result) {
 
-            return con.con(result);
-
+        stt().then(function (result) {
+            return conversation.sendMessage(false ,result);
         }).then(function (result) {
             //Add new notification, stop loader animation and show recording button again
             notificationNumber++;
@@ -47,7 +46,7 @@ $(document).ready(function () {
     //Chat Submit
     $chatForm.submit(function (event) {
         event.preventDefault();
-        con.con(chat.chatSubmit());
+        conversation.sendMessage(chat.chatSubmit());
     });
     //Open Login Window
     $modalTrigger.leanModal({

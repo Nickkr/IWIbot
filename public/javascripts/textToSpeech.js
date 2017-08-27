@@ -2,9 +2,8 @@ var exports = module.exports = {};
 var synthesize = require('watson-speech/text-to-speech/synthesize');
 
 exports.tts = function (result) {
-
-    //console.log('----------TTS_started----------');
-    //console.log('TTS_params: ' + result);
+    console.log('----------TextToSpeech_started----------');
+    console.log('TextToSpeech_params: ' + result);
 
     var resultObj = JSON.parse(result);
     var text = resultObj.payload;
@@ -14,26 +13,19 @@ exports.tts = function (result) {
         .then(function (response) {
             return response.text();
         }).then(function (token) {
-
-        return synthesize({
-                text: text,
-                token: token,
-                voice: getVoice(resultObj)
-            }
-        );
-
+            return synthesize({
+                    text: text,
+                    token: token,
+                    voice: getVoice(resultObj)
+                }
+            );
     });
-
-    function getVoice(obj) {
-
-        if ("voice" in obj) {
-            return obj.voice;
-        }
-        else {
-            return 'de-DE_DieterVoice';
-        }
-
-    }
-
-
 };
+
+function getVoice(obj) {
+    if ("voice" in obj) {
+        return obj.voice;
+    } else {
+        return 'de-DE_DieterVoice';
+    }
+}

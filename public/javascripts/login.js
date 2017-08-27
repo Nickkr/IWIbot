@@ -1,9 +1,8 @@
+'use strict';
+
 var exports = module.exports = {};
 
-
 exports.loginSubmit = function () {
-
-
     var $invalidInput = $(".invalidInput");
     var $noSemesterSelected = $(".noSemesterSelected");
     var $rememberMeChecked = $("#remember").is(':checked');
@@ -16,11 +15,8 @@ exports.loginSubmit = function () {
     });
 
     if (values.semester === "0") {
-
         $noSemesterSelected.show();
-
     } else {
-
         $loginForm.trigger('reset');
 
         $.ajax({
@@ -30,36 +26,23 @@ exports.loginSubmit = function () {
                 "Authorization": "Basic " + btoa(values.username + ":" + values.password)
             },
             success: function (data) {
-
-                //console.log(data);
-
+                console.log("Login success data: " + JSON.stringify(data));
                 $invalidInput.hide();
                 $noSemesterSelected.hide();
                 close_modal();
 
-
                 if ($rememberMeChecked) {
-
                     localStorage.setItem("semester", values.semester);
                     localStorage.setItem("courseOfStudies", data.courseOfStudies);
-                    //console.log("courseOfStudies: " + localStorage.getItem("courseOfStudies"));
-                    //console.log("Semester: " + localStorage.getItem("semester"));
-
                 } else {
-
                     sessionStorage.setItem("semester", values.semester);
                     sessionStorage.setItem("courseOfStudies", data.courseOfStudies);
-                    //console.log("Session storage");
-                    //console.log("courseOfStudies: " + sessionStorage.getItem("courseOfStudies"));
-                    //console.log("Semester: " + sessionStorage.getItem("semester"));
-
                 }
             },
             error: function () {
                 $noSemesterSelected.hide();
                 $invalidInput.show();
             }
-
         });
     }
     function close_modal() {
@@ -69,17 +52,11 @@ exports.loginSubmit = function () {
     }
 
     function resetLoginForm() {
-
         $('#selectSemester').prop('selectedIndex', 0);
         $('#remember').prop('checked' , false);
         $('.loginForm').find('input').each(function () {
             //console.log($(this).prop("tagName"));
-
             $(this).val('');
-
         });
-
-
     }
-
 };

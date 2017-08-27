@@ -1,3 +1,5 @@
+'use strict';
+
 var ConversationV1 = require('watson-developer-cloud/conversation/v1');
 var conversation = new ConversationV1({
     username: "15bdf076-1ad9-4063-9bb1-6eb1db935f39",
@@ -9,39 +11,15 @@ var conversation = new ConversationV1({
     //"2017-02-03"
 });
 
-
-function conInit() {
-
-    return new Promise(function (resolve, reject) {
-        conversation.message({}, processResponse);
-
-        function processResponse(err, response) {
-            if (err) {
-                console.error("Conversation Error: " + err);
-                reject(err);
-            }
-
-            console.log("Conversation Response: " + JSON.stringify(response));
-            resolve(response);
-
-
-        }
-
-
-    });
-}
-function con(params) {
-
+function sendMessage(init, params) {
     console.log("------Conversation Started!------");
     console.log('Conversation Params: ' + params.payload);
     return new Promise(function (resolve, reject) {
-
-        conversation.message({
+        var options = init ? {} : {
             input: {text: params.payload.toString()},
             context: params.context
-        }, processResponse);
-
-        function processResponse(err, response) {
+        };
+        conversation.message(options, function (err, response) {
             if (err) {
                 console.error("Conversation Error: " + err);
                 reject(err);
@@ -49,13 +27,8 @@ function con(params) {
 
             console.log("Conversation Response: " + JSON.stringify(response));
             resolve(response);
-
-
-        }
-
+        });
     });
 }
 
-
-exports.con = con;
-exports.coninit = conInit;
+exports.sendMessage = sendMessage;

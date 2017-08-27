@@ -13,7 +13,7 @@ function main(params) {
 
     return new Promise(function (resolve, reject) {
 
-        if (params.entities !== undefined && params.entities.length !== 0) {
+        if ('entities' in params && params.entities.length !== 0) {
             console.log("Entity found in Params");
             entity = params.entities[0].value;
         } else {
@@ -60,8 +60,6 @@ function main(params) {
                     resultObject.payload = "In der Mensa gibt es heute nichts zu essen, vielleicht sind Ferien?";
 
                     resolve(resultObject);
-
-
                 } else {
 
                     var mealsLength = meals.mealGroups[entity].meals.length;
@@ -83,8 +81,8 @@ function main(params) {
                 console.log('error:', error);
                 console.log('body:', body);
                 resultObject.payload = error.toString();
-                reject(error.toString());
 
+                reject(error.toString());
             }
         });
     });

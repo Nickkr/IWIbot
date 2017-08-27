@@ -9,6 +9,7 @@ cache:
     - "openwhisk/meal/node_modules"
     - "openwhisk/router/node_modules"
     - "openwhisk/timetables/node_modules"
+    - "openwhisk/weather/node_modules"
 notifications:
   email: false
 provider: script

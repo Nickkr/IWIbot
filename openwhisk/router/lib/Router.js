@@ -1,5 +1,5 @@
 var dispatcher = require('./dispatcher');
-var con = require('./conversation');
+var conversation = require('./conversation');
 
 
 function main(params) {
@@ -14,27 +14,12 @@ function main(params) {
         params = JSON.parse(params.__ow_body);
     }
 
-    function conversation() {
-        if ("conInit" in params) {
-
-            return con.coninit();
-
-        } else {
-
-            return con.con(params);
-
-        }
-
-    }
-
     if ("semester" in params && "courseOfStudies" in params) {
-
         semester = params.semester;
         courseOfStudies = params.courseOfStudies;
-
     }
 
-    return conversation().then(function (response) {
+    return conversation.sendMessage("conInit" in params, params).then(function (response) {
 
         response.semester = semester;
         response.courseOfStudies = courseOfStudies;
@@ -67,7 +52,5 @@ function main(params) {
         };
 
     });
-
-
 }
 exports.main = main;

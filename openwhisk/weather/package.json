@@ -1,17 +1,18 @@
 {
-  "name": "Router",
-  "description": "Openwhisk action that passes recived params to Watson conversation service and maps the returned intent to a action",
+  "name": "Weather",
+  "description": "IWIBot module that returns the weather for a specific location",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/Nickkr/IWIbot.git"
   },
   "version": "0.0.1",
-  "main": "lib/Router.js",
+  "main": "lib/Weather.js",
   "scripts": {
     "test": "grunt nodeunit"
   },
   "dependencies": {
+    "request": "^2.81.0"
   },
   "devDependencies": {
     "grunt": "~1.0.1",
