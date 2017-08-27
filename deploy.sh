@@ -15,7 +15,7 @@
 # limitations under the License.
 
 # Load configuration variables
-source local.env
+#source local.env
 
 export PATH=$PATH:`pwd`
 
