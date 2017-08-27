@@ -31,6 +31,10 @@ wsk bluemix login --user $BLUEMIX_USER --password $BLUEMIX_PASS --namespace Hoch
 echo "Configure local.env"
 touch local.env #Configurations defined in travis-ci console
 
+# Fix
+echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Uninstalling wsk actions, etc.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+./deploy_test.sh --uninstall
+
 echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Deploying wsk actions, etc.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 ./deploy_test.sh --install
 echo "Running tests"
