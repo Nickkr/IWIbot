@@ -1,5 +1,3 @@
-'use strict';
-
 $(document).ready(function () {
     //Require Watson Modules
     var stt = require("./speechToText");
