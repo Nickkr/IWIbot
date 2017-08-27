@@ -67,7 +67,6 @@ function main(params) {
                 console.log('http status code:', (result || {}).statusCode);
                 console.log('error:', error);
                 console.log('result:', result);
-                error.appEnv = JSON.stringify(appEnv)
                 reject(error);
             }
         });
