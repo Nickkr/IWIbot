@@ -1,5 +1,5 @@
 var request = require('request');
-var cfenv = require('cfenv');
+var weather_host = 'https://1b68ea01-e52f-41b7-b695-4166b52f5865:BsSbIOsTwl@twcservice.mybluemix.net';
 
 var today = new Date();
 var currentDay = parseInt(today.getDay());
@@ -19,11 +19,6 @@ geocode[0] = 49.0068901;  // latitude
 geocode[1] = 8.4036527; // longitude
 
 function main(params) {
-
-    var appEnv = cfenv.getAppEnv();
-    var weather_host = appEnv.services['weatherinsights'] ? appEnv.services['weatherinsights'][0].credentials.url // Weather credentials passed in
-        : 'https://1b68ea01-e52f-41b7-b695-4166b52f5865:BsSbIOsTwl@twcservice.mybluemix.net';
-
     console.log('------Weather Action started!------');
     console.log('WeatherAction Params:' + JSON.stringify(params));
     console.log('Day: ' + currentDay);

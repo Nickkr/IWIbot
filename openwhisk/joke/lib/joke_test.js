@@ -12,7 +12,7 @@ module.exports = {
             console.log('Error: ' + err);
             console.log('Response: ' + JSON.stringify(response));
             body = JSON.parse(body);
-            test.ok(typeof body.payload === 'string');
+            test.ok('payload' in body);
             test.done();
         });
     }
