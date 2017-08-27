@@ -73,7 +73,7 @@ function install() {
   mv .mod node_modules
   # install zip in openwhisk
   wsk action create Router --kind nodejs:6 action.zip --web true
-  wsk api create -n "iwibot new API" /iwibotNew /router post Router --response-type http
+  wsk api create -n "iwibot API" /iwibot /router post Router --response-type http
   cd ../..
 
    echo "Installing GET Timetables Action"
