@@ -1,5 +1,3 @@
-'use strict';
-
 var ConversationV1 = require('watson-developer-cloud/conversation/v1');
 var conversation = new ConversationV1({
     username: "15bdf076-1ad9-4063-9bb1-6eb1db935f39",
@@ -11,7 +9,7 @@ var conversation = new ConversationV1({
     //"2017-02-03"
 });
 
-function sendMessage(init, params) {
+exports.sendMessage = function sendMessage(init, params) {
     console.log("------Conversation Started!------");
     console.log('Conversation Params: ' + params.payload);
     return new Promise(function (resolve, reject) {
@@ -30,5 +28,3 @@ function sendMessage(init, params) {
         });
     });
 }
-
-exports.sendMessage = sendMessage;

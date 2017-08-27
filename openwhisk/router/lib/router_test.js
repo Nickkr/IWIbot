@@ -6,7 +6,7 @@ var actionUrl = 'https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/2
 var params = {
     semester: 5,
     courseOfStudies: 'INFB',
-    context: undefined/*{ // If this test is not successful, try to get a new context! (Log and paste it here!)
+    context: { // If this test is not successful, try to get a new context! (Log and paste it here!)
         conversation_id: '8b3c7145-70f7-496b-80eb-248311c25776',
         system:{
             dialog_stack:[{dialog_node: 'root'}],
@@ -18,7 +18,7 @@ var params = {
             branch_exited: true,
             branch_exited_reason: 'completed'
         }
-    }*/
+    }
 };
 
 module.exports = {
