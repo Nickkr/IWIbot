@@ -22,9 +22,9 @@ function usage() {
 }
 
 function install() {
-  echo -e "Installing OpenWhisk actions, triggers, and rules for IWIBot"
+  echo -e "Deploying OpenWhisk actions, triggers, and rules for IWIBot"
 
-   echo "Installing Joke Action with HTTP-VERB GET"
+   echo "Deploy Joke Action with HTTP-VERB GET"
   cd openwhisk/joke
   # preserve dev deps
   mv node_modules .mod
@@ -38,10 +38,10 @@ function install() {
   mv .mod node_modules
   # install zip in openwhisk
   wsk action create test/Joke --kind nodejs:6 action.zip --web true
-  wsk api create /iwibotTest /joke get test/Joke --response-type json
+  wsk api create -n "iwibot Test API" /iwibotTest /joke get test/Joke --response-type json
   cd ../..
 
-   echo "Installing Meal Action with HTTP-VERB GET"
+   echo "Deploy Meal Action with HTTP-VERB GET"
   cd openwhisk/meal
   # preserve dev deps
   mv node_modules .mod
@@ -58,7 +58,7 @@ function install() {
   wsk api create /iwibotTest /meal get test/Meal --response-type json
   cd ../..
 
-   echo "Installing Router Action with HTTP-VERB POST"
+   echo "Deploy Router Action with HTTP-VERB POST"
   cd openwhisk/router
   # preserve dev deps
   mv node_modules .mod
@@ -75,7 +75,7 @@ function install() {
   wsk api create /iwibotTest /router post test/Router --response-type http
   cd ../..
 
-   echo "Installing Timetables Action with HTTP-VERB POST"
+   echo "Deploy Timetables Action with HTTP-VERB POST"
   cd openwhisk/timetables
   # preserve dev deps
   mv node_modules .mod
@@ -93,7 +93,7 @@ function install() {
   cd ../..
 
 
-   echo "Installing Weather Action with HTTP-VERB POST"
+   echo "Deploy Weather Action with HTTP-VERB POST"
   cd openwhisk/weather
   # preserve dev deps
   mv node_modules .mod
@@ -110,11 +110,11 @@ function install() {
   wsk api create /iwibotTest /weather post test/Weather --response-type json
   cd ../..
 
-  echo -e "Installation Complete!"
+  echo -e "Deployment Complete!"
 }
 
 function uninstall() {
-  echo -e "Uninstalling..."
+  echo -e "Undeploying..."
 
   echo "Removing API actions..."
   wsk api delete /iwibotTest
@@ -125,11 +125,7 @@ function uninstall() {
   wsk action delete test/Timetables
   wsk action delete test/Joke
   wsk action delete test/Weather
-  echo -e "Uninstallation Complete"
-}
-
-function showenv() {
-  echo -e MY_VARIABLE="$MY_VARIABLE"
+  echo -e "Undeployment Complete"
 }
 
 case "$1" in
@@ -138,9 +134,6 @@ install
 ;;
 "--uninstall" )
 uninstall
-;;
-"--env" )
-showenv
 ;;
 * )
 usage

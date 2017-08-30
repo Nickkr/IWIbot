@@ -25,9 +25,9 @@ function usage() {
 
 function install() {
 
-  echo -e "Installing OpenWhisk actions, triggers, and rules for IWIBot"
+  echo -e "Deploying OpenWhisk actions, triggers, and rules for IWIBot"
 
-   echo "Installing GET Joke Action"
+   echo "Deploy GET Joke Action"
   cd openwhisk/joke
   # preserve dev deps
   mv node_modules .mod
@@ -43,7 +43,7 @@ function install() {
   wsk action create Joke --kind nodejs:6 action.zip --web true
   cd ../..
 
-   echo "Installing GET Meal Action"
+   echo "Deploy GET Meal Action"
   cd openwhisk/meal
   # preserve dev deps
   mv node_modules .mod
@@ -59,7 +59,7 @@ function install() {
   wsk action create Meal --kind nodejs:6 action.zip --web true
   cd ../..
 
-   echo "Installing GET Router Action"
+   echo "Deploy GET Router Action"
   cd openwhisk/router
   # preserve dev deps
   mv node_modules .mod
@@ -76,7 +76,7 @@ function install() {
   wsk api create -n "iwibot API" /iwibot /router post Router --response-type http
   cd ../..
 
-   echo "Installing GET Timetables Action"
+   echo "Deploy GET Timetables Action"
   cd openwhisk/timetables
   # preserve dev deps
   mv node_modules .mod
@@ -92,7 +92,7 @@ function install() {
   wsk action create Timetables --kind nodejs:6 action.zip --web true
   cd ../..
 
-  echo "Installing POST Weather Action"
+  echo "Deploy POST Weather Action"
   cd openwhisk/weather
   # preserve dev deps
   mv node_modules .mod
@@ -108,11 +108,11 @@ function install() {
   wsk action create Weather --kind nodejs:6 action.zip --web true
   cd ../..
 
-  echo -e "Installation Complete"
+  echo -e "Deployment Complete"
 }
 
 function uninstall() {
-  echo -e "Uninstalling..."
+  echo -e "Undeploying..."
 
   echo "Removing API actions..."
   wsk api delete /iwibot
@@ -123,11 +123,7 @@ function uninstall() {
   wsk action delete Timetables
   wsk action delete Joke
   wsk action delete Weather
-  echo -e "Uninstallation Complete"
-}
-
-function showenv() {
-  echo -e MY_VARIABLE="$MY_VARIABLE"
+  echo -e "Undeployment Complete"
 }
 
 case "$1" in
@@ -136,9 +132,6 @@ install
 ;;
 "--uninstall" )
 uninstall
-;;
-"--env" )
-showenv
 ;;
 * )
 usage

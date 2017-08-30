@@ -31,7 +31,7 @@ wsk bluemix login --user $BLUEMIX_USER --password $BLUEMIX_PASS --namespace Fach
 echo "Configure local.env"
 touch local.env #Configurations defined in travis-ci console
 
-echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Deploying wsk actions, etc.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Deploying wsk actions for testing~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 ./deploy_test.sh --install
 echo "Running tests"
 
@@ -61,6 +61,3 @@ npm install
 npm test
 
 cd ../..
-
-echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Uninstalling wsk actions, etc.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-./deploy_test.sh --uninstall

@@ -12,7 +12,10 @@ cache:
     - "openwhisk/weather/node_modules"
 notifications:
   email: false
-provider: script
+#provider: script
+#before_script:
+  #- npm install
+  #- npm install source-map
 script:
     - chmod +x ./travis_test.sh
     - chmod +x ./deploy_test.sh
@@ -22,6 +25,8 @@ script:
     - echo "Uglify Bundle.js"
     - grunt uglify
     - ./travis_test.sh
+    - echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Undeploying wsk actions for testing~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+    - ./deploy_test.sh --uninstall
     - ./deploy.sh --uninstall
     - ./deploy.sh --install
 deploy:
@@ -34,7 +39,3 @@ deploy:
     space: $BLUEMIX_SPACE
     on:
       branch: master
-
-#before_script:
-  #- npm install
-  #- npm install source-map
