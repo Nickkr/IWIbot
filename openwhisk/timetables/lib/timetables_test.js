@@ -2,7 +2,7 @@
  * Created by Armin on 11.06.2017.
  */
 var request = require('request');
-var actionUrl = 'https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/2b5bfd7bced95ed3c16e36929ac1576f8ca11a7df301beca57861caf482d1b7e/iwibotTest/timetables';
+var actionUrl = 'https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/c9f88de3acb5a4648e4f118769d019c8df8797d1777c4342f43260626b4c51bf/iwibotTest/timetables';
 var params = {
     semester: 5,
     courseOfStudies: 'INFB'

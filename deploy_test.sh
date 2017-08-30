@@ -31,14 +31,14 @@ function install() {
   # install only prod deps
   npm install --production
   # zip all but skip the dev deps
-  zip -rq action.zip package.json lib node_modules
+  zip -r action.zip package.json lib/Joke.js node_modules
   # delete prod deps
   rm -rf node_modules
   # recover dev deps
   mv .mod node_modules
   # install zip in openwhisk
-  wsk action create test/Joke --kind nodejs:6 action.zip --web true
-  wsk api create -n "iwibot Test API" /iwibotTest /joke get test/Joke --response-type json
+  wsk action create testJoke --kind nodejs:6 action.zip --web true
+  wsk api create -n "iwibot Test API" /iwibotTest /joke get testJoke --response-type json
   cd ../..
 
    echo "Deploy Meal Action with HTTP-VERB GET"
