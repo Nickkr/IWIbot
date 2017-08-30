@@ -13,7 +13,7 @@ exports.sendMessage = function (init, result) {
             requestObject.conInit = true;
         }
 
-        requestObject.payload = result.toString();
+        requestObject.payload = result;
         requestObject.context = context;
 
         if ("courseOfStudies" in localStorage && "semester" in localStorage) {

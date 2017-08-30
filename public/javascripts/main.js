@@ -44,7 +44,7 @@ $(document).ready(function () {
     //Chat Submit
     $chatForm.submit(function (event) {
         event.preventDefault();
-        conversation.sendMessage(chat.chatSubmit());
+        conversation.sendMessage(false ,chat.chatSubmit());
     });
     //Open Login Window
     $modalTrigger.leanModal({
