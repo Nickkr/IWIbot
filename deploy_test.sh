@@ -48,7 +48,7 @@ function install() {
   # install only prod deps
   npm install --production
   # zip all but skip the dev deps
-  zip -rq action.zip package.json lib node_modules
+  zip -rq action.zip package.json lib/Meal.js node_modules
   # delete prod deps
   rm -rf node_modules
   # recover dev deps
@@ -65,7 +65,7 @@ function install() {
   # install only prod deps
   npm install --production
   # zip all but skip the dev deps
-  zip -rq action.zip package.json lib node_modules
+  zip -r action.zip package.json lib node_modules
   # delete prod deps
   rm -rf node_modules
   # recover dev deps
@@ -88,8 +88,8 @@ function install() {
   # recover dev deps
   mv .mod node_modules
   # install zip in openwhisk
-  wsk action create test/Timetables --kind nodejs:6 action.zip --web true
-  wsk api create /iwibotTest /timetables post test/Timetables --response-type json
+  wsk action create testTimetables --kind nodejs:6 action.zip --web true
+  wsk api create /iwibotTest /timetables post testTimetables --response-type json
   cd ../..
 
 
