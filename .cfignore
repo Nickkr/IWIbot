@@ -2,5 +2,6 @@
 launchConfigurations/
 .idea/
 node_modules/
+openwhisk/
 
 # .. and these files

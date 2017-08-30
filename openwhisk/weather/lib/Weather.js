@@ -1,5 +1,5 @@
 var request = require('request');
-var weather_host = 'https://1b68ea01-e52f-41b7-b695-4166b52f5865:BsSbIOsTwl@twcservice.mybluemix.net';
+var weather_host = 'https://0e549e74-15e0-41a8-9fdf-e205f9f864ea:NfQ4qpvuXw@twcservice.mybluemix.net';
 
 var today = new Date();
 var currentDay = parseInt(today.getDay());

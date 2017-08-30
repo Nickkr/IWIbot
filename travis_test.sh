@@ -25,8 +25,8 @@ chmod u+x wsk
 export PATH=$PATH:`pwd`
 echo "Configuring CLI from apihost and API key\n"
 
-wsk property set --apihost openwhisk.ng.bluemix.net --auth $OPEN_WHISK_KEY > /dev/null 2>&1
-wsk bluemix login --user $BLUEMIX_USER --password $BLUEMIX_PASS --namespace Hochschule_Test
+wsk property set --apihost openwhisk.ng.bluemix.net --auth $OPENWHISK_KEY > /dev/null 2>&1
+wsk bluemix login --user $BLUEMIX_USER --password $BLUEMIX_PASS --namespace Fachhochschule_IWIBot
 
 echo "Configure local.env"
 touch local.env #Configurations defined in travis-ci console
