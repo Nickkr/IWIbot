@@ -25,6 +25,7 @@ script:
     - echo "Uglify Bundle.js"
     - grunt uglify
     - ./travis_test.sh
+    - export PATH=$PATH:`pwd`
     - echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Undeploying wsk actions for testing~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
     - ./deploy_test.sh --uninstall
     - ./deploy.sh --uninstall

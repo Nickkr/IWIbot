@@ -31,7 +31,7 @@ function install() {
   # install only prod deps
   npm install --production
   # zip all but skip the dev deps
-  zip -r action.zip package.json lib/Joke.js node_modules
+  zip -rq action.zip package.json lib/Joke.js node_modules
   # delete prod deps
   rm -rf node_modules
   # recover dev deps
@@ -54,8 +54,8 @@ function install() {
   # recover dev deps
   mv .mod node_modules
   # install zip in openwhisk
-  wsk action create test/Meal --kind nodejs:6 action.zip --web true
-  wsk api create /iwibotTest /meal get test/Meal --response-type json
+  wsk action create testMeal --kind nodejs:6 action.zip --web true
+  wsk api create /iwibotTest /meal get testMeal --response-type json
   cd ../..
 
    echo "Deploy Router Action with HTTP-VERB POST"
@@ -65,14 +65,14 @@ function install() {
   # install only prod deps
   npm install --production
   # zip all but skip the dev deps
-  zip -r action.zip package.json lib node_modules
+  zip -rq action.zip package.json lib node_modules
   # delete prod deps
   rm -rf node_modules
   # recover dev deps
   mv .mod node_modules
   # install zip in openwhisk
-  wsk action create test/Router --kind nodejs:6 action.zip --web true
-  wsk api create /iwibotTest /router post test/Router --response-type http
+  wsk action create testRouter --kind nodejs:6 action.zip --web true
+  wsk api create /iwibotTest /router post testRouter --response-type http
   cd ../..
 
    echo "Deploy Timetables Action with HTTP-VERB POST"
@@ -82,7 +82,7 @@ function install() {
   # install only prod deps
   npm install --production
   # zip all but skip the dev deps
-  zip -rq action.zip package.json lib node_modules
+  zip -rq action.zip package.json lib/Timetables.js node_modules
   # delete prod deps
   rm -rf node_modules
   # recover dev deps
@@ -100,14 +100,14 @@ function install() {
   # install only prod deps
   npm install --production
   # zip all but skip the dev deps
-  zip -rq action.zip package.json lib node_modules
+  zip -rq action.zip package.json lib/Weather.js node_modules
   # delete prod deps
   rm -rf node_modules
   # recover dev deps
   mv .mod node_modules
   # install zip in openwhisk
-  wsk action create test/Weather --kind nodejs:6 action.zip --web true
-  wsk api create /iwibotTest /weather post test/Weather --response-type json
+  wsk action create testWeather --kind nodejs:6 action.zip --web true
+  wsk api create /iwibotTest /weather post testWeather --response-type json
   cd ../..
 
   echo -e "Deployment Complete!"
