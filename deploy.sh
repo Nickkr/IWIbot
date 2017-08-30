@@ -114,7 +114,7 @@ function install() {
 function uninstall() {
   echo -e "Undeploying..."
 
-  echo "Removing API actions..."
+  echo "Removing API..."
   wsk api delete /iwibot
 
   echo "Removing actions..."

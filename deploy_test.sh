@@ -116,15 +116,15 @@ function install() {
 function uninstall() {
   echo -e "Undeploying..."
 
-  echo "Removing API actions..."
+  echo "Removing API..."
   wsk api delete /iwibotTest
 
   echo "Removing actions..."
-  wsk action delete test/Meal
-  wsk action delete test/Router
-  wsk action delete test/Timetables
-  wsk action delete test/Joke
-  wsk action delete test/Weather
+  wsk action delete testMeal
+  wsk action delete testRouter
+  wsk action delete testTimetables
+  wsk action delete testJoke
+  wsk action delete testWeather
   echo -e "Undeployment Complete"
 }
 
