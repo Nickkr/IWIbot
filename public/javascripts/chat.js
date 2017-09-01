@@ -8,9 +8,7 @@ exports.appendSendMessage = function appendSendMessage(msg) {
         '</div><div class="col-lg-4"><div class="msg-send">' +
         msg + '</div></div><div class="col-lg-3"></div></div>';
     $(msgSend).appendTo("#chat div.container").hide().fadeIn();
-    window.scrollTo(0, document.body.scrollHeight);
-
-};
+    $("html, body").animate({ scrollTop: $(document).height()-$(window).height() });};
 
 exports.appendReceivedMessage = function appendReceivedMessage(msg) {
     var isMsgWithHtml = msg.indexOf('<ul>') != -1;
@@ -20,8 +18,7 @@ exports.appendReceivedMessage = function appendReceivedMessage(msg) {
         msg + '</div></div><div class="col-lg-5"></div></div>';
 
     $(msgReceived).appendTo("#chat div.container").hide().fadeIn();
-
-    window.scrollTo(0, document.body.scrollHeight);
+    $("html, body").animate({ scrollTop: $(document).height()-$(window).height() });
 };
 
 exports.chatSubmit = function chatSubmit() {
