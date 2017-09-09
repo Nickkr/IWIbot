@@ -84,7 +84,7 @@ function main(params) {
 
 function processObservationData(data) {
 
-    var data = JSON.parse(data).observation;
+    var data = JSON.parse(data);
     observation = data.observation;
     weatherHtml = "<ul style='list-style-type:none'>";
     weatherHtml += "<li style='font-size:25px'>" + geo_location + "</li>";
