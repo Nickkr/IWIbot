@@ -7,7 +7,7 @@
     "browserify": "browserify ./public/javascripts/main.js -o ./public/javascripts/bundle.js"
   },
   "description": "The directory's public, routers, views and bin are the Webserver part of the IWIBot. In the directory Openwhisk are all actions placed which should be deployed to Openwhisk",
-  "authors": [
+  "contributors": [
     {
       "name": "Hen"
     },
@@ -15,6 +15,7 @@
       "name": "Armin Kunkel"
     }
   ],
+  "license": "Apache-2.0",
   "dependencies": {
     "body-parser": "^1.17.2",
     "browserify": "^14.4.0",
