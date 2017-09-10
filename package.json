@@ -1,13 +1,12 @@
 {
-  "name": "iwibot-web-server",
-  "version": "0.0.0",
-  "private": true,
+  "name": "IWIBot",
+  "version": "1.0.0",
   "scripts": {
     "start": "node ./bin/www.js",
     "test": "grunt",
     "browserify": "browserify ./public/javascripts/main.js -o ./public/javascripts/bundle.js"
   },
-  "description": "IWIbotWebServer",
+  "description": "The directory's public, routers, views and bin are the Webserver part of the IWIBot. In the directory Openwhisk are all actions placed which should be deployed to Openwhisk",
   "authors": [
     {
       "name": "Hen"

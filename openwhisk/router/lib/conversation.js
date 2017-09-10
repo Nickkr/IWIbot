@@ -27,4 +27,4 @@ exports.sendMessage = function sendMessage(init, params) {
             resolve(response);
         });
     });
-}
+};

@@ -2,7 +2,7 @@ applications:
 - path: .
   memory: 512M
   instances: 1
-  name: IWIbot
-  host: IWIbot
+  name: IWIBot
+  host: IWIBot
   disk_quota: 1024M
   domain: mybluemix.net

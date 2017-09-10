@@ -68,5 +68,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch'); //
     grunt.loadNpmTasks('grunt-browserify');
     // Default task.
-    grunt.registerTask('default', ['nodeunit','jshint']);
+    grunt.registerTask('default', ['jshint']);
 };

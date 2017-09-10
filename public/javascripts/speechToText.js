@@ -18,7 +18,7 @@ module.exports = function () {
                     token: token,
                     outputElement: '#sttContent' // CSS selector or DOM Element
                 });
-                stream.on('error', function (/*err*/) {
+                stream.on('error', function (err) {
                     //Remove recording animation on error
                     $recordingButton.removeClass("recording").addClass("notRecording");
                     console.log("SpeechToText_Error: " + err);
