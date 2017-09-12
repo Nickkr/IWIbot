@@ -12,7 +12,6 @@ cache:
     - "openwhisk/weather/node_modules"
 notifications:
   email: false
-#provider: script
 #before_script:
   #- npm install
   #- npm install source-map
@@ -25,7 +24,7 @@ script:
     - echo "Uglify Bundle.js"
     - grunt uglify
     - ./travis_test.sh
-    - export PATH=$PATH:`pwd`
+    - export PATH=$PATH:`pwd`  # make openwhisk cli available here
     - echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Undeploying wsk actions for testing~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
     - ./deploy_test.sh --uninstall
     - ./deploy.sh --uninstall

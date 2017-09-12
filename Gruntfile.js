@@ -21,7 +21,7 @@ module.exports = function(grunt) {
             files: ['openwhisk/**/*test.js']
         },
         jshint: {
-            files: ['**/*.js', // Alle javascript files außer nachfolgende
+            files: ['**/*.js', // lint all javascript files except the follow
                     '!Gruntfile.js',
                     '!node_modules/**',
                     '!tts-token.js',
@@ -62,11 +62,13 @@ module.exports = function(grunt) {
     });
 
     // These plugins provide necessary tasks.
-    grunt.loadNpmTasks('grunt-contrib-jshint'); // Linter
-    grunt.loadNpmTasks('grunt-contrib-nodeunit'); // Unittest engine?
-    grunt.loadNpmTasks('grunt-contrib-uglify'); // Minifier
-    grunt.loadNpmTasks('grunt-contrib-watch'); //
-    grunt.loadNpmTasks('grunt-browserify');
+    grunt.loadNpmTasks('grunt-contrib-jshint');     // Linter
+    grunt.loadNpmTasks('grunt-contrib-nodeunit');   // Test-Framework
+    grunt.loadNpmTasks('grunt-contrib-uglify');     // Minifier
+    grunt.loadNpmTasks('grunt-contrib-watch');      // Watcher (if files changed, then run condigured tasks)
+    grunt.loadNpmTasks('grunt-browserify');         // Convert the nodejs app to javascript which works in browsers
+                                                    // (another way is to use require.js)
     // Default task.
     grunt.registerTask('default', ['jshint']);
+    grunt.registerTask('localBuild', ['jshint', 'uglify', 'browserify']);
 };
