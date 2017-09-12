@@ -37,7 +37,7 @@ function main(params) {
             case '5':           //Buffet
                 entity = 4;
                 break;
-            default:            //Schnitzelbar
+            case '6':            //Schnitzelbar
                 entity = 5;
                 break;
         }
