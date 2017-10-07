@@ -1,5 +1,6 @@
 # GitIgnore these directorys...
 .idea/
+node_modules/
 
 # .. and these files
 IWIbot.iml
