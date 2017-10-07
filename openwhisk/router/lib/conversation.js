@@ -1,5 +1,4 @@
 var ConversationV1 = require('watson-developer-cloud/conversation/v1');
-var vcapServices = require('vcap_services');
 
 var conversation = new ConversationV1({
     username: "778dd9b2-02fb-4b22-895f-5c4b0b7a763b",
@@ -14,8 +13,6 @@ var conversation = new ConversationV1({
 exports.sendMessage = function sendMessage(init, params) {
     console.log("------Conversation Started!------");
     console.log('Conversation Params: ' + params.payload);
-    console.log('Conversation credentials: ' + vcapServices.getCredentials('conversation'));
-    console.log('Conversation credentials stringifyied: ' + JSON.stringify(vcapServices.getCredentials('conversation')));
     return new Promise(function (resolve, reject) {
         var options = init ? {} : {
             input: {text: params.payload.toString()},
