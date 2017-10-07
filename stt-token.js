@@ -10,6 +10,9 @@ var extend = (extend = require('util')._extend);
 
 // For local development, replace username and password or set env properties
 var sttConfig = extend(
+    {
+        version: 'v1'
+    },
     vcapServices.getCredentials('speech_to_text')
 );
 

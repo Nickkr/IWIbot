@@ -6,10 +6,10 @@ var watson = require('watson-developer-cloud');
 var vcapServices = require('vcap_services');
 var extend = (extend = require('util')._extend);
 
-// another endpoint for the text to speech service
-
-// For local development, replace username and password or set env properties
 var ttsConfig = extend(
+    {
+        version: 'v1'
+    },
     vcapServices.getCredentials('text_to_speech')
 );
 
