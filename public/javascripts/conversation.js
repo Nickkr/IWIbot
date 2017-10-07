@@ -3,7 +3,7 @@
 var exports = module.exports = {};
 var chat = require("./chat.js");
 var context = null;
-var url = $API_URL + '/router';
+var url = process.env.API_URL + '/router';
 var $mainDiv = $("#mainDiv");
 var $btnCircle = $(".btn-circle");
 
