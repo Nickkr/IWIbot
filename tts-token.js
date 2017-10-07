@@ -10,12 +10,6 @@ var extend = (extend = require('util')._extend);
 
 // For local development, replace username and password or set env properties
 var ttsConfig = extend(
-    {
-        version: 'v1',
-        url: 'https://stream.watsonplatform.net/text-to-speech/api',
-        username: process.env.TTS_USERNAME || '4481a95e-b426-46d4-9800-472db2dc5d9a',
-        password: process.env.TTS_PASSWORD || '2lzTyznP4aX5'
-    },
     vcapServices.getCredentials('text_to_speech')
 );
 

@@ -10,12 +10,6 @@ var extend = (extend = require('util')._extend);
 
 // For local development, replace username and password or set env properties
 var sttConfig = extend(
-    {
-        version: 'v1',
-        url: 'https://stream.watsonplatform.net/speech-to-text/api',
-        username: process.env.STT_USERNAME || 'd1c24e6c-b557-4497-8857-41f82e163de0',
-        password: process.env.STT_PASSWORD || '7dFLIq3XBdyY'
-    },
     vcapServices.getCredentials('speech_to_text')
 );
 
