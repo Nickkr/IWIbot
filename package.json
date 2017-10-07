@@ -12,12 +12,8 @@
     "browserify": "browserify ./public/javascripts/main.js -o ./public/javascripts/bundle.js"
   },
   "contributors": [
-    {
-      "name": "Niklas Kreutzarek"
-    },
-    {
-      "name": "Armin Kunkel"
-    }
+    {"name": "Niklas Kreutzarek"},
+    {"name": "Armin Kunkel"}
   ],
   "license": "Apache-2.0",
   "dependencies": {

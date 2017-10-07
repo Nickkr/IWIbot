@@ -32,14 +32,12 @@ $(document).ready(function () {
 
             return tts.tts(result);
         });
-
     });
 
     //Toggle between chat and voice view
     $historyToggle.click(function () {
         notificationNumber = 0;
         chat.chatToggle();
-
     });
     //Chat Submit
     $chatForm.submit(function (event) {
@@ -63,5 +61,4 @@ $(document).ready(function () {
             $(this).collapse('hide');
         }
     });
-
 });

@@ -3,7 +3,7 @@
 var exports = module.exports = {};
 var chat = require("./chat.js");
 var context = null;
-var url = 'https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/c9f88de3acb5a4648e4f118769d019c8df8797d1777c4342f43260626b4c51bf/iwibot/router';
+var url = $API_URL + '/router';
 var $mainDiv = $("#mainDiv");
 var $btnCircle = $(".btn-circle");
 
@@ -17,15 +17,12 @@ exports.sendMessage = function (init, result) {
         requestObject.context = context;
 
         if ("courseOfStudies" in localStorage && "semester" in localStorage) {
-
             requestObject.courseOfStudies = localStorage.getItem("courseOfStudies");
             requestObject.semester = localStorage.getItem("semester");
 
         } else if ("courseOfStudies" in sessionStorage && "semester" in sessionStorage) {
-
             requestObject.courseOfStudies = sessionStorage.getItem("courseOfStudies");
             requestObject.semester = sessionStorage.getItem("semester");
-
         }
 
         console.log("CONVERSATION_RequestObject : " + JSON.stringify(requestObject));

@@ -49,7 +49,6 @@ exports.chatToggle = function chatToggle() {
 
     };
     options.complete = function () {
-
         $(window).scrollTop(exports.getLastScrollPosition());
     };
     $voiceChatToggle.toggle(options);
@@ -57,13 +56,9 @@ exports.chatToggle = function chatToggle() {
 
 };
 exports.getLastScrollPosition = function getLastScrollPosition() {
-
     return lastScrollPosition;
-
-
 };
 exports.setLastScrollPosition = function setLastScrollPosition(value) {
-
      lastScrollPosition = value;
      //console.log(lastScrollPosition);
  };
