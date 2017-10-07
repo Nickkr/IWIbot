@@ -1,15 +1,19 @@
 {
   "name": "IWIBot",
+  "description": "The directory's public, routers, views and bin are the Webserver part of the IWIBot. In the directory Openwhisk are all actions placed which should be deployed to Openwhisk",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nickkr/IWIbot.git"
+  },
   "scripts": {
     "start": "node ./bin/www.js",
     "test": "grunt",
     "browserify": "browserify ./public/javascripts/main.js -o ./public/javascripts/bundle.js"
   },
-  "description": "The directory's public, routers, views and bin are the Webserver part of the IWIBot. In the directory Openwhisk are all actions placed which should be deployed to Openwhisk",
   "contributors": [
     {
-      "name": "Hen"
+      "name": "Niklas Kreutzarek"
     },
     {
       "name": "Armin Kunkel"
