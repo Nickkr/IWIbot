@@ -4,6 +4,7 @@
 var request = require('request');
 var actionUrl = 'https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/c9f88de3acb5a4648e4f118769d019c8df8797d1777c4342f43260626b4c51bf/iwibotTest/router';
 var params = {
+    use_unauthenticated: true,
     semester: 5,
     courseOfStudies: 'INFB',
     context: { // If this test is not successful, try to get a new context! (Log and paste it here!)
