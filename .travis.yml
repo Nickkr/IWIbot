@@ -24,6 +24,7 @@ script:
     - echo "Uglify Bundle.js"
     - grunt uglify
     - sed 's/\b$CONVERSATION_USERNAME\b/'"$CONVERSATION_USERNAME"'/g' -i openwhisk/router/lib/conversation.js
+    - cat openwhisk/router/lib/conversation.js
     - ./travis_test.sh
     - export PATH=$PATH:`pwd`  # make openwhisk cli available here
     - echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Undeploying wsk actions for testing~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
