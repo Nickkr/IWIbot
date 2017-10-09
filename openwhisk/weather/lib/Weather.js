@@ -1,5 +1,5 @@
 var request = require('request-promise');
-var weather_host = 'https://aa8374a9-dd6a-4960-89b6-262118e8c9b7:aQVNTZtXeG@twcservice.mybluemix.net';
+var weather_url = $WEATHER_URL;
 
 var today = new Date();
 var currentDay = parseInt(today.getDay());
@@ -41,12 +41,12 @@ function main(params) {
     }
 
     var optionsObservation = {
-        url: weather_host + '/api/weather/v1/geocode/' + geocode[0] + '/' + geocode[1] + '/observations.json',
+        url: weather_url + '/api/weather/v1/geocode/' + geocode[0] + '/' + geocode[1] + '/observations.json',
         qs: qs
     };
 
     var optionsForecast = {
-        url: weather_host + '/api/weather/v1/geocode/' + geocode[0] + '/' + geocode[1] + '/forecast/daily/3day.json',
+        url: weather_url + '/api/weather/v1/geocode/' + geocode[0] + '/' + geocode[1] + '/forecast/daily/3day.json',
         qs: qs
     };
 

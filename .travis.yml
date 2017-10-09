@@ -25,6 +25,7 @@ script:
     - grunt uglify
     - sed 's/$CONVERSATION_USERNAME/'"\'${CONVERSATION_USERNAME}\'"'/g' -i openwhisk/router/lib/conversation.js
     - sed 's/$CONVERSATION_PASSWORD/'"\'${CONVERSATION_PASSWORD}\'"'/g' -i openwhisk/router/lib/conversation.js
+    - sed 's/$WEATHER_URL/'"\'${WEATHER_URL}\'"'/g' -i openwhisk/weather/lib/Weather.js
     - cat openwhisk/router/lib/conversation.js
     - ./travis_test.sh
     - export PATH=$PATH:`pwd`  # make openwhisk cli available here
