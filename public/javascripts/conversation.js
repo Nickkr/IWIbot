@@ -17,15 +17,12 @@ exports.sendMessage = function (init, result) {
         requestObject.context = context;
 
         if ("courseOfStudies" in localStorage && "semester" in localStorage) {
-
             requestObject.courseOfStudies = localStorage.getItem("courseOfStudies");
             requestObject.semester = localStorage.getItem("semester");
 
         } else if ("courseOfStudies" in sessionStorage && "semester" in sessionStorage) {
-
             requestObject.courseOfStudies = sessionStorage.getItem("courseOfStudies");
             requestObject.semester = sessionStorage.getItem("semester");
-
         }
 
         console.log("CONVERSATION_RequestObject : " + JSON.stringify(requestObject));

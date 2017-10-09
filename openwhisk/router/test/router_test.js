@@ -4,19 +4,18 @@
 var request = require('request');
 var actionUrl = 'https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/c9f88de3acb5a4648e4f118769d019c8df8797d1777c4342f43260626b4c51bf/iwibotTest/router';
 var params = {
+    use_unauthenticated: true,
     semester: 5,
     courseOfStudies: 'INFB',
     context: { // If this test is not successful, try to get a new context! (Log and paste it here!)
-        conversation_id: '8b3c7145-70f7-496b-80eb-248311c25776',
-        system:{
+        conversation_id: '69cf475b-b891-4889-923b-f3605060e1c2',
+        system: {
             dialog_stack:[{dialog_node: 'root'}],
             dialog_turn_counter: 1,
             dialog_request_counter: 1,
             _node_output_map:{
-                node_2_1496758852004: [0]
-            },
-            branch_exited: true,
-            branch_exited_reason: 'completed'
+                "Willkommen":[0]
+            }
         }
     }
 };

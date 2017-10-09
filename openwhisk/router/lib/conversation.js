@@ -1,4 +1,5 @@
 var ConversationV1 = require('watson-developer-cloud/conversation/v1');
+
 var conversation = new ConversationV1({
     username: $CONVERSATION_USERNAME,//"778dd9b2-02fb-4b22-895f-5c4b0b7a763b",
     password: "OKlE4wpgYNpb",

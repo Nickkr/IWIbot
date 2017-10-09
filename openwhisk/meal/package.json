@@ -1,12 +1,8 @@
 {
   "name": "Meal",
-  "description": "IWIBot module that returns the Mensa Menu",
+  "description": "IWIBot module that returns the canteen menu",
   "license": "Apache-2.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Nickkr/IWIbot.git"
-  },
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "lib/Meal.js",
   "scripts": {
     "test": "grunt nodeunit"

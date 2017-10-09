@@ -2,11 +2,7 @@
   "name": "joke",
   "description": "IWIBot module that returns a random joke.",
   "license": "Apache-2.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Nickkr/IWIbot.git"
-  },
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "lib/Joke.js",
   "scripts": {
     "test": "grunt nodeunit"
