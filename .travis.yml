@@ -23,10 +23,9 @@ script:
     - npm run-script browserify
     - echo "Uglify Bundle.js"
     - grunt uglify
-    - sed 's/$CONVERSATION_USERNAME/'"\'${CONVERSATION_USERNAME}\'"'/g' -i openwhisk/router/lib/conversation.js
-    - sed 's/$CONVERSATION_PASSWORD/'"\'${CONVERSATION_PASSWORD}\'"'/g' -i openwhisk/router/lib/conversation.js
-    - sed 's/$WEATHER_COMPANY_URL/'"\'${WEATHER_COMPANY_URL}\'"'/g' -i openwhisk/weather/lib/Weather.js
-    - cat openwhisk/weather/lib/Weather.js
+    - sed 's/$CONVERSATION_USERNAME/'"\'${CONVERSATION_USERNAME}\'"'/gp' -i openwhisk/router/lib/conversation.js
+    - sed 's/$CONVERSATION_PASSWORD/'"\'${CONVERSATION_PASSWORD}\'"'/gp' -i openwhisk/router/lib/conversation.js
+    - sed 's/$WEATHER_COMPANY_URL/'"\'${WEATHER_COMPANY_URL}\'"'/g' -i openwhisk/weather/lib/weather.js
     - ./travis_test.sh
     - export PATH=$PATH:`pwd`  # make openwhisk cli available here
     - echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Undeploying wsk actions for testing~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"

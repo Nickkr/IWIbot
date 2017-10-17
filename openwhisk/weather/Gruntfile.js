@@ -14,8 +14,8 @@ module.exports = function(grunt) {
             gruntfile: {
                 src: 'Gruntfile.js'
             },
-            Timetables: {
-                src: ['lib/Weather.js']
+            Weather: {
+                src: ['lib/weather.js']
             }
 
         },
