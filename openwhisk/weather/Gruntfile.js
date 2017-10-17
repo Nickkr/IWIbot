@@ -15,7 +15,7 @@ module.exports = function(grunt) {
                 src: 'Gruntfile.js'
             },
             Weather: {
-                src: ['lib/weather.js']
+                src: ['lib/Weather.js']
             }
 
         },
