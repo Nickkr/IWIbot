@@ -1,5 +1,5 @@
 var request = require('request-promise');
-var weather_host = 'https://aa8374a9-dd6a-4960-89b6-262118e8c9b7:aQVNTZtXeG@twcservice.mybluemix.net';
+var weather_host = $WEATHER_COMPANY_URL;
 
 var today = new Date();
 var currentDay = parseInt(today.getDay());
