@@ -1,3 +1,4 @@
+---
 applications:
 - path: .
   memory: 512M
@@ -6,3 +7,6 @@ applications:
   host: IWIBot
   disk_quota: 1024M
   domain: mybluemix.net
+  services:
+   - speech_to_text
+   - text_to_speech
