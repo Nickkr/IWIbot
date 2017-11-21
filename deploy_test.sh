@@ -17,16 +17,34 @@
 # Load configuration variables
 source local.env
 
+# API
+export API_NAME="iwibot Test API"
+export API_BASE_PATH="/iwibotTest"
+
 function usage() {
   echo -e "Usage: $0 [--install,--uninstall,--env]"
 }
 
 function install() {
+  # Exit if any command fails
+  set -e
+
   echo -e "Deploying OpenWhisk actions, triggers, and rules for IWIBot"
 
-   echo "Deploy Joke Action with HTTP-VERB GET"
+  echo -e "Setting Bluemix credentials and logging in to provision API Gateway"
+
+  # Login requiered to provision the API Gateway
+  wsk bluemix login \
+    --user $BLUEMIX_USER \
+    --password $BLUEMIX_PASS \
+    --namespace ${BLUEMIX_ORGANIZATION}_${BLUEMIX_SPACE}
+
+  echo -e "\n"
+
+  echo "Deploy Joke Action with HTTP-VERB GET"
   cd openwhisk/joke
-  # preserve dev deps
+  # preserve dev deps if any
+  mkdir -p .mod
   mv node_modules .mod
   # install only prod deps
   npm install --production
@@ -38,12 +56,13 @@ function install() {
   mv .mod node_modules
   # install zip in openwhisk
   wsk action create testJoke --kind nodejs:6 action.zip --web true
-  wsk api create -n "iwibot Test API" /iwibotTest /joke get testJoke --response-type json
+  wsk api create -n "$API_NAME" $API_BASE_PATH /joke get testJoke --response-type json
   cd ../..
 
-   echo "Deploy Meal Action with HTTP-VERB GET"
+  echo "Deploy Meal Action with HTTP-VERB GET"
   cd openwhisk/meal
-  # preserve dev deps
+  # preserve dev deps if any
+  mkdir -p .mod
   mv node_modules .mod
   # install only prod deps
   npm install --production
@@ -55,12 +74,23 @@ function install() {
   mv .mod node_modules
   # install zip in openwhisk
   wsk action create testMeal --kind nodejs:6 action.zip --web true
-  wsk api create /iwibotTest /meal get testMeal --response-type json
+  wsk api create $API_BASE_PATH /meal get testMeal --response-type json
   cd ../..
 
-   echo "Deploy Router Action with HTTP-VERB POST"
+  echo "Deploy Router Action with HTTP-VERB POST"
+  # save router sources
   cd openwhisk/router
-  # preserve dev deps
+  cp ./lib/conversation.js ./lib/conversation.js.org
+  # prepare router sources
+  echo "1"
+  sed -i -e 's/$CONVERSATION_USERNAME/'"\'${CONVERSATION_USERNAME}\'"'/g' ./lib/conversation.js
+  echo "2"
+  sed -i -e 's/$CONVERSATION_PASSWORD/'"\'${CONVERSATION_PASSWORD}\'"'/g' ./lib/conversation.js
+  echo "3"
+  sed -i -e 's/$CONVERSATION_WORKSPACE_ID/'"\'${CONVERSATION_WORKSPACE_ID}\'"'/g' ./lib/conversation.js
+  echo "4"
+  # preserve dev deps if any
+  mkdir -p .mod
   mv node_modules .mod
   # install only prod deps
   npm install --production
@@ -72,12 +102,16 @@ function install() {
   mv .mod node_modules
   # install zip in openwhisk
   wsk action create testRouter --kind nodejs:6 action.zip --web true
-  wsk api create /iwibotTest /router post testRouter --response-type http
+  wsk api create $API_BASE_PATH /router post testRouter --response-type http
+  #recover router source
+  cp ./lib/conversation.js ./lib/conversation.js.trans
+  mv ./lib/conversation.js.org ./lib/conversation.js
   cd ../..
 
-   echo "Deploy Timetables Action with HTTP-VERB POST"
+  echo "Deploy Timetables Action with HTTP-VERB POST"
   cd openwhisk/timetables
-  # preserve dev deps
+  # preserve dev deps if any
+  mkdir -p .mod
   mv node_modules .mod
   # install only prod deps
   npm install --production
@@ -89,13 +123,16 @@ function install() {
   mv .mod node_modules
   # install zip in openwhisk
   wsk action create testTimetables --kind nodejs:6 action.zip --web true
-  wsk api create /iwibotTest /timetables post testTimetables --response-type json
+  wsk api create $API_BASE_PATH /timetables post testTimetables --response-type json
   cd ../..
 
-
-   echo "Deploy Weather Action with HTTP-VERB POST"
+  echo "Deploy Weather Action with HTTP-VERB POST"
+  # save router sources
   cd openwhisk/weather
-  # preserve dev deps
+  cp ./lib/Weather.js ./lib/Weather.js.org
+  sed -i -e 's%$WEATHER_COMPANY_URL%'"\'${WEATHER_COMPANY_URL}\'"'%g' ./lib/Weather.js
+  # preserve dev deps if any
+  mkdir -p .mod
   mv node_modules .mod
   # install only prod deps
   npm install --production
@@ -107,7 +144,10 @@ function install() {
   mv .mod node_modules
   # install zip in openwhisk
   wsk action create testWeather --kind nodejs:6 action.zip --web true
-  wsk api create /iwibotTest /weather post testWeather --response-type json
+  wsk api create $API_BASE_PATH /weather post testWeather --response-type json
+  #recover router source
+  cp ./lib/Weather.js ./lib/Weather.js.trans
+  mv ./lib/Weather.js.org ./lib/Weather.js
   cd ../..
 
   echo -e "Deployment Complete!"
@@ -116,8 +156,8 @@ function install() {
 function uninstall() {
   echo -e "Undeploying..."
 
-  echo "Removing API..."
-  wsk api delete /iwibotTest
+  echo "Removing API actions..."
+  wsk api delete $API_BASE_PATH
 
   echo "Removing actions..."
   wsk action delete testMeal
@@ -125,7 +165,22 @@ function uninstall() {
   wsk action delete testTimetables
   wsk action delete testJoke
   wsk action delete testWeather
+
   echo -e "Undeployment Complete"
+}
+
+function showenv() {
+  echo -e BLUEMIX_ORGANIZATION="$BLUEMIX_ORGANIZATION"
+  echo -e BLUEMIX_PASS="$BLUEMIX_PASS"
+  echo -e BLUEMIX_SPACE="$BLUEMIX_SPACE"
+  echo -e BLUEMIX_USER="$BLUEMIX_USER"
+  echo -e CONVERSATION_PASSWORD="$CONVERSATION_PASSWORD"
+  echo -e CONVERSATION_USERNAME="$CONVERSATION_USERNAME"
+  echo -e OPENWHISK_KEY="$OPENWHISK_KEY"
+  echo -e WEATHER_COMPANY_URL="$WEATHER_COMPANY_URL"
+  echo -e CONVERSATION_WORKSPACE_ID="$CONVERSATION_WORKSPACE_ID"
+  echo -e CONVERSATION_ID="$CONVERSATION_ID"
+  echo -e WSK_API_CODE="$WSK_API_CODE"
 }
 
 case "$1" in
@@ -134,6 +189,9 @@ install
 ;;
 "--uninstall" )
 uninstall
+;;
+"--env" )
+showenv
 ;;
 * )
 usage

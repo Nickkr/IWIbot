@@ -2,13 +2,13 @@
  * Created by Armin on 11.06.2017.
  */
 var request = require('request');
-var actionUrl = 'https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/c9f88de3acb5a4648e4f118769d019c8df8797d1777c4342f43260626b4c51bf/iwibotTest/router';
+var actionUrl = 'https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/'+process.env.WSK_API_CODE+'/iwibotTest/router';
 var params = {
     use_unauthenticated: true,
     semester: 5,
     courseOfStudies: 'INFB',
     context: { // If this test is not successful, try to get a new context! (Log and paste it here!)
-        conversation_id: '69cf475b-b891-4889-923b-f3605060e1c2',
+        conversation_id: process.env.CONVERSATION_ID,
         system: {
             dialog_stack:[{dialog_node: 'root'}],
             dialog_turn_counter: 1,
@@ -19,6 +19,8 @@ var params = {
         }
     }
 };
+
+console.log(JSON.stringify(params))
 
 module.exports = {
     'Router Action Test (timetables)' : function (test) {

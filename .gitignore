@@ -1,4 +1,6 @@
 
+local.env
+
 # Created by https://www.gitignore.io/api/node,macos,grunt,linux,windows,webstorm+all
 
 ### grunt ###
