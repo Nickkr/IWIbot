@@ -22,7 +22,7 @@ LINK=https://openwhisk.ng.bluemix.net/cli/go/download/linux/amd64/wsk
 echo "Downloading OpenWhisk CLI from '$LINK'...\n"
 curl -O $LINK
 chmod u+x wsk
-PATH=$PATH:`pwd`
+export PATH=$PATH:`pwd`
 
 # config and login in deploy scripts
 echo "Configuring CLI from apihost and API key\n"
