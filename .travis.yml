@@ -42,3 +42,8 @@ deploy:
     space: $BLUEMIX_SPACE
     on:
       branch: master
+services:
+    - conversation
+    - text_to_speech
+    - speech_to_text
+    - weatherinsights
