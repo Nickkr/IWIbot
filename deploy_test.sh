@@ -55,7 +55,7 @@ function install() {
   # recover dev deps
   mv .mod node_modules
   # install zip in openwhisk
-  wsk action create testJoke --kind nodejs:6 action.zip --web true
+  wsk action create Joke --kind nodejs:6 action.zip --web true
   wsk api create -n "$API_NAME" $API_BASE_PATH /joke get Joke --response-type json
   cd ../..
 
@@ -73,7 +73,7 @@ function install() {
   # recover dev deps
   mv .mod node_modules
   # install zip in openwhisk
-  wsk action create testMeal --kind nodejs:6 action.zip --web true
+  wsk action create Meal --kind nodejs:6 action.zip --web true
   wsk api create $API_BASE_PATH /meal get Meal --response-type json
   cd ../..
 
@@ -101,7 +101,7 @@ function install() {
   # recover dev deps
   mv .mod node_modules
   # install zip in openwhisk
-  wsk action create testRouter --kind nodejs:6 action.zip --web true
+  wsk action create Router --kind nodejs:6 action.zip --web true
   wsk api create $API_BASE_PATH /router post Router --response-type http
   #recover router source
   cp ./lib/conversation.js ./lib/conversation.js.trans
@@ -122,7 +122,7 @@ function install() {
   # recover dev deps
   mv .mod node_modules
   # install zip in openwhisk
-  wsk action create testTimetables --kind nodejs:6 action.zip --web true
+  wsk action create Timetables --kind nodejs:6 action.zip --web true
   wsk api create $API_BASE_PATH /timetables post Timetables --response-type json
   cd ../..
 
@@ -143,7 +143,7 @@ function install() {
   # recover dev deps
   mv .mod node_modules
   # install zip in openwhisk
-  wsk action create testWeather --kind nodejs:6 action.zip --web true
+  wsk action create Weather --kind nodejs:6 action.zip --web true
   wsk api create $API_BASE_PATH /weather post Weather --response-type json
   #recover router source
   cp ./lib/Weather.js ./lib/Weather.js.trans
