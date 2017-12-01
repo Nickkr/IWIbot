@@ -92,7 +92,7 @@ function install() {
   # install zip in openwhisk
   wsk action create Router --kind nodejs:6 action.zip --web true
   #wsk api create -n "$API_NAME" $API_BASE_PATH $API_PATH /router post Router --response-type http
-  wsk api create -n "$API_NAME" $API_PATH /router post Router --response-type http
+  wsk api create -n "$API_NAME" $API_BASE_PATH /router post Router --response-type http
   cd ../..
 
   echo "Deploy GET Timetables Action"
