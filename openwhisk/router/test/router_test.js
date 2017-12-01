@@ -11,6 +11,7 @@ var params = {
     context: { // If this test is not successful, try to get a new context! (Log and paste it here!)
         //conversation_id: process.env.CONVERSATION_ID,
         conversation_id: 'b4451374-40d2-4709-bc0c-1d5412d568dd',
+        workspace_id: '49d2a377-47a0-42aa-9649-cbce4637b624',
         system: {
             dialog_stack:[{dialog_node: 'root'}],
             dialog_turn_counter: 1,

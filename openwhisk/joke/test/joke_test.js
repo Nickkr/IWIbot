@@ -17,7 +17,7 @@ module.exports = {
                 console.log('\n\n\nTypeof env: '+ typeof process.env +'\n\n\n');
 
                 if(typeof process.env == "obejct") {
-                    console.log('\n\n\nEnv vars: '+ JSON.stringify(process.env) +'\n\n\n');
+                    console.log('\n\n\nEnv vars: '+ process.env.BLUEMIX_USER +'\n\n\n');
                 }
             }
             console.log('\n\n\n \n\n\n');
