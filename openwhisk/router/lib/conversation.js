@@ -24,7 +24,7 @@ exports.sendMessage = function sendMessage(init, params) {
                 reject(err);
             }
 
-            console.log("Conversation Response: " + JSON.stringify(response));
+            console.log("Conversation Response: " + JSON.stringify(response, null, 4));
             resolve(response);
         });
     });

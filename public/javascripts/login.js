@@ -26,7 +26,7 @@ exports.loginSubmit = function () {
                 "Authorization": "Basic " + btoa(values.username + ":" + values.password)
             },
             success: function (data) {
-                console.log("Login success data: " + JSON.stringify(data));
+                console.log("Login success data: " + JSON.stringify(data, null, 4));
                 $invalidInput.hide();
                 $noSemesterSelected.hide();
                 close_modal();

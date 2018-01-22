@@ -15,7 +15,7 @@ var currentDayString = weekday[currentDay];
 function main(params) {
 
     console.log("------Timetable Action started!------");
-    console.log("TimetableAction Params:" + JSON.stringify(params));
+    console.log("TimetableAction Params:" + JSON.stringify(params, null, 4));
     console.log("Timetable Semester: " + params.semester);
     console.log("Day: " + currentDay);
     console.log("DayString: " + currentDayString);
@@ -82,7 +82,7 @@ function main(params) {
             if (!error && response.statusCode === 200) {
                 var responseObject = JSON.parse(body);
 
-                console.log('Response Object: ' + JSON.stringify(responseObject));
+                console.log('Response Object: ' + JSON.stringify(responseObject, null, 4));
                 var entries = responseObject.timetables[dayIndex].entries;
 
                 if (!entries || entries.length === 0) {

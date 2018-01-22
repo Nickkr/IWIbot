@@ -25,7 +25,7 @@ function main(params) {
     }
 
     console.log('------Weather Action started!------');
-    console.log('WeatherAction Params:' + JSON.stringify(params));
+    console.log('WeatherAction Params:' + JSON.stringify(params, null, 4));
     console.log('Day: ' + currentDay);
     console.log('DayString: ' + currentDayString);
     params.units = 'm';

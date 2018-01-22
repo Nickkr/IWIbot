@@ -24,7 +24,7 @@ module.exports = function () {
                     console.log("SpeechToText_Error: " + err);
                 });
                 stream.on('data', function (message) {
-                    console.log("SpeechToText_streamData: " + JSON.stringify(message));
+                    console.log("SpeechToText_streamData: " + JSON.stringify(message, null, 4));
                     //If Speech To Text service recognized something
                     if (typeof message.results[0] !== "undefined") {
                         //Safe sst response when sentence has ended

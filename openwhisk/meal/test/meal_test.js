@@ -8,9 +8,10 @@ module.exports = {
     'Meal Action Test' : function (test) {
         test.expect(1);
         request.get(actionUrl, function (err, response, body) {
-            console.log('Body: ' + body);
-            console.log('Error: ' + err);
-            console.log('Response: ' + JSON.stringify(response));
+            console.log('\n Action URL: \n' + actionUrl);
+            console.log('\n Body:       \n' + JSON.stringify(body, null, 4));
+            console.log('\n Error:      \n' + err);
+            console.log('\n Response:   \n' + JSON.stringify(response, null, 4));
             body = JSON.parse(body);
             test.ok(typeof body.payload === 'string');
             test.done();

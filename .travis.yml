@@ -29,7 +29,6 @@ script:
     - sed 's%$WEATHER_COMPANY_URL%'"\'${WEATHER_COMPANY_URL}\'"'%g' -i openwhisk/weather/lib/Weather.js
     - ./travis_test.sh
     - export PATH=$PATH:`pwd`  # make openwhisk cli available here
-    - echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Undeploying wsk actions for testing~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
     - ./deploy_test.sh --uninstall
     - ./deploy.sh --uninstall
     - ./deploy.sh --install

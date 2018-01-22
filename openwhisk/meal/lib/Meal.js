@@ -9,7 +9,7 @@ var entity;
 
 function main(params) {
     console.log("------Meal Action started!------");
-    console.log("Meal Action Params:" + JSON.stringify(params));
+    console.log("Meal Action Params:" + JSON.stringify(params, null, 4));
 
     return new Promise(function (resolve, reject) {
 

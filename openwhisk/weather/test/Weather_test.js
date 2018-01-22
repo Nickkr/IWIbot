@@ -3,6 +3,7 @@
  */
 var request = require('request');
 var actionUrl = 'https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/'+process.env.WSK_API_CODE+'/iwibotTest/weather';
+
 var params = {
     semester: 5,
     courseOfStudies: 'INFB'
@@ -16,9 +17,10 @@ module.exports = {
             url: actionUrl,
             body: JSON.stringify(params)
         }, function (err, response, body) {
-            console.log('Body: ' + body);
-            console.log('Error: ' + err);
-            console.log('Response: ' + JSON.stringify(response));
+            console.log('\n Action URL: \n' + actionUrl);
+            console.log('\n Body:       \n' + JSON.stringify(body, null, 4));
+            console.log('\n Error:      \n' + err);
+            console.log('\n Response:   \n' + JSON.stringify(response, null, 4));
             body = JSON.parse(body);
             test.ok('payload' in body);
             test.ok('htmlText' in body);
