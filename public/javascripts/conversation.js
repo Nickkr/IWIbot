@@ -25,7 +25,7 @@ exports.sendMessage = function (init, result) {
             requestObject.semester = sessionStorage.getItem("semester");
         }
 
-        console.log("CONVERSATION_RequestObject : " + JSON.stringify(requestObject));
+        console.log("CONVERSATION_RequestObject : " + JSON.stringify(requestObject, null, 4));
 
         var options = {
             url: url,
@@ -34,7 +34,7 @@ exports.sendMessage = function (init, result) {
             contentType: "application/json",
             processData: false,
             success: function (data) {
-                console.log("CONVERSATION_recivedData: " + JSON.stringify(data));
+                console.log("CONVERSATION_recivedData: " + JSON.stringify(data, null, 4));
 
                 var dataObj = JSON.parse(data);
                 var payload = dataObj.payload.toString();

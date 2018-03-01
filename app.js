@@ -2,15 +2,12 @@
     'use strict';
     var express = require('express');
     var path = require('path');
-    //var favicon = require('serve-favicon');
     var logger = require('morgan');
     var cookieParser = require('cookie-parser');
     var bodyParser = require('body-parser');
-    var stt = require( path.resolve( __dirname, './stt-token.js' ) );
-    var tts = require( path.resolve( __dirname, './tts-token.js' ) );
-
+    var stt = require('./routers/stt-token.js');
+    var tts = require('./routers/tts-token.js');
     var index = require('./routers/index');
-    var users = require('./routers/users');
 
     var app = express();
 
@@ -27,8 +24,6 @@
     }
 
     app.use(requireHTTPS);
-    // uncomment after placing your favicon in /public
-    //app.use(favicon(__dirname + '/public/favicon.ico'));
     app.use(logger('dev'));
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: false }));
@@ -36,11 +31,8 @@
     app.use(express.static(path.join(__dirname, 'public')));
     app.use('/static', express.static(path.join(__dirname, 'public')));
     app.use('/', index);
-    app.use('/users', users);
     app.use('/api/speech-to-text/', stt);
     app.use('/api/text-to-speech/', tts);
-    /*app.use('/api/speech-to-text/', require('./stt-token.js'));
-     app.use('/api/text-to-speech/', require('./tts-token.js'));*/
 
     // catch 404 and forward to error handler
     app.use(function (req, res, next) {
@@ -48,7 +40,6 @@
         err.status = 404;
         next(err);
     });
-
 
     // error handlers
 
